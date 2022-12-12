@@ -11,9 +11,13 @@ export default function Header() {
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <img src=""
+            <Nav.Link href="#health-insights">Health Insights</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="#faq">Faq</Nav.Link>
+            <Nav.Link href="#download">Download</Nav.Link>
+            <Nav.Link href="#articles">Articles</Nav.Link>
+            <Nav.Link href="#login">Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
