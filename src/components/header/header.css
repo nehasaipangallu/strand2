@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  height: 120px;
+}
+
+.header .nav-items {
+  justify-content: space-evenly;
+  flex: auto;
+  margin: 0 20px;
+}

@@ -6,12 +6,16 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
   return (
-    <header>
+    <header class="header">
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <img src=""
+          <Navbar.Brand>
+            <img
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-2%20(1).svg?raw=true"
+              className=""
+            />
+          </Navbar.Brand>
+          <Nav className="me-auto nav-items">
             <Nav.Link href="#health-insights">Health Insights</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link href="#faq">Faq</Nav.Link>
