@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import Header from './components/header/header';
 import Home from './components/home/home';
@@ -16,6 +17,7 @@ export default function App() {
       <HashRouter>
         <Header />
         <Routes>
+          <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/home" element={<Home />}></Route>
         </Routes>
       </HashRouter>
