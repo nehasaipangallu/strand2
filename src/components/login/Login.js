@@ -24,11 +24,7 @@ export default class Login extends React.Component {
           >
             <h3> Continue with Phone Number</h3>
             <h5>Phone Number</h5>
-            <input
-              type="text"
-              id="typeNumber"
-              class=" mobile-input form-control"
-            />
+            <input type="text" id="mobile" class=" mobile-input form-control" />
             <button class="send-otp btn" onClick={this.sendOtp}>
               Send OTP
             </button>
@@ -40,15 +36,41 @@ export default class Login extends React.Component {
               display: this.state.isOtpSent ? 'flex' : 'none',
             }}
           >
-            <h3> Continue with Phone Number</h3>
-            <h5>Phone Number</h5>
-            <input
-              type="text"
-              id="typeNumber"
-              class=" mobile-input form-control"
-            />
+            <h4> Please enter the OTP sent to your mobile number</h4>
+            <div class="otp-box-container d-flex">
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                class=" otp-input form-control"
+              />
+            </div>
             <button class="send-otp btn" onClick={this.sendOtp}>
-              Send OTP
+              Verify and Proceed
             </button>
           </div>
         </div>
