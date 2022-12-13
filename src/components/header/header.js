@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 export default function Header() {
   return (
     <header className="header">
-      <Navbar bg="white" variant="light">
+      <Navbar bg="#0000" variant="light">
         <Container>
           <Navbar.Brand>
             <img
