@@ -4,8 +4,16 @@ import './Login.css';
 export default class Login extends React.Component {
   constructor() {
     super();
-    this.state = { isOtpSent: false };
+    this.state = { isOtpSent: false, isValidMobile: false };
   }
+
+  onMobileInput = (event) => {
+    if (isNaN(Number(event.target.value)) || event.target.value.length != 10) {
+      this.setState({ isValidMobile: false });
+    } else {
+      this.setState({ isValidMobile: true });
+    }
+  };
 
   sendOtp = () => {
     console.log('before', this.state);
@@ -26,7 +34,12 @@ export default class Login extends React.Component {
             <h5>Phone Number</h5>
             <div class="mobile-input-container  form-control">
               <p class="country-code">+91</p>
-              <input type="text" id="mobile" class="mobile-input" />
+              <input
+                type="text"
+                id="mobile"
+                class="mobile-input"
+                onChange={this.onMobileInput}
+              />
             </div>
             <button class="send-otp btn" onClick={this.sendOtp}>
               Send OTP
