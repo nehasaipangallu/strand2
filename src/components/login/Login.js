@@ -3,6 +3,7 @@ import './Login.css';
 import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
 import { auth } from '../../firebase';
 import Spinner from 'react-bootstrap/Spinner';
+import Alert from 'react-bootstrap/Alert';
 
 export default class Login extends React.Component {
   constructor() {
@@ -19,6 +20,7 @@ export default class Login extends React.Component {
       digit5: '',
       digit6: '',
       otp: [],
+      isValid: true,
     };
   }
 
@@ -46,6 +48,15 @@ export default class Login extends React.Component {
   };
 
   onMobileInput = (event) => {
+  
+
+    if (event.target.value[0] != 8) {
+     
+      this.setState({ isValid: false });
+      return;
+    }
+   this.setState({isValid: true});
+   
     if (isNaN(Number(event.target.value)) || event.target.value.length != 10) {
       this.setState({ isValidMobile: false });
     } else {
@@ -105,7 +116,7 @@ export default class Login extends React.Component {
 
   verifyOtp = (event) => {
     event.preventDefault();
-    const code = this.state.otp;
+    const code = this.state.otp.join('');
     console.log(code);
     window.confirmationResult
       .confirm(code)
@@ -117,6 +128,7 @@ export default class Login extends React.Component {
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
+        console.log(error)
       });
   };
 
@@ -166,9 +178,16 @@ export default class Login extends React.Component {
               disabled={!this.state.isValidMobile}
               onClick={this.sendOtp}
             >
-              <Spinner animation="border" size="sm" />
+              {/* <Spinner animation="border" size="sm" /> */}
               Send OTP
             </button>
+            <Alert
+              key="danger"
+              variant="danger"
+              style={{ display: this.state.isValid ? 'none' : 'block' }}
+            >
+              This is a danger alert—check it out!
+            </Alert>
           </div>
 
           <div
