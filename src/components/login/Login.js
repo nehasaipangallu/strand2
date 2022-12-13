@@ -123,6 +123,25 @@ export default class Login extends React.Component {
       });
   };
 
+  inputfocus = (elmnt) => {
+    if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
+      const next = elmnt.target.tabIndex - 2;
+      if (next > -1) {
+
+        elmnt.target.form.elements[next].focus()
+      }
+    }
+    else {
+      console.log("next");
+     
+        const next = elmnt.target.tabIndex;
+        if (next < 5) {
+          elmnt.target.form.elements[next].focus()
+        }
+    }
+
+  }
+
   render() {
     return (
       <div class="login-page d-flex justify-content-end align-items-center">
@@ -170,6 +189,9 @@ export default class Login extends React.Component {
                 name="digit1"
                 class="otp-input form-control"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit1", e)}
+                tabIndex="1" maxLength="1" onKeyUp={e => this.inputfocus(e)}
               />
               <input
                 type="text"
@@ -177,6 +199,9 @@ export default class Login extends React.Component {
                 name="digit2"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit2", e)}
+                tabIndex="2" maxLength="1" onKeyUp={e => this.inputfocus(e)}
               />
               <input
                 type="text"
@@ -184,6 +209,9 @@ export default class Login extends React.Component {
                 name="digit3"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit3", e)}
+                tabIndex="3" maxLength="1" onKeyUp={e => this.inputfocus(e)}
               />
               <input
                 type="text"
@@ -191,6 +219,9 @@ export default class Login extends React.Component {
                 class=" otp-input form-control"
                 name="digit4"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit4", e)}
+                tabIndex="4" maxLength="1" onKeyUp={e => this.inputfocus(e)}
               />
               <input
                 type="text"
@@ -198,6 +229,9 @@ export default class Login extends React.Component {
                 name="digit5"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit5", e)}
+                tabIndex="5" maxLength="1" onKeyUp={e => this.inputfocus(e)}
               />
               <input
                 type="text"
@@ -205,6 +239,10 @@ export default class Login extends React.Component {
                 name="digit6"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
+                onKeyPress={this.keyPressed}
+                onChange={e => this.handleChange("digit6", e)}
+                tabIndex="6" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                
               />
             </div>
             <button

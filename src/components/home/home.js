@@ -11,7 +11,11 @@ export default function Home() {
           sollicitudin consectetur. Suspendisse tempus at diam at volutpat.
           Donec sit amet dui malesuada, tincidunt sem sed, tincidunt justo.
         </p>
-        <button className="btn btn-view"> View Insights</button>
+        <button className="btn btn-view"
+         onClick={(e) => {
+          e.preventDefault();
+          window.location.href='#/login';
+          }}> View Insights</button>
       </div>
     </div>
   );
