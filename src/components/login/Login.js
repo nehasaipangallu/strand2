@@ -11,6 +11,13 @@ export default class Login extends React.Component {
       isValidMobile: false,
       isValidOtp: false,
       mobile: '',
+      digit1: '',
+      digit2: '',
+      digit3: '',
+      digit4: '',
+      digit5: '',
+      digit6: '',
+      otp: '',
     };
   }
 
@@ -37,30 +44,6 @@ export default class Login extends React.Component {
     );
   };
 
-  sendOtp = (e) => {
-    e.preventDefault();
-    this.configureCaptcha();
-    const phoneNumber = '+91' + this.state.mobile;
-    console.log(phoneNumber);
-    const appVerifier = window.recaptchaVerifier;
-    // firebase
-    //   .auth()
-    debugger;
-    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
-      .then((confirmationResult) => {
-        // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        window.confirmationResult = confirmationResult;
-        this.setState({ isOtpSent: true });
-        console.log('OTP has been sent');
-        // ...
-      })
-      .catch((error) => {
-        this.setState({ isOtpSent: false });
-        console.log('SMS not sent');
-      });
-  };
-
   onMobileInput = (event) => {
     if (isNaN(Number(event.target.value)) || event.target.value.length != 10) {
       this.setState({ isValidMobile: false });
@@ -75,12 +58,69 @@ export default class Login extends React.Component {
       });
     }
   };
+
+  sendOtp = (e) => {
+    e.preventDefault();
+    this.configureCaptcha();
+    const phoneNumber = '+91' + this.state.mobile;
+    console.log(phoneNumber);
+    const appVerifier = window.recaptchaVerifier;
+
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        // SMS sent. Prompt user to type the code from the message, then sign the
+        window.confirmationResult = confirmationResult;
+        this.setState({ isOtpSent: true });
+        console.log('OTP has been sent');
+        // ...
+      })
+      .catch((error) => {
+        this.setState({ isOtpSent: false });
+        console.log('SMS not sent');
+      });
+  };
+
   onOTPInput = (event) => {
-    if (isNaN(Number(event.target.value)) || event.target.value.length != 6) {
+    if (isNaN(Number(event.target.value))) {
       this.setState({ isValidOtp: false });
+      return;
     } else {
-      this.setState({ isValidOtp: true });
+      const { name, value } = event.target;
+      this.setState({
+        [name]: value,
+      });
+      this.setState({
+        otp:
+          this.state.digit1 +
+          this.state.digit2 +
+          this.state.digit3 +
+          this.state.digit4 +
+          this.state.digit5 +
+          this.state.digit6,
+      });
     }
+
+    debugger;
+    // if (this.setState.otp.trim().length == 6) {
+    //   this.setState({ isValidOtp: true });
+    // }
+  };
+
+  verifyOtp = (event) => {
+    event.preventDefault();
+    const code = this.state.otp;
+    console.log(code);
+    window.confirmationResult
+      .confirm(code)
+      .then((result) => {
+        // User signed in successfully.
+        const user = result.user;
+        console.log(JSON.stringify(user));
+        console.log('User is verified');
+      })
+      .catch((error) => {
+        // User couldn't sign in (bad verification code?)
+      });
   };
 
   render() {
@@ -127,37 +167,49 @@ export default class Login extends React.Component {
               <input
                 type="text"
                 id="typeNumber"
+                name="digit1"
+                class="otp-input form-control"
+                onChange={this.onOTPInput}
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                name="digit2"
                 class=" otp-input form-control"
+                onChange={this.onOTPInput}
+              />
+              <input
+                type="text"
+                id="typeNumber"
+                name="digit3"
+                class=" otp-input form-control"
+                onChange={this.onOTPInput}
               />
               <input
                 type="text"
                 id="typeNumber"
                 class=" otp-input form-control"
+                name="digit4"
+                onChange={this.onOTPInput}
               />
               <input
                 type="text"
                 id="typeNumber"
+                name="digit5"
                 class=" otp-input form-control"
+                onChange={this.onOTPInput}
               />
               <input
                 type="text"
                 id="typeNumber"
+                name="digit6"
                 class=" otp-input form-control"
-              />
-              <input
-                type="text"
-                id="typeNumber"
-                class=" otp-input form-control"
-              />
-              <input
-                type="text"
-                id="typeNumber"
-                class=" otp-input form-control"
+                onChange={this.onOTPInput}
               />
             </div>
             <button
               class="send-otp btn"
-              onClick={this.sendOtp}
+              onClick={this.verifyOtp}
               disabled={!this.state.isValidOtp}
             >
               Verify and Proceed
