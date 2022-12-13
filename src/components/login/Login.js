@@ -8,7 +8,7 @@ export default class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      isOtpSent: false,
+      isOtpSent: true,
       isValidMobile: false,
       isValidOtp: false,
       mobile: '',
@@ -18,7 +18,7 @@ export default class Login extends React.Component {
       digit4: '',
       digit5: '',
       digit6: '',
-      otp: '',
+      otp: [],
     };
   }
 
@@ -86,25 +86,21 @@ export default class Login extends React.Component {
       this.setState({ isValidOtp: false });
       return;
     } else {
-      const { name, value } = event.target;
+      const { name, value, id } = event.target;
       this.setState({
         [name]: value,
       });
-      this.setState({
-        otp:
-          this.state.digit1 +
-          this.state.digit2 +
-          this.state.digit3 +
-          this.state.digit4 +
-          this.state.digit5 +
-          this.state.digit6,
-      });
-    }
 
-    debugger;
-    // if (this.setState.otp.trim().length == 6) {
-    //   this.setState({ isValidOtp: true });
-    // }
+      const otp = this.state.otp;
+      otp[id] = value;
+
+      this.setState({
+        otp: otp,
+      });
+      if (otp.join('').trim().length === 6) {
+        this.setState({ isValidOtp: true });
+      }
+    }
   };
 
   verifyOtp = (event) => {
@@ -125,23 +121,21 @@ export default class Login extends React.Component {
   };
 
   inputfocus = (elmnt) => {
-    if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
+    if (elmnt.key === 'Delete' || elmnt.key === 'Backspace') {
       const next = elmnt.target.tabIndex - 2;
       if (next > -1) {
-
-        elmnt.target.form.elements[next].focus()
+        elmnt.target.form.elements[next].focus();
+      }
+    } else {
+      console.log('next');
+      const next = elmnt.target.tabIndex;
+      if (next < 6) {
+        elmnt.target.form.elements[next].focus();
+      } else if (next == 6) {
+        // document.getElementsByClassName('verify-otp')[0].focus();
       }
     }
-    else {
-      console.log("next");
-     
-        const next = elmnt.target.tabIndex;
-        if (next < 5) {
-          elmnt.target.form.elements[next].focus()
-        }
-    }
-
-  }
+  };
 
   render() {
     return (
@@ -172,7 +166,7 @@ export default class Login extends React.Component {
               disabled={!this.state.isValidMobile}
               onClick={this.sendOtp}
             >
-                <Spinner animation="border" size="sm" />
+              <Spinner animation="border" size="sm" />
               Send OTP
             </button>
           </div>
@@ -184,71 +178,82 @@ export default class Login extends React.Component {
             }}
           >
             <h4> Please enter the OTP sent to your mobile number</h4>
-            <div class="otp-box-container d-flex">
+            <form class="otp-box-container d-flex">
               <input
                 type="text"
-                id="typeNumber"
+                id="0"
                 name="digit1"
                 class="otp-input form-control"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit1", e)}
-                tabIndex="1" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                // onChange={(e) => this.handleChange('digit1', e)}
+                tabIndex="1"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
               <input
                 type="text"
-                id="typeNumber"
+                id="1"
                 name="digit2"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit2", e)}
-                tabIndex="2" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                // onChange={(e) => this.handleChange('digit2', e)}
+                tabIndex="2"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
               <input
                 type="text"
-                id="typeNumber"
+                id="2"
                 name="digit3"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit3", e)}
-                tabIndex="3" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                // onChange={(e) => this.handleChange('digit3', e)}
+                tabIndex="3"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
               <input
                 type="text"
-                id="typeNumber"
+                id="3"
                 class=" otp-input form-control"
                 name="digit4"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit4", e)}
-                tabIndex="4" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                // onChange={(e) => this.handleChange('digit4', e)}
+                tabIndex="4"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
               <input
                 type="text"
-                id="typeNumber"
+                id="4"
                 name="digit5"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit5", e)}
-                tabIndex="5" maxLength="1" onKeyUp={e => this.inputfocus(e)}
+                // onChange={(e) => this.handleChange('digit5', e)}
+                tabIndex="5"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
               <input
                 type="text"
-                id="typeNumber"
+                id="5"
                 name="digit6"
                 class=" otp-input form-control"
                 onChange={this.onOTPInput}
                 onKeyPress={this.keyPressed}
-                onChange={e => this.handleChange("digit6", e)}
-                tabIndex="6" maxLength="1" onKeyUp={e => this.inputfocus(e)}
-                
+                // onChange={(e) => this.handleChange('digit6', e)}
+                tabIndex="6"
+                maxLength="1"
+                onKeyUp={(e) => this.inputfocus(e)}
               />
-            </div>
+            </form>
             <button
-              class="send-otp btn"
+              class="verify-otp btn"
               onClick={this.verifyOtp}
               disabled={!this.state.isValidOtp}
             >
