@@ -1,17 +1,79 @@
 import React from 'react';
 import './Login.css';
+import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
+import { auth } from '../../firebase';
 
 export default class Login extends React.Component {
   constructor() {
     super();
-    this.state = { isOtpSent: false, isValidMobile: false, isValidOtp: false };
+    this.state = {
+      isOtpSent: false,
+      isValidMobile: false,
+      isValidOtp: false,
+      mobile: '',
+    };
   }
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  configureCaptcha = () => {
+    auth.languageCode = 'in';
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      'sign-in-button',
+      {
+        size: 'invisible',
+        callback: (response) => {
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+          //this.onSignInSubmit();
+          // console.log('recaptcha verified');
+        },
+        // defaultCountry: "IN",
+      },
+      auth
+    );
+  };
+
+  onSignInSubmit = (e) => {
+    e.preventDefault();
+    this.configureCaptcha();
+    const phoneNumber = '+91' + this.state.mobile;
+    console.log(phoneNumber);
+    const appVerifier = window.recaptchaVerifier;
+    // firebase
+    //   .auth()
+    debugger;
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        // SMS sent. Prompt user to type the code from the message, then sign the
+        // user in with confirmationResult.confirm(code).
+        window.confirmationResult = confirmationResult;
+        console.log('OTP has been sent');
+        // ...
+      })
+      .catch((error) => {
+        // Error; SMS not sent
+        // ...
+        console.log('SMS not sent');
+      });
+  };
 
   onMobileInput = (event) => {
     if (isNaN(Number(event.target.value)) || event.target.value.length != 10) {
       this.setState({ isValidMobile: false });
     } else {
       this.setState({ isValidMobile: true });
+    }
+
+    if (!isNaN(Number(event.target.value)) && event.target.value) {
+      const { name, value } = event.target;
+      this.setState({
+        [name]: value,
+      });
     }
   };
   onOTPInput = (event) => {
@@ -21,14 +83,16 @@ export default class Login extends React.Component {
       this.setState({ isValidOtp: true });
     }
   };
-  sendOtp = () => {
-    console.log('before', this.state);
+  sendOtp = (event) => {
+    debugger;
     this.setState({ isOtpSent: true });
-    console.log(this.state);
+    this.onSignInSubmit(event);
   };
+
   render() {
     return (
       <div class="login-page d-flex justify-content-end align-items-center">
+        <div id="sign-in-button"></div>
         <div class="login-page-container">
           <div
             class="login-background flex-column justify-content-center"
@@ -44,6 +108,8 @@ export default class Login extends React.Component {
                 type="text"
                 id="mobile"
                 class="mobile-input"
+                name="mobile"
+                required
                 onChange={this.onMobileInput}
               />
             </div>
