@@ -4,7 +4,7 @@ import './Login.css';
 export default class Login extends React.Component {
   constructor() {
     super();
-    this.state = { isOtpSent: false, isValidMobile: false };
+    this.state = { isOtpSent: false, isValidMobile: false, isValidOtp: false };
   }
 
   onMobileInput = (event) => {
@@ -14,7 +14,13 @@ export default class Login extends React.Component {
       this.setState({ isValidMobile: true });
     }
   };
-
+  onOTPInput = (event) => {
+    if (isNaN(Number(event.target.value)) || event.target.value.length != 6) {
+      this.setState({ isValidOtp: false });
+    } else {
+      this.setState({ isValidOtp: true });
+    }
+  };
   sendOtp = () => {
     console.log('before', this.state);
     this.setState({ isOtpSent: true });
@@ -41,7 +47,11 @@ export default class Login extends React.Component {
                 onChange={this.onMobileInput}
               />
             </div>
-            <button class="send-otp btn" onClick={this.sendOtp}>
+            <button
+              class="send-otp btn"
+              disabled={!this.state.isValidMobile}
+              onClick={this.sendOtp}
+            >
               Send OTP
             </button>
           </div>
@@ -85,7 +95,11 @@ export default class Login extends React.Component {
                 class=" otp-input form-control"
               />
             </div>
-            <button class="send-otp btn" onClick={this.sendOtp}>
+            <button
+              class="send-otp btn"
+              onClick={this.sendOtp}
+              disabled={!this.state.isValidOtp}
+            >
               Verify and Proceed
             </button>
           </div>
