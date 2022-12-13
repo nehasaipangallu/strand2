@@ -21,7 +21,7 @@ export default function Header() {
             <Nav.Link href="#faq">Faq</Nav.Link>
             <Nav.Link href="#download">Download</Nav.Link>
             <Nav.Link href="#articles">Articles</Nav.Link>
-            <Nav.Link href="#login">Login</Nav.Link>
+            <Nav.Link href="#/login">Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
