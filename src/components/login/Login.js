@@ -24,7 +24,10 @@ export default class Login extends React.Component {
           >
             <h3> Continue with Phone Number</h3>
             <h5>Phone Number</h5>
-            <input type="text" id="mobile" class=" mobile-input form-control" />
+            <div class="mobile-input-container  form-control">
+              <p class="country-code">+91</p>
+              <input type="text" id="mobile" class="mobile-input" />
+            </div>
             <button class="send-otp btn" onClick={this.sendOtp}>
               Send OTP
             </button>
