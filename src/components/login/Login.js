@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
 import { auth } from '../../firebase';
+import Spinner from 'react-bootstrap/Spinner';
 
 export default class Login extends React.Component {
   constructor() {
@@ -171,6 +172,7 @@ export default class Login extends React.Component {
               disabled={!this.state.isValidMobile}
               onClick={this.sendOtp}
             >
+                <Spinner animation="border" size="sm" />
               Send OTP
             </button>
           </div>
