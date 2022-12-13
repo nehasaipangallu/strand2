@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
   return (
-    <header class="header">
+    <header className="header">
       <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand>
