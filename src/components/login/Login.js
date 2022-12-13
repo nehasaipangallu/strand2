@@ -32,13 +32,12 @@ export default class Login extends React.Component {
           //this.onSignInSubmit();
           // console.log('recaptcha verified');
         },
-        // defaultCountry: "IN",
       },
       auth
     );
   };
 
-  onSignInSubmit = (e) => {
+  sendOtp = (e) => {
     e.preventDefault();
     this.configureCaptcha();
     const phoneNumber = '+91' + this.state.mobile;
@@ -52,12 +51,12 @@ export default class Login extends React.Component {
         // SMS sent. Prompt user to type the code from the message, then sign the
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
+        this.setState({ isOtpSent: true });
         console.log('OTP has been sent');
         // ...
       })
       .catch((error) => {
-        // Error; SMS not sent
-        // ...
+        this.setState({ isOtpSent: false });
         console.log('SMS not sent');
       });
   };
@@ -82,11 +81,6 @@ export default class Login extends React.Component {
     } else {
       this.setState({ isValidOtp: true });
     }
-  };
-  sendOtp = (event) => {
-    debugger;
-    this.setState({ isOtpSent: true });
-    this.onSignInSubmit(event);
   };
 
   render() {
