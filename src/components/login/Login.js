@@ -8,7 +8,7 @@ export default class Login extends React.Component {
   constructor() {
     super();
     this.state = {
-      isOtpSent: true,
+      isOtpSent: false,
       isValidMobile: false,
       isValidOtp: false,
       mobile: '',
