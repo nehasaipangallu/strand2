@@ -24,6 +24,7 @@ export default class Login extends React.Component {
       digit6: '',
       otp: [],
       isValid: true,
+     
     };
   }
 
@@ -115,7 +116,6 @@ export default class Login extends React.Component {
   };
 
   verifyOtp = (event) => {
-    debugger;
     event.preventDefault();
     const code = this.state.otp.join('');
     console.log(code);
@@ -130,12 +130,12 @@ export default class Login extends React.Component {
         });
       })
       .catch((error) => {
-       
+        debugger;
         // User couldn't sign in (bad verification code?)
         this.setState({
           isValidUser: false,
-          });
-      console.log(error); 
+        });
+        console.log(error);
       });
   };
 
@@ -194,7 +194,7 @@ export default class Login extends React.Component {
               variant="danger"
               style={{ display: this.state.isValid ? 'none' : 'block' }}
             >
-             Phone number is not Valid
+              Phone number is not Valid
             </Alert>
           </div>
           {/* OTP */}
@@ -279,7 +279,7 @@ export default class Login extends React.Component {
                 onKeyUp={(e) => this.inputfocus(e)}
               />
             </form>
-            
+
             <button
               class="verify-otp btn"
               onClick={this.verifyOtp}
@@ -288,16 +288,19 @@ export default class Login extends React.Component {
               Verify and Proceed
             </button>
             <div className="countdown-text">
-          <p>Time Remaining: 01:25</p>
+              <p>Time Remaining: 01:25</p>
 
-          <button style={{ color: "#FF5630" }}>Resend OTP</button>
-        </div>
+              <button style={{ color: '#FF5630' }}>Resend OTP</button>
+            </div>
 
             <Alert
               key="danger"
               variant="danger"
-              style={{ display: this.state.isValidUser ? 'block':'none' }}
-            > Otp is Not Valid </Alert>
+              style={{ display: this.state.isValidUser && this.state.isOtpSent ? 'block' : 'none' }}
+            >
+              {' '}
+              Otp is Not Valid{' '}
+            </Alert>
             {this.state.isValidUser && <Navigate to="/user" replace={true} />}
           </div>
         </div>
