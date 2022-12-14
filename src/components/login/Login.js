@@ -4,12 +4,13 @@ import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
 import { auth } from '../../firebase';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 export default class Login extends React.Component {
+  // navigate = useNavigate();
   constructor() {
-    
     super();
+
     this.state = {
       isOtpSent: false,
       isValidMobile: false,
@@ -32,7 +33,6 @@ export default class Login extends React.Component {
       [name]: value,
     });
   };
-  
 
   configureCaptcha = () => {
     auth.languageCode = 'in';
@@ -51,15 +51,12 @@ export default class Login extends React.Component {
   };
 
   onMobileInput = (event) => {
-  
-
     if (event.target.value[0] != 8) {
-     
       this.setState({ isValid: false });
       return;
     }
-   this.setState({isValid: true});
-   
+    this.setState({ isValid: true });
+
     if (isNaN(Number(event.target.value)) || event.target.value.length != 10) {
       this.setState({ isValidMobile: false });
     } else {
@@ -118,7 +115,6 @@ export default class Login extends React.Component {
   };
 
   verifyOtp = (event) => {
-    let navigate= useNavigate();
     event.preventDefault();
     const code = this.state.otp.join('');
     console.log(code);
@@ -128,11 +124,16 @@ export default class Login extends React.Component {
         // User signed in successfully.
         const user = result.user;
         console.log(JSON.stringify(user));
-        navigate('/User');
+        this.setState({
+          isValidUser: true,
+        });
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
-        console.log(error)
+        this.setState({
+          isValidUser: false,
+        });
+        console.log(error);
       });
   };
 
@@ -153,7 +154,6 @@ export default class Login extends React.Component {
     }
   };
 
- 
   render() {
     return (
       <div class="login-page d-flex justify-content-end align-items-center">
@@ -283,6 +283,7 @@ export default class Login extends React.Component {
             >
               Verify and Proceed
             </button>
+            {this.state.isValidUser && <Navigate to="/user" replace={true} />}
           </div>
         </div>
       </div>
