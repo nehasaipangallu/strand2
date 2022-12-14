@@ -16,7 +16,7 @@ export default function Header() {
             />
           </Navbar.Brand>
           <Nav className="me-auto nav-items">
-            <Nav.Link href="#health-insights">Health Insights</Nav.Link>
+            <Nav.Link href="#/home">Health Insights</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link href="#faq">Faq</Nav.Link>
             <Nav.Link href="#download">Download</Nav.Link>
