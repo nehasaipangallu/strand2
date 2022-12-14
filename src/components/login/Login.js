@@ -159,6 +159,7 @@ export default class Login extends React.Component {
       <div class="login-page d-flex justify-content-end align-items-center">
         <div id="sign-in-button"></div>
         <div class="login-page-container">
+          {/* Mobile number */}
           <div
             class="login-background flex-column justify-content-center"
             style={{
@@ -194,7 +195,7 @@ export default class Login extends React.Component {
               This is a danger alert—check it out!
             </Alert>
           </div>
-
+          {/* OTP */}
           <div
             class="otp-background flex-column justify-content-center"
             style={{
