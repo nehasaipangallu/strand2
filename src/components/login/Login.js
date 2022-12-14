@@ -167,7 +167,7 @@ export default class Login extends React.Component {
             }}
           >
             <h3 className="heading-log"> Continue with Phone Number</h3>
-            <h5 className="heading-log">Phone Number</h5>
+            <h5 className="heading-log-2">Phone Number</h5>
             <div class="mobile-input-container  form-control">
               <p class="country-code">+91</p>
               <input
