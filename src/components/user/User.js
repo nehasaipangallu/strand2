@@ -7,6 +7,7 @@ export default class User extends React.Component {
       <div class="user-page d-flex justify-content-center align-items-center">
         <div class="user-background  d-flex flex-column justify-content-center align-items-center">
           <h3> Please Select User</h3>
+          <button class="btn user-name-btn">Neha</button>
         </div>
       </div>
     );
