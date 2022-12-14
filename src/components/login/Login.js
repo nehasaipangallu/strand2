@@ -35,7 +35,7 @@ export default class Login extends React.Component {
   };
 
   configureCaptcha = () => {
-    auth.languageCode = 'in';
+    auth.languageCode = 'en';
     window.recaptchaVerifier = new RecaptchaVerifier(
       'sign-in-button',
       {
