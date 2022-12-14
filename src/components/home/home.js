@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home-page d-flex justify-content-end align-items-center">
       <div className="home-page-container">
-        <h3> Get Health Insights Right</h3>
+        <p className="heading"> Get Health Insights Right</p>
         <p className="para">
           Vivamus elementum dictum augue at fermentum. Proin non nisi at quam
           sollicitudin consectetur. Suspendisse tempus at diam at volutpat.

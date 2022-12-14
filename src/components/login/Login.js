@@ -166,8 +166,8 @@ export default class Login extends React.Component {
               display: !this.state.isOtpSent ? 'flex' : 'none',
             }}
           >
-            <h3> Continue with Phone Number</h3>
-            <h5>Phone Number</h5>
+            <h3 className="heading-log"> Continue with Phone Number</h3>
+            <h5 className="heading-log">Phone Number</h5>
             <div class="mobile-input-container  form-control">
               <p class="country-code">+91</p>
               <input

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Lobster&family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Lobster&family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
 .home-page {
   width: 100%;
   position: relative;
@@ -36,7 +40,8 @@
   padding: 0 5%;
 }
 .para {
-  font-size: 13px;
+  font-size: 16px;
+  font-family:'Baloo 2', cursive;
 }
 .btn-view {
   background: #f99d1b;
@@ -46,4 +51,15 @@
   height: 55px;
   color: white;
   font-size: 14px;
+}
+
+.heding{
+  font-family: 'Baloo 2', cursive !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-view{
+  font-size: 16px;
+  font-weight: 400; 
 }

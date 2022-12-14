@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Lobster&family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
 .header {
   width: 100%;
   height: 90px;
@@ -7,4 +10,17 @@
   justify-content: space-evenly;
   flex: auto;
   margin: 0 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.logo{
+  height: 60px;
+  width: auto;
+}
+
+.heading{
+  font-family: Baloo;
+  font-weight: 600;
+  
 }

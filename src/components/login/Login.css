@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Lobster&family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
 .login-page {
   width: 100%;
   position: relative;
@@ -91,6 +93,7 @@
   width: 80%;
   height: 50px;
   color: white;
+  font-family: Baloo;
 }
 
 .otp-box-container > input {
@@ -104,4 +107,8 @@
   border: 1px solid #000000;
   width: 80%;
   height: 45px;
+}
+
+.heading-log{
+
 }
