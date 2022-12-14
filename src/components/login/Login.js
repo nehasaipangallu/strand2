@@ -115,6 +115,7 @@ export default class Login extends React.Component {
   };
 
   verifyOtp = (event) => {
+    debugger;
     event.preventDefault();
     const code = this.state.otp.join('');
     console.log(code);
@@ -129,11 +130,12 @@ export default class Login extends React.Component {
         });
       })
       .catch((error) => {
+       
         // User couldn't sign in (bad verification code?)
         this.setState({
           isValidUser: false,
-        });
-        console.log(error);
+          });
+      console.log(error); 
       });
   };
 
@@ -285,10 +287,16 @@ export default class Login extends React.Component {
             >
               Verify and Proceed
             </button>
+            <div className="countdown-text">
+          <p>Time Remaining: 01:25</p>
+
+          <button style={{ color: "#FF5630" }}>Resend OTP</button>
+        </div>
+
             <Alert
               key="danger"
               variant="danger"
-              style={{ display: this.state.isValidUser ? 'block' : 'none' }}
+              style={{ display: this.state.isValidUser ? 'block':'none' }}
             > Otp is Not Valid </Alert>
             {this.state.isValidUser && <Navigate to="/user" replace={true} />}
           </div>
