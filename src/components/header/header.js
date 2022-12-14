@@ -9,7 +9,7 @@ export default function Header() {
     <header className="header">
       <Navbar bg="#0000" variant="light">
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand href="#/home">
             <img
               src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-2%20(1).svg?raw=true"
               className=""
