@@ -192,7 +192,7 @@ export default class Login extends React.Component {
               variant="danger"
               style={{ display: this.state.isValid ? 'none' : 'block' }}
             >
-              This is a danger alert—check it out!
+             Phone number is not Valid
             </Alert>
           </div>
           {/* OTP */}
@@ -277,6 +277,7 @@ export default class Login extends React.Component {
                 onKeyUp={(e) => this.inputfocus(e)}
               />
             </form>
+            
             <button
               class="verify-otp btn"
               onClick={this.verifyOtp}
@@ -284,6 +285,11 @@ export default class Login extends React.Component {
             >
               Verify and Proceed
             </button>
+            <Alert
+              key="danger"
+              variant="danger"
+              style={{ display: this.state.isValidUser ? 'block' : 'none' }}
+            > Otp is Not Valid </Alert>
             {this.state.isValidUser && <Navigate to="/user" replace={true} />}
           </div>
         </div>
