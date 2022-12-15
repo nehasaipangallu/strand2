@@ -8,9 +8,12 @@ import { Navigate } from 'react-router-dom';
 
 export default class Login extends React.Component {
   // navigate = useNavigate();
+  interval;
+  minutes = 1;
+  seconds = 30;
   constructor() {
     super();
-
+    this.interval = function () {};
     this.state = {
       isOtpSent: true,
       isValidMobile: false,
@@ -25,6 +28,7 @@ export default class Login extends React.Component {
       otp: [],
       isValid: true,
     };
+    this.countdown();
   }
 
   handleChange = (e) => {
@@ -83,6 +87,7 @@ export default class Login extends React.Component {
         // SMS sent. Prompt user to type the code from the message, then sign the
         window.confirmationResult = confirmationResult;
         this.setState({ isOtpSent: true });
+        this.countdown();
         console.log('OTP has been sent');
         // ...
       })
@@ -153,6 +158,24 @@ export default class Login extends React.Component {
         // document.getElementsByClassName('verify-otp')[0].focus();
       }
     }
+  };
+
+  countdown = () => {
+    // console.log(this.minutes, this.seconds);
+    debugger;
+    clearInterval(this.interval);
+    this.interval = setInterval(function () {
+      this.seconds -= 1;
+      if (this.minutes < 0) {
+        return;
+      } else if (this.seconds < 0 && this.minutes != 0) {
+        this.minutes -= 1;
+        this.seconds = 59;
+      }
+      if (this.minutes == 0 && this.seconds == 0) {
+        clearInterval(thisinterval);
+      }
+    }, 1000);
   };
 
   render() {
@@ -288,7 +311,9 @@ export default class Login extends React.Component {
             </button>
             <div className="d-flex justify-content-between">
               <button class="resend-otp-btn">Resend OTP</button>
-              <p class="countdown-text">Time Remaining: 01:25</p>
+              <p class="countdown-text">
+                Time Remaining: {this.minutes}:{this.seconds}
+              </p>
             </div>
 
             <Alert
