@@ -29,7 +29,6 @@ export default class Login extends React.Component {
       minutes: 1,
       seconds: 25,
     };
-    this.countdown();
   }
 
   handleChange = (e) => {
@@ -130,12 +129,12 @@ export default class Login extends React.Component {
         // User signed in successfully.
         const user = result.user;
         console.log(JSON.stringify(user));
+        window.localStorage.setItem('auth', true);
         this.setState({
           isValidUser: true,
         });
       })
       .catch((error) => {
-        debugger;
         // User couldn't sign in (bad verification code?)
         this.setState({
           isValidUser: false,
@@ -321,7 +320,9 @@ export default class Login extends React.Component {
                 class="resend-otp-btn"
                 onClick={this.resendOtp}
                 style={{
-                  visibility: this.state.isOtpTimerCompleted ? 'visible' : 'hidden',
+                  visibility: this.state.isOtpTimerCompleted
+                    ? 'visible'
+                    : 'hidden',
                 }}
               >
                 Resend OTP

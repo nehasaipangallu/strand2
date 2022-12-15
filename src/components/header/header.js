@@ -15,13 +15,33 @@ export default function Header() {
               className="logo"
             />
           </Navbar.Brand>
-          <Nav className="me-auto nav-items">
+          <Nav
+            className="me-auto nav-items"
+            activeKey="/home"
+            onSelect={(selectedKey, event) => console.log(`selected ${event}`)}
+          >
             <Nav.Link href="#/home">Health Insights</Nav.Link>
+
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link href="#faq">Faq</Nav.Link>
             <Nav.Link href="#download">Download</Nav.Link>
             <Nav.Link href="#articles">Articles</Nav.Link>
-            <Nav.Link href="#/login">Login</Nav.Link>
+            <Nav.Link
+              href="#/login"
+              style={{
+                display: window.localStorage.getItem('auth') ? 'block' : 'none',
+              }}
+            >
+              Login
+            </Nav.Link>
+            <Nav.Link
+              href="#/login"
+              style={{
+                display: window.localStorage.getItem('auth') ? 'block' : 'none',
+              }}
+            >
+              Logout
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
