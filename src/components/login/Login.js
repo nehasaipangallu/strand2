@@ -12,7 +12,7 @@ export default class Login extends React.Component {
     super();
 
     this.state = {
-      isOtpSent: false,
+      isOtpSent: true,
       isValidMobile: false,
       isValidOtp: false,
       mobile: '',
@@ -24,7 +24,6 @@ export default class Login extends React.Component {
       digit6: '',
       otp: [],
       isValid: true,
-     
     };
   }
 
@@ -287,16 +286,21 @@ export default class Login extends React.Component {
             >
               Verify and Proceed
             </button>
-            <div className="countdown-text">
-              <p>Time Remaining: 01:25</p>
-
-              <button style={{ color: '#FF5630' }}>Resend OTP</button>
+            <div className="d-flex justify-content-between">
+              <button class="resend-otp-btn">Resend OTP</button>
+              <p class="countdown-text">Time Remaining: 01:25</p>
             </div>
 
             <Alert
               key="danger"
               variant="danger"
-              style={{ display: this.state.isValidUser && this.state.isOtpSent ? 'block' : 'none' }}
+              className="otp-alert"
+              style={{
+                display:
+                  this.state.isValidUser && this.state.isOtpSent
+                    ? 'block'
+                    : 'block',
+              }}
             >
               {' '}
               Otp is Not Valid{' '}

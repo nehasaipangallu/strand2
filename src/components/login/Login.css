@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
 
-
 .login-page {
   width: 100%;
   position: relative;
@@ -36,11 +35,9 @@
 
 .login-page-container {
   width: 40%;
-  height: 70%;
+  height: 75%;
   padding: 0 5%;
 }
-
-
 
 .login-background,
 .otp-background {
@@ -112,16 +109,32 @@
   height: 45px;
 }
 
-.heading-log{
-font-family: 'Baloo 2';
-font-weight: 400;
+.heading-log {
+  font-family: 'Baloo 2';
+  font-weight: 400;
 }
 
-.heading-log-2{
+.heading-log-2 {
   font-family: 'Open Sans';
   font-size: 22px;
 }
 
-.btn{
+.btn {
   font-family: 'Open Sans';
+}
+
+.resend-otp-btn {
+  color: #06377b;
+  background: no-repeat;
+  border: none;
+  font-size: 12px;
+}
+.countdown-text {
+  font-size: 12px;
+}
+.otp-alert {
+  border: 1px solid #fb848e;
+  background-color: #f8d7da;
+  color: #842029;
+  font-size: 16px;
 }
