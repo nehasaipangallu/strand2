@@ -10,14 +10,18 @@ export default function Health(){
            </div>
          
         <div className="p-2 img-cap">
-          <ul>
+          <ul className ="un-list">
             <li>
           <a href="#">
             <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
             Adult Onset
           </a>
            </li>
-           <div className="next-nav"></div>
+           <div className="next-nav">
+           <div className="next-nav-1"></div>
+           <div className="next-nav-2"></div>
+           <div className="next-nav-3"></div>
+           </div>
            </ul>
           </div>
       

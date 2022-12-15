@@ -46,10 +46,38 @@
   font-size: 15px;
 }
 
-.flex-cont > .img-cap  .next-nav {
+  .next-nav-1 {
   display: flex;
   width: 100px;
   height: 100px;
   position: absolute;
   background-color: red;
+  left:105%;
+  top:0;
 }
+
+ .img-cap >.un-list {
+   position: relative;
+   height:100%;
+   width: 100%;
+ }
+ .next-nav-2{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  left:105%;
+  top: 101px;
+  position: absolute;
+ 
+ }
+
+ .next-nav-3{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  left:105%;
+  top:202px;
+ position: absolute;
+ }
