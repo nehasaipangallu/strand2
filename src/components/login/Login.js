@@ -9,15 +9,14 @@ import { Navigate } from 'react-router-dom';
 export default class Login extends React.Component {
   // navigate = useNavigate();
   interval;
-  minutes = 1;
-  seconds = 30;
   constructor() {
     super();
     this.interval = function () {};
     this.state = {
-      isOtpSent: true,
+      isOtpSent: false,
       isValidMobile: false,
       isValidOtp: false,
+      isOtpTimerCompleted: false,
       mobile: '',
       digit1: '',
       digit2: '',
@@ -27,6 +26,8 @@ export default class Login extends React.Component {
       digit6: '',
       otp: [],
       isValid: true,
+      minutes: 1,
+      seconds: 25,
     };
     this.countdown();
   }
@@ -161,21 +162,27 @@ export default class Login extends React.Component {
   };
 
   countdown = () => {
-    // console.log(this.minutes, this.seconds);
-    debugger;
     clearInterval(this.interval);
-    this.interval = setInterval(function () {
-      this.seconds -= 1;
-      if (this.minutes < 0) {
+    this.interval = setInterval(() => {
+      this.setState({ seconds: this.state.seconds - 1 });
+      if (this.state.seconds - 1 < 0 && this.state.minutes == 0) {
         return;
-      } else if (this.seconds < 0 && this.minutes != 0) {
-        this.minutes -= 1;
-        this.seconds = 59;
+      } else if (this.state.seconds - 1 < 0 && this.state.minutes > 0) {
+        this.setState({
+          minutes: 0,
+          seconds: 59,
+        });
       }
-      if (this.minutes == 0 && this.seconds == 0) {
-        clearInterval(thisinterval);
+      if (this.state.minutes == 0 && this.state.seconds - 1 <= 0) {
+        this.setState({ isOtpTimerCompleted: true });
+        clearInterval(this.interval);
       }
     }, 1000);
+  };
+
+  resendOtp = (e) => {
+    this.setState({ isOtpTimerCompleted: false, minutes: 1, seconds: 30 });
+    this.sendOtp(e);
   };
 
   render() {
@@ -310,9 +317,17 @@ export default class Login extends React.Component {
               Verify and Proceed
             </button>
             <div className="d-flex justify-content-between">
-              <button class="resend-otp-btn">Resend OTP</button>
+              <button
+                class="resend-otp-btn"
+                onClick={this.resendOtp}
+                style={{
+                  visibility: this.state.isOtpTimerCompleted ? 'visible' : 'hidden',
+                }}
+              >
+                Resend OTP
+              </button>
               <p class="countdown-text">
-                Time Remaining: {this.minutes}:{this.seconds}
+                Time Remaining: {this.state.minutes}:{this.state.seconds}
               </p>
             </div>
 
@@ -324,7 +339,7 @@ export default class Login extends React.Component {
                 display:
                   this.state.isValidUser && this.state.isOtpSent
                     ? 'block'
-                    : 'block',
+                    : 'none',
               }}
             >
               {' '}
