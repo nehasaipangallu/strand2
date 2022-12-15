@@ -11,19 +11,19 @@ export default class User extends React.Component {
           className="btn user-name-btn" 
           onClick={(e) => {
             e.preventDefault();
-            window.location.href='#/dashboard';
+            window.location.href='#/health-insight';
             }}
             >Virat</button>
           <button class="btn user-name-btn"
            onClick={(e) => {
             e.preventDefault();
-            window.location.href='#/dashboard';
+            window.location.href='#/health-insight';
             }}
           >Hardik</button>
           <button class="btn user-name-btn"
            onClick={(e) => {
             e.preventDefault();
-            window.location.href='#/dashboard';
+            window.location.href='#/health-insight';
             }}>Dhoni</button>
         </div>
       </div>
