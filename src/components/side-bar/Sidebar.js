@@ -3,6 +3,7 @@ import './Sidebar.css';
 
 export default function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState('');
 
   // document.addEventListener('mouseup', function (e) {
   //   var container = document.getElementById('slideSubMenu');

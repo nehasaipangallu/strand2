@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import Header from './components/header/header';
@@ -15,10 +15,16 @@ import {
   BrowserRouter,
   Switch,
   HashRouter,
+  useLocation,
 } from 'react-router-dom';
 
 export default function App() {
+  const [path, setPath] = useState('/');
   const isLoggedin = localStorage.getItem('isLoggedin');
+  useEffect(() => {
+    //const location = useLocation();
+    // alert(location.pathname);
+  });
 
   return (
     <div className="container-fluid p-0">
