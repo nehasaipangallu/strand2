@@ -13,18 +13,18 @@ export default function Health() {
         </div>
       </div>
       <div className="d-flex flex-column body-para">
-        <div className="p-2">
-          <h3 className="c1">What are inherited cancers?</h3>
-          <p className="c1">
+        <div className="section1">
+          <h2 className="c1 pt-4">What are inherited cancers?</h2>
+          <p className="c1 pb-4">
             Cancer caused by changes in the genetic material or L sperm or egg
             is called inherited cancer, R predisposes an individual to develop
             cancers later in their life. This type of mutation accounts for
             about 5% to 20% of all cancers
           </p>
         </div>
-        <div className="P-2">
-          <h5>Types of genes linked to cancer</h5>
-          <p>
+        <div className="section1">
+          <h2 className="c1">Types of genes linked to cancer</h2>
+          <p className="c1 pb-4">
             Many of the genes that contribute to cancer development fall into
             broad categories :
           </p>
