@@ -5,6 +5,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
+  const isLoggedin = localStorage.getItem('isLoggedin');
+
+  function logout() {
+    localStorage.clear();
+    window.location.reload(false);
+  }
   return (
     <header className="header">
       <Navbar bg="#0000" variant="light">
@@ -26,22 +32,12 @@ export default function Header() {
             <Nav.Link href="#faq">Faq</Nav.Link>
             <Nav.Link href="#download">Download</Nav.Link>
             <Nav.Link href="#articles">Articles</Nav.Link>
-            <Nav.Link
-              href="#/login"
-              style={{
-                display: window.localStorage.getItem('auth') ? 'block' : 'none',
-              }}
-            >
-              Login
-            </Nav.Link>
-            <Nav.Link
-              href="#/login"
-              style={{
-                display: window.localStorage.getItem('auth') ? 'block' : 'none',
-              }}
-            >
-              Logout
-            </Nav.Link>
+            {localStorage.getItem('isLoggedin') === null && (
+              <Nav.Link href="#/login">Login</Nav.Link>
+            )}
+            {localStorage.getItem('isLoggedin') === 'true' && (
+              <Nav.Link onClick={() => logout()}>Logout</Nav.Link>
+            )}
           </Nav>
         </Container>
       </Navbar>

@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
 import { auth } from '../../firebase';
@@ -129,7 +129,7 @@ export default class Login extends React.Component {
         // User signed in successfully.
         const user = result.user;
         console.log(JSON.stringify(user));
-        window.localStorage.setItem('auth', true);
+        window.localStorage.setItem('isLoggedin', 'true');
         this.setState({
           isValidUser: true,
         });
