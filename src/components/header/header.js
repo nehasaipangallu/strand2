@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="header">
       <Navbar bg="#0000" variant="light">
-        <Container>
+        <Container fluid>
           <Navbar.Brand href="#/home">
             <img
               src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-2%20(1).svg?raw=true"

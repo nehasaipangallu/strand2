@@ -4,11 +4,12 @@ import { signInWithPhoneNumber, RecaptchaVerifier } from 'firebase/auth';
 import { auth } from '../../firebase';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
-import { Navigate } from 'react-router-dom';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router';
+import { Navigate } from "react-router-dom";
 
- class Login extends React.Component {
-  
+import { Link } from 'react-router-dom';
+
+class Login extends React.Component {
   //  navigate = useNavigate();
   interval;
   constructor(props) {
@@ -135,10 +136,6 @@ import {withRouter} from 'react-router-dom';
         this.setState({
           isValidUser: true,
         });
-
-
-        window.location.reload(false);
-
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
@@ -353,7 +350,6 @@ import {withRouter} from 'react-router-dom';
               Otp is Not Valid{' '}
             </Alert>
             {this.state.isValidUser && <Navigate to="/user" replace={true} />}
-            {/* {this.props.history.push('#/user')} */}
           </div>
         </div>
       </div>

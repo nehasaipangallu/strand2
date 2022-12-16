@@ -3,53 +3,62 @@ import './Sidebar.css';
 
 export default function Sidebar() {
   return (
-    <div className="health-page">
-      <div className="d-flex flex-column mb-3 flex-cont">
-        <div className="p-2 health-in">Health Insight</div>
+    <div className="sideBar">
+      <div className="sidebarInner">
+        <h2 className="sidebarHero">Health Insight</h2>
 
-        <div className="p-2 img-cap">
-          <ul className="un-list">
-            <li>
-              <a href="#">
-                <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
-                Adult Onset
+        <nav className="sideBarNav navbar">
+          {/* One */}
+          <ul className="navbar-nav">
+            <li class="nav-item nav-item dropdown">
+              <a href="#" className="nav-link">
+                <div className="navIcon">
+                  <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
+                </div>
+                <div className="navLabel">Adult Onset</div>
               </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
             </li>
-            <div className="next-nav">
-              <div className="next-nav-1">Cancer</div>
-              <div className="next-nav-2">Cardio</div>
-              <div className="next-nav-3">Metabolic</div>
-            </div>
           </ul>
-        </div>
 
-        <div className="p-2 img-cap">
           <ul>
             <li>
               <a href="#">
-                <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spreading%201.svg?raw=true" />
-                Carrier Risk
+                <div className="navIcon">
+                  <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spreading%201.svg?raw=true" />
+                </div>
+                <div className="navLabel">Career Risk</div>
               </a>
             </li>
           </ul>
-        </div>
-        <div className="p-2 img-cap">
+
           <ul>
             <li>
               <a href="#">
-                <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-14%202.svg?raw=true" />
-                Pharmacogenomics
+                <div className="navIcon">
+                  <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-14%202.svg?raw=true" />
+                </div>
+                <div className="navLabel">Pharmacogenomics</div>
               </a>
             </li>
           </ul>
-        </div>
-        <div className="p-2 img-cap">
-          <ul>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
-        </div>
+        </nav>
       </div>
     </div>
   );
