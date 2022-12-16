@@ -9,6 +9,7 @@ export default function Header() {
 
   function logout() {
     localStorage.clear();
+    window.location.replace('#/login');
     window.location.reload(false);
   }
   return (

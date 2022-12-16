@@ -133,6 +133,7 @@ export default class Login extends React.Component {
         this.setState({
           isValidUser: true,
         });
+        window.location.reload(false);
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
