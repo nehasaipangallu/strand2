@@ -22,6 +22,7 @@ export default function Health() {
             about 5% to 20% of all cancers
           </p>
         </div>
+        
         <div className="section1">
           <h2 className="c1">Types of genes linked to cancer</h2>
           <p className="c1 pb-4">
