@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   //  navigate = useNavigate();
+  // changed
   interval;
   constructor(props) {
     super(props);
