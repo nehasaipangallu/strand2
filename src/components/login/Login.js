@@ -5,12 +5,14 @@ import { auth } from '../../firebase';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
 import { Navigate } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
-export default class Login extends React.Component {
-  // navigate = useNavigate();
+ class Login extends React.Component {
+  
+  //  navigate = useNavigate();
   interval;
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.interval = function () {};
     this.state = {
       isOtpSent: false,
@@ -133,7 +135,10 @@ export default class Login extends React.Component {
         this.setState({
           isValidUser: true,
         });
+
+
         window.location.reload(false);
+
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
@@ -348,9 +353,11 @@ export default class Login extends React.Component {
               Otp is Not Valid{' '}
             </Alert>
             {this.state.isValidUser && <Navigate to="/user" replace={true} />}
+            {/* {this.props.history.push('#/user')} */}
           </div>
         </div>
       </div>
     );
   }
 }
+export default Login;
