@@ -82,3 +82,8 @@ h1 {
   font-size: 26px;
   font-weight: 600;
 }
+
+.pageWrapper {
+  height: calc(100vh - 90px);
+  overflow: auto;
+}

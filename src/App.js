@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <div className="container-fluid p-0">
-      <div className="row">
+      <div className="row p-0 m-0">
         <HashRouter>
           <Header />
           <div className="col-md-2 p-0">

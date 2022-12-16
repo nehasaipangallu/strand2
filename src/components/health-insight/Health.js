@@ -42,9 +42,7 @@ export default function Health() {
                   alt="First slide"
                 />
               </div>
-
-              {/* <Carousel.Caption> */}
-              <div className="p-2 carousel-cap">
+              <div className="p-5 carousel-cap">
                 <h3>Tumor suppressor genes</h3>
                 <p>
                   These are protective genes under normal circumstances, and
@@ -58,7 +56,6 @@ export default function Health() {
                   pancreatic cancer and melanoma in women and men.
                 </p>
               </div>
-              {/* </Carousel.Caption> */}
             </div>
           </Carousel.Item>
 
@@ -70,15 +67,13 @@ export default function Health() {
                   alt="Second slide"
                 />
               </div>
-              {/* <Carousel.Caption> */}
-              <div className="p-2 carousel-cap">
+              <div className="p-5 carousel-cap">
                 <h3>Oncogenes</h3>
                 <p>
                   These genes actively turn a healthy cell into a cancerous cell
                   Mutations in these genes are NOT known to be inherited.
                 </p>
               </div>
-              {/* </Carousel.Caption> */}
             </div>
           </Carousel.Item>
           <Carousel.Item>
@@ -89,8 +84,8 @@ export default function Health() {
                   alt="Third slide"
                 />
               </div>
-              {/* <Carousel.Caption> */}
-              <div className="p-2 carousel-cap">
+
+              <div className="p-5 carousel-cap">
                 <h3>DNA Repair Genes</h3>
                 <p>
                   These genes fix mistakes made when DNA is copied. Many of them
@@ -106,7 +101,6 @@ export default function Health() {
                   mutations
                 </p>
               </div>
-              {/* </Carousel.Caption> */}
             </div>
           </Carousel.Item>
         </Carousel>
