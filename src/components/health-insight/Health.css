@@ -44,45 +44,28 @@
   font-size: 20px;
   
 }
-.car-item{
-  background-color: white;
-  z-index:1;
-  
+.carousel-health{
+  height:200px;
+  width: 100%;
+  right: 40px;
 }
-.car-row{
+.flex-car{
   background-color: white;
-  z-index: 1;
-  width:800px
-}
-  .car-img{
-  width:600px;
-  background-color:white;
-  z-index:1;
   color: black;
-
-}
-
- .car-row-2 {
-  color: black;
-  background-color: white;
   z-index: 1;
 }
 
-.car-img-second{
-  width:600px;
-  background-color:white;
-  z-index:1;
-  color: black;
-}
-
-.car-row-sec{
-  color: black;
+ .car-img {
+  height:400px;
+  width:100px;
   background-color: white;
+ 
   z-index: 1;
 }
 
-.car-row-second{
+.carousel-cap{
   color: black;
-  background-color: white;
-  z-index: 1;
+  left: 10px;
+  font-size: 15px;
+  position: static;
 }

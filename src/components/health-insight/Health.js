@@ -1,5 +1,6 @@
 import React from 'react';
 import './Health.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 export default function Health(){
   return(
@@ -21,54 +22,65 @@ export default function Health(){
          <h5>Types of genes linked to cancer</h5>
          <p>Many of the genes that contribute to cancer development fall into broad categories :</p>
        </div>
-       <div className="p-2 carousel-health">
-       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div className="d-flex flex-row mb-3 car-item">
-        <div className="p-2 car-row">
-       <img class="d-block w-100 car-img" src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12495-300%202.svg?raw=true" alt="First slide" />
-       </div> 
-       <div className="p-2 car-row-2">
-         <h4>Tumor suppressor genes</h4>
-         <p>These are protective genes under normal circumstances, and they limit cell growth. When a tumor suppressor gene mutates, control on cell growth is lost, resulting in the formation of a tumor. Examples of tumor suppres sor genes include BRCA1, BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2 genes increase a wom ar's risk of developing hereditary breast or ovarian cancers and a man's risk of developing hereditary prostate or breast cancers. They also increase the risk of pancreatic cancer and melanoma in women and men.</p>
-         </div>
-       
-      </div>
-    </div>
-    <div class="carousel-item">
-     <div className="d-flex flex-row mb-3 car-item-2">
-        <div className="p-2 car-row-sec">
-       <img class="d-block w-100 car-img-second" src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12494-150%202.svg?raw=true" alt="First slide" />
-       </div> 
-       <div className="p-2 car-row-second">
-         <h4>Oncogenes</h4>
-         <p>These genes actively turn a healthy cell into a cancerous cell Mutations in these genes are NOT known to be inherited.</p>
-         </div>
-       
-      </div>
-    </div>
-    <div class="carousel-item">
-      {/* <img class="d-block w-100" src="..." alt="Third slide"> */}
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-         
        </div>
+       <div className ="carousel-health">
+       <Carousel>
+        
+      <Carousel.Item>
+      <div className ="d-flex flex-row mb-3 flex-car ">
+        <div className="p-2 car-img-item">
+        <img
+          className="d-block w-100 car-img"
+          src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12495-300%202.svg?raw=true"
+          alt="First slide"
+        />
+        </div>
+
+        
+        <Carousel.Caption>
+        <div className="p-2 carousel-cap">
+          <h3>Tumor suppressor genes</h3>
+          <p>These are protective genes under normal circumstances, and they limit cell growth. When a tumor suppressor gene mutates, control on cell growth is lost, resulting in the formation of a tumor. Examples of tumor suppres sor genes include BRCA1, BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2 genes increase a wom ar's risk of developing hereditary breast or ovarian cancers and a man's risk of developing hereditary prostate or breast cancers. They also increase the risk of pancreatic cancer and melanoma in women and men.</p>
+          </div>
+        </Carousel.Caption>
+       
+        </div>
+      </Carousel.Item>
+      
+      <Carousel.Item>
+      <div className ="d-flex flex-row mb-3 flex-car ">
+        <div className="p-2 car-img-item">
+        <img
+          className="d-block w-100"
+          src="https://github.com/nehasaipangallu/strand2/commit/ff806c1b8762eed14b1b1596e8b3373032070cd8?raw=true"
+          alt="Second slide"
+        />
+        </div>
+        <Carousel.Caption>
+        <div className="p-2 carousel-cap">
+          <h3>Oncogenes</h3>
+          <p>These genes actively turn a healthy cell into a cancerous cell Mutations in these genes are NOT known to be inherited.</p>
+          </div>
+        </Carousel.Caption>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="holder.js/800x400?text=Third slide&bg=20232a"
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
     </div>
     </div>
+    
   )
 }
