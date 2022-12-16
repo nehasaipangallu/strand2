@@ -1,20 +1,21 @@
 import React from 'react';
 import './Health.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Table from 'react-bootstrap/Table';
 
 export default function Health() {
   return (
-    <div className="healthPage">
-      <div class="d-flex p-2 img-box">
+    <div className="innerWrapper">
+      <div class="d-flex p-2 img-box bdrRad1">
         <div class="d-flex flex-row img-captions">
           <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/aza%203.svg?raw=true" />
           <div class="p-2">Your Report Is Ready</div>
         </div>
       </div>
       <div className="d-flex flex-column body-para">
-        <div className="P-2">
-          <h5>What are inherited cancers?</h5>
-          <p>
+        <div className="p-2">
+          <h3 className="c1">What are inherited cancers?</h3>
+          <p className="c1">
             Cancer caused by changes in the genetic material or L sperm or egg
             is called inherited cancer, R predisposes an individual to develop
             cancers later in their life. This type of mutation accounts for
@@ -82,25 +83,139 @@ export default function Health() {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-          <div className="d-flex flex-row mb-3 flex-car ">
+            <div className="d-flex flex-row mb-3 flex-car ">
               <div className="p-2 car-img-item">
-            <img
-              className="d-block w-100"
-              src="https://github.com/nehasaipangallu/strand2/blob/main/public/fonc-08-00015-g001%202%20(1).svg?raw=true"
-              alt="Third slide"
-            />
-           </div>
-            <Carousel.Caption>
-            <div className="p-2 carousel-cap">
-              <h3>DNA Repair Genes</h3>
-              <p>
-              These genes fix mistakes made when DNA is copied. Many of them also function as tumor suppressor genes. Eg BRCA1, BRCAZ and p53 are all DNA repair genes. It is normal that DNA is copied every time a cell divides. However, If a person has an error in a DNA repair gene, mistakes made during DNA copying remain uncorrected. Then, the mistakes become mutations. These mutations may eventually lead to cancer, particu larly mutations in tumor suppressor genes or oncogenes. Mutations in DNA repair genes may be inherited or acquired Lynch syndrome is an example of the inherited kind. BRCAT, BRCA2, and p53 mutations
-              </p>
+                <img
+                  className="d-block w-100"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/fonc-08-00015-g001%202%20(1).svg?raw=true"
+                  alt="Third slide"
+                />
               </div>
-            </Carousel.Caption>
+              <Carousel.Caption>
+                <div className="p-2 carousel-cap">
+                  <h3>DNA Repair Genes</h3>
+                  <p>
+                    These genes fix mistakes made when DNA is copied. Many of
+                    them also function as tumor suppressor genes. Eg BRCA1,
+                    BRCAZ and p53 are all DNA repair genes. It is normal that
+                    DNA is copied every time a cell divides. However, If a
+                    person has an error in a DNA repair gene, mistakes made
+                    during DNA copying remain uncorrected. Then, the mistakes
+                    become mutations. These mutations may eventually lead to
+                    cancer, particu larly mutations in tumor suppressor genes or
+                    oncogenes. Mutations in DNA repair genes may be inherited or
+                    acquired Lynch syndrome is an example of the inherited kind.
+                    BRCAT, BRCA2, and p53 mutations
+                  </p>
+                </div>
+              </Carousel.Caption>
             </div>
           </Carousel.Item>
         </Carousel>
+      </div>
+      <div>
+        <h4>Susceptibility Genes in Hereditary Cancer</h4>
+        <div className="d-flex flex-row mb-3">
+          <div className="p-2 bar-box">
+            <img
+              className="bar-img"
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/image%2012.svg?raw=true"
+            />
+          </div>
+          <div className="p-2 bar-box-2">
+            <h2>
+              High Penetrant Cancer Susceptibility Genes in Common Cancers
+            </h2>
+            <Table responsive="sm">
+              <thead className="table-cont">
+                <tr>
+                  <td>Malignancy</td>
+                  <td>High Penetrant Cancer Susceptibility Genes</td>
+                </tr>
+                <tr>
+                  <td>Breast Cancer</td>
+                  <td>BRCA1, BRCA2, p53, PTEN, CDH1</td>
+                </tr>
+                <tr>
+                  <td>Colorectal Cancer</td>
+                  <td>MLH1, MSH2, MSH6, PMS2, MYH, APC, STK11</td>
+                </tr>
+                <tr>
+                  <td>Ovarian Cancer</td>
+                  <td>BRCA1, BRCA2, MLH1, MSH2, MSH6, PMS2, P53</td>
+                </tr>
+                <tr>
+                  <td>Prostate Cancer</td>
+                  <td>BRCA2, RNASEL ELAC2, MSR1</td>
+                </tr>
+                <tr>
+                  <td>Pancreatic Cancer</td>
+                  <td>BRCA2, STK11/LKB1, PALB2, PRSS1, SPINKKI, CDKN2A</td>
+                </tr>
+              </thead>
+            </Table>
+          </div>
+        </div>
+      </div>
+      <div className="d-flex flex-column mb-3">
+        <div className="p-2">
+          <h2>Other Hereditary Mutations</h2>
+          <p>
+            In Case of familisal syndrome, the risk of developing cancer is even
+            greater without timely intervention.
+          </p>
+          <div className="d-flex flex-row mb-3">
+            <div className="p-2">
+              <ul>
+                <li>Familial Adenomatous Polyposis-nearly 100%</li>
+              </ul>
+            </div>
+            <div className="p-2">
+              <ul>
+                <li>MUTYH- associated polyposis- 80-90% </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="p-2">
+          <Carousel>
+            <Carousel.Item>
+              <div className="d-flex flex-row mb-3 carousel-2">
+                <div className="p-2 carousel-2-flex">
+                  <img
+                    className="d-block w-100 carousel-2-img"
+                    src="https://github.com/nehasaipangallu/strand2/blob/main/public/lynch-syndrome-101-what-you-need-to-know-722x406%201.svg?raw=true"
+                    alt="First slide"
+                  />
+                </div>
+                <Carousel.Caption>
+                  <div className="p-2 carousel-2-cap">
+                    <h3>Eg: Lynch syndrome</h3>
+                    <p>
+                      Lynch syndrome is a type of inherited cancer syndrome
+                      associated with a genetic predisposition to different
+                      cancer types. This means people with Lynch syndrome have a
+                      higher risk of certain types of cancer. Lynch Syndrome is
+                      also known as her non-polyposis colorectal cancer (HNPCC).
+                    </p>
+                  </div>
+                </Carousel.Caption>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="holder.js/800x400?text=Second slide&bg=282c34"
+                alt="Second slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </div>
       </div>
     </div>
   );

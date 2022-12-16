@@ -21,24 +21,30 @@ export default function App() {
   const isLoggedin = localStorage.getItem('isLoggedin');
 
   return (
-    <div className="row">
-      <HashRouter>
-        <Header />
-        <div className="col-md-2 p-0">
-          {isLoggedin == 'true' && <Sidebar />}
-        </div>
-        <div className="col-md-10 p-0">
-          <div className="pageWrapper">
-            <Routes>
-              <Route exact path="/" element={<Home />}></Route>
-              <Route exact path="/home" element={<Home />}></Route>
-              <Route exact path="/login" element={<Login />}></Route>
-              <Route exact path="/user" element={<User />}></Route>
-              <Route exact path="/health-insight" element={<Health />}></Route>
-            </Routes>
+    <div className="container-fluid p-0">
+      <div className="row">
+        <HashRouter>
+          <Header />
+          <div className="col-md-2 p-0">
+            {isLoggedin == 'true' && <Sidebar />}
           </div>
-        </div>
-      </HashRouter>
+          <div className="col-md-10 p-0">
+            <div className="pageWrapper">
+              <Routes>
+                <Route exact path="/" element={<Home />}></Route>
+                <Route exact path="/home" element={<Home />}></Route>
+                <Route exact path="/login" element={<Login />}></Route>
+                <Route exact path="/user" element={<User />}></Route>
+                <Route
+                  exact
+                  path="/health-insight"
+                  element={<Health />}
+                ></Route>
+              </Routes>
+            </div>
+          </div>
+        </HashRouter>
+      </div>
     </div>
   );
 }
