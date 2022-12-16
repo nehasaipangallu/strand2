@@ -36,7 +36,6 @@
   width:100%;
   background-color:#06377B;
   font-size: 10px;
-  position: absolute;
   padding-top: 20px;
   
 }
@@ -44,4 +43,46 @@
 .body-para{
   font-size: 20px;
   
+}
+.car-item{
+  background-color: white;
+  z-index:1;
+  
+}
+.car-row{
+  background-color: white;
+  z-index: 1;
+  width:800px
+}
+  .car-img{
+  width:600px;
+  background-color:white;
+  z-index:1;
+  color: black;
+
+}
+
+ .car-row-2 {
+  color: black;
+  background-color: white;
+  z-index: 1;
+}
+
+.car-img-second{
+  width:600px;
+  background-color:white;
+  z-index:1;
+  color: black;
+}
+
+.car-row-sec{
+  color: black;
+  background-color: white;
+  z-index: 1;
+}
+
+.car-row-second{
+  color: black;
+  background-color: white;
+  z-index: 1;
 }
