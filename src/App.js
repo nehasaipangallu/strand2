@@ -31,10 +31,17 @@ export default function App() {
       <div className="row p-0 m-0">
         <HashRouter>
           <Header />
-          <div className="col-md-2 p-0">
+          <div
+            className="col-md-2 p-0"
+            style={{ display: isLoggedin == 'true' ? 'block' : 'none' }}
+          >
             {isLoggedin == 'true' && <Sidebar />}
           </div>
-          <div className="col-md-10 p-0">
+          <div
+            className={`p-0 ${
+              isLoggedin == 'true' ? 'col-md-10' : 'col-md-12'
+            }`}
+          >
             <div className="pageWrapper">
               <Routes>
                 <Route exact path="/" element={<Home />}></Route>
