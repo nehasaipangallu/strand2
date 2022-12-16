@@ -5,7 +5,8 @@ import Header from './components/header/header';
 import Home from './components/home/home';
 import Login from './components/login/Login';
 import User from './components/user/User';
-import Health from'./components/health-insight/Health';
+// import Health from'./components/health-insight/';
+import Health from'.components/health-insight/Health';
 import {
   Route,
   Routes,
@@ -24,7 +25,7 @@ export default function App() {
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/user" element={<User />}></Route>
-           <Route exact path="/health-insight" element ={< Health />}></Route> 
+           <Route exact path="/health-insight" element ={< Health />}></Route>  
         </Routes>
       </HashRouter>
     </div>
