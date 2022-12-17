@@ -37,10 +37,10 @@
 .search-text {
   height: 33px;
   width: 245px;
-  left: 1234px;
-  top: 302px;
   border-radius: 2px;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
   outline: none;
+  font-size: 14px;
+  color: #898989;
 }
