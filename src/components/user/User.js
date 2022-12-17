@@ -8,23 +8,32 @@ export default class User extends React.Component {
         <div class="user-background  d-flex flex-column justify-content-center align-items-center">
           <h3> Please Select User</h3>
           <button
-          className="btn user-name-btn" 
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href='#/health-insight';
+            className="btn user-name-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '#/adult-onset';
             }}
-            >Virat</button>
-          <button class="btn user-name-btn"
-           onClick={(e) => {
-            e.preventDefault();
-            window.location.href='#/health-insight';
+          >
+            Virat
+          </button>
+          <button
+            class="btn user-name-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '#/adult-onset';
             }}
-          >Hardik</button>
-          <button class="btn user-name-btn"
-           onClick={(e) => {
-            e.preventDefault();
-            window.location.href='#/health-insight';
-            }}>Dhoni</button>
+          >
+            Hardik
+          </button>
+          <button
+            class="btn user-name-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '#/adult-onset';
+            }}
+          >
+            Dhoni
+          </button>
         </div>
       </div>
     );
