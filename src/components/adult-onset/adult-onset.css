@@ -1,2 +1,8 @@
 .adult-onset {
 }
+
+.adult-onset .container-1 {
+  background: white;
+  height: 500px;
+  border-radius: 5px;
+}
