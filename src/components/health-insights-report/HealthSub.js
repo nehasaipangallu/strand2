@@ -1,11 +1,20 @@
 import React from 'react';
 import './HealthSub.css';
 import Table from 'react-bootstrap/Table';
+import Sidepanel from '../../components/side-panel/side-panel';
 
 export default function HealthSub() {
   return (
     <div className="d-flex flex-column mb-3 ">
-      <button className="btn btn-download align-self-end m-3">Download Report</button>
+      <Sidepanel />
+      <button className="btn btn-download align-self-end m-3">
+        Download Report{' '}
+        <img
+          alt=""
+          class="icon-download"
+          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
+        />
+      </button>
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered>
           <thead>

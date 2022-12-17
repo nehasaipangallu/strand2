@@ -1,0 +1,8 @@
+.side-panel {
+  height: Calc(100% - 90px);
+  width: 320px;
+  position: fixed;
+  right: 0;
+  top:90px;
+  background-color: #f5f4f4;
+}
