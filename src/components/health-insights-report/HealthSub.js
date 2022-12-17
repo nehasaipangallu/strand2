@@ -5,6 +5,7 @@ import Table from 'react-bootstrap/Table';
 export default function HealthSub() {
   return (
     <div className="d-flex flex-column mb-3 ">
+      <button className="btn btn-download align-self-end m-3">Download Report</button>
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered>
           <thead>
