@@ -3,6 +3,44 @@
   width: 320px;
   position: fixed;
   right: 0;
-  top:90px;
+  top: 90px;
   background-color: #f5f4f4;
+  font-family: 'Open Sans';
+}
+
+.side-panel * {
+  font-family: 'Open Sans';
+}
+
+.side-panel .side-panel-heading {
+  font-weight: 700;
+  color: #7a7a7a;
+}
+
+.side-panel .heading {
+  color: #b60a02;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.side-panel .heading-2 {
+  color: #b1b1b1;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.side-panel p {
+  color: #898989;
+  font-size: 13px;
+}
+
+.search-text {
+  height: 33px;
+  width: 245px;
+  left: 1234px;
+  top: 302px;
+  border-radius: 2px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  outline: none;
 }
