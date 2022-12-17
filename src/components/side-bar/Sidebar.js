@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState('');
+  const navigate = useNavigate();
+
+  function onMenuClick(clickedMenuName) {
+    setSelectedMenu(clickedMenuName);
+  }
+
+  function onChildMenuClick(location) {
+    setMenuOpen(false);
+    navigate(location);
+  }
 
   // document.addEventListener('mouseup', function (e) {
   //   var container = document.getElementById('slideSubMenu');
@@ -20,7 +31,11 @@ export default function Sidebar() {
         <nav className="sideBarNav">
           {/* One */}
           <ul>
-            <li class="position-relative subMenu">
+            <li
+              class="position-relative subMenu"
+              onClick={() => onMenuClick('adult-onset')}
+              name="adult-onset"
+            >
               <a onClick={() => setMenuOpen(true)} className="nav-link">
                 <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
@@ -31,9 +46,12 @@ export default function Sidebar() {
               {menuOpen && (
                 <ul className="slideSubMenu" id="slideSubMenu">
                   <li>
-                    <a onClick={() => setMenuOpen(true)} className="nav-link">
+                    <a
+                      onClick={() => onChildMenuClick('health-insight-cancer')}
+                      className="nav-link"
+                    >
                       <div className="navIcon">
-                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
+                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/cancer.svg?raw=true" />
                       </div>
                       <div className="navLabel">Cancer</div>
                     </a>
@@ -41,7 +59,7 @@ export default function Sidebar() {
                   <li>
                     <a onClick={() => setMenuOpen(true)} className="nav-link">
                       <div className="navIcon">
-                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
+                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/cardio.svg?raw=true" />
                       </div>
                       <div className="navLabel">Cardio</div>
                     </a>
@@ -49,7 +67,7 @@ export default function Sidebar() {
                   <li>
                     <a onClick={() => setMenuOpen(true)} className="nav-link">
                       <div className="navIcon">
-                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
+                        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism.svg?raw=true" />
                       </div>
                       <div className="navLabel">Metabolic</div>
                     </a>
@@ -67,10 +85,14 @@ export default function Sidebar() {
           <ul>
             <li>
               <a href="#">
-                <div className="navIcon">
+                <div
+                  className="navIcon"
+                  onClick={() => onMenuClick('adult-onset')}
+                  name="carrier-risk"
+                >
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spreading%201.svg?raw=true" />
                 </div>
-                <div className="navLabel">Career Risk</div>
+                <div className="navLabel">Carrier Risk</div>
               </a>
             </li>
           </ul>
@@ -78,7 +100,11 @@ export default function Sidebar() {
           <ul>
             <li>
               <a href="#">
-                <div className="navIcon">
+                <div
+                  className="navIcon"
+                  onClick={() => onMenuClick('adult-onset')}
+                  name="pharmacogenomics"
+                >
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-14%202.svg?raw=true" />
                 </div>
                 <div className="navLabel">Pharmacogenomics</div>

@@ -55,7 +55,7 @@ export default function App() {
                 ></Route>
                 <Route
                   exact
-                  path="/health-insights-sub"
+                  path="/health-insight-cancer"
                   element={<HealthSub />}
                 ></Route>
               </Routes>
