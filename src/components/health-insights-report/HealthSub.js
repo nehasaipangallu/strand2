@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HealthSub.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 
 export default function HealthSub() {
+  const [isPanelOpen, setPanelOpen] = useState(false);
+  function openPanel(event) {
+    setPanelOpen(true);
+  }
+
+  function onPanelClose(){
+
+  }
+
   return (
     <div className="d-flex flex-column mb-3 ">
-      <Sidepanel />
-      <button className="btn btn-download align-self-end m-3">
+      <Sidepanel opne={isPanelOpen} />
+      <button className="btn btn-download align-self-end m-3"  onClick={openPanel()}>
         Download Report{' '}
         <img
           alt=""
           class="icon-download"
-          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
-        />
+          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"/>
       </button>
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered>
