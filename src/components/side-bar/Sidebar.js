@@ -35,7 +35,7 @@ export default function Sidebar() {
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
                       </div>
-                      <div className="navLabel">Adult Onset</div>
+                      <div className="navLabel">Cancer</div>
                     </a>
                   </li>
                   <li>
@@ -43,7 +43,7 @@ export default function Sidebar() {
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
                       </div>
-                      <div className="navLabel">Adult Onset</div>
+                      <div className="navLabel">Cardio</div>
                     </a>
                   </li>
                   <li>
@@ -51,7 +51,7 @@ export default function Sidebar() {
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
                       </div>
-                      <div className="navLabel">Adult Onset</div>
+                      <div className="navLabel">Metabolic</div>
                     </a>
                   </li>
                   <li>
