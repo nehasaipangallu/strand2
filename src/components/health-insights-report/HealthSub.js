@@ -22,7 +22,6 @@ export default function HealthSub() {
       )}
       <button
         className="btn btn-download align-self-end m-3"
-        onClick={openPanel}
       >
         Download Report{' '}
         <img
@@ -48,7 +47,9 @@ export default function HealthSub() {
                 ATM,BARD1,BRCA1, BRCA2, BRIP1, CDH1, CHEK2, NBN, NF1, PALB2,
                 PPM1D, PTEN, RAD51C, STK11, TP53{' '}
               </td>
-              <td>BRCA1</td>
+              <td>BRCA1 <img alt="" 
+              class="icon-question"
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true" onClick={openPanel}/></td>
               <td className="yes-text">YES</td>
             </tr>
             <tr>
@@ -57,7 +58,9 @@ export default function HealthSub() {
                 BRCA1, BRCA2, BRIP1, DICER1, EPCAM, MLH1, MSH2, MSH6, PALB2,
                 PMS2, PPM1D, RAD51C,RAD51D, STK11, TP53
               </td>
-              <td>BRCA1</td>
+              <td>BRCA1 <img alt="" 
+              class="icon-question"
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true" onClick={openPanel}/></td>
               <td className="yes-text">YES</td>
             </tr>
             <tr>
@@ -75,7 +78,9 @@ export default function HealthSub() {
             <tr>
               <td>Prostate Gland</td>
               <td>ATM, BRCA1, BRCA2, CHEK2, HOXB13, NBN, TP53</td>
-              <td>BRCA1</td>
+              <td>BRCA1 <img alt="" 
+              class="icon-question"
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true" onClick={openPanel}/></td>
               <td className="yes-text">YES</td>
             </tr>
             <tr>

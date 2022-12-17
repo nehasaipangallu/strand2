@@ -45,6 +45,10 @@
   padding: 1rem 0.5rem;
 }
 
+.icon-question{
+  cursor: pointer;
+}
+
 .yes-text {
   color: #b60a02;
 }
