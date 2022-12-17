@@ -8,6 +8,10 @@
   font-family: 'Open Sans';
 }
 
+.side-panel .close-image {
+  cursor: pointer;
+}
+
 .side-panel * {
   font-family: 'Open Sans';
 }
@@ -43,4 +47,9 @@
   outline: none;
   font-size: 14px;
   color: #898989;
+}
+
+.search-text::after {
+  background-image: url(https://github.com/nehasaipangallu/strand2/blob/main/public/search.svg?raw=true);
+  content: '';
 }
