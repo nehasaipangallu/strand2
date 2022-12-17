@@ -9,6 +9,7 @@ import Login from './components/login/Login';
 import User from './components/user/User';
 import Health from './components/health-insight/Health';
 import Health from '.components/health-insight/Health';
+import HealthSub from './components/health-insights-sub/HealthSub';
 import {
   Route,
   Routes,
@@ -53,6 +54,7 @@ export default function App() {
                   path="/health-insight"
                   element={<Health />}
                 ></Route>
+                <Route exact path="/health-insights-sub" element={<HealthSub />}></Route>
               </Routes>
             </div>
           </div>

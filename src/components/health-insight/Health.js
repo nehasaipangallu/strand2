@@ -3,6 +3,8 @@ import './Health.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 
+import { Link } from 'react-router-dom';
+
 export default function Health() {
   return (
     <div className="innerWrapper">
@@ -180,7 +182,7 @@ export default function Health() {
                     alt="First slide"
                   />
                 </div>
-                <Carousel.Caption>
+                
                   <div className="p-2 carousel-2-cap">
                     <h3>Eg: Lynch syndrome</h3>
                     <p>
@@ -191,24 +193,32 @@ export default function Health() {
                       also known as her non-polyposis colorectal cancer (HNPCC).
                     </p>
                   </div>
-                </Carousel.Caption>
+                
               </div>
             </Carousel.Item>
             <Carousel.Item>
+            <div className="d-flex flex-row mb-3 carousel-2">
+                <div className="p-2 carousel-2-flex">
               <img
-                className="d-block w-100"
-                src="holder.js/800x400?text=Second slide&bg=282c34"
+                className="d-block w-100 carousel-3-img"
+                src="https://github.com/nehasaipangallu/strand2/blob/main/public/BRCA1_and_BRCA2_mutations_and_absolute_cancer_risk%201.svg?raw=true"
                 alt="Second slide"
               />
+              </div>
 
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
+<div className="p-2 carousel-3-cap">
+                <h3>Eg: Hereditary Breast and Ovarian Cancer syndrome (HBOC)</h3>
+                <p>Hereditary Breast and Ovarian Cancer syndrome (HBOC) is a genetic condition that makes it more likely that a person will get breast, ovarian, and other cancers. HBOC is hereditary, meaning that it is caused by a mutation (genetic change) that can be passed down in families.
+</p>
+             </div>
+             </div>
             </Carousel.Item>
           </Carousel>
         </div>
       </div>
-    </div>
+      {/*  */}
+      <Link to="/health-insights-sub">Click Here for More</Link>
+      </div>
+    
   );
 }
