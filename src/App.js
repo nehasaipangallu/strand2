@@ -20,12 +20,9 @@ import {
 } from 'react-router-dom';
 
 export default function App() {
-  const [path, setPath] = useState('/');
+  const location = window.location.hash || '';
+  const [path, setPath] = useState(location.replace('#/', ''));
   const isLoggedin = localStorage.getItem('isLoggedin');
-  useEffect(() => {
-    //const location = useLocation();
-    // alert(location.pathname);
-  });
 
   return (
     <div className="container-fluid p-0">
@@ -34,7 +31,15 @@ export default function App() {
           <Header />
           <div
             className="col-md-2 p-0"
-            style={{ display: isLoggedin == 'true' ? 'block' : 'none' }}
+            style={{
+              display:
+                isLoggedin == 'true' ||
+                path != 'home' ||
+                path != 'login' ||
+                path != 'logout'
+                  ? 'block'
+                  : 'none',
+            }}
           >
             {isLoggedin == 'true' && <Sidebar />}
           </div>

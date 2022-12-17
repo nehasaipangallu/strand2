@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
+  debugger;
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(
+    location.pathname.replace('/', '')
+  );
 
   function onMenuClick(clickedMenuName) {
     setSelectedMenu(clickedMenuName);
@@ -35,6 +39,10 @@ export default function Sidebar() {
               class="position-relative subMenu"
               onClick={() => onMenuClick('adult-onset')}
               name="adult-onset"
+              style={{
+                'background-color':
+                  selectedMenu == 'adult-onset' ? '#F5F4F4' : '#FFFFFF',
+              }}
             >
               <a onClick={() => setMenuOpen(true)} className="nav-link">
                 <div className="navIcon">
@@ -83,13 +91,16 @@ export default function Sidebar() {
           </ul>
 
           <ul>
-            <li>
+            <li
+              name="carrier-risk"
+              onClick={() => onMenuClick('carrier-risk')}
+              style={{
+                'background-color':
+                  selectedMenu == 'carrier-risk' ? '#F5F4F4' : '#FFFFFF',
+              }}
+            >
               <a href="#">
-                <div
-                  className="navIcon"
-                  onClick={() => onMenuClick('adult-onset')}
-                  name="carrier-risk"
-                >
+                <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spreading%201.svg?raw=true" />
                 </div>
                 <div className="navLabel">Carrier Risk</div>
@@ -98,13 +109,16 @@ export default function Sidebar() {
           </ul>
 
           <ul>
-            <li>
+            <li
+              name="pharmacogenomics"
+              onClick={() => onMenuClick('pharmacogenomics')}
+              style={{
+                'background-color':
+                  selectedMenu == 'pharmacogenomics' ? '#F5F4F4' : '#FFFFFF',
+              }}
+            >
               <a href="#">
-                <div
-                  className="navIcon"
-                  onClick={() => onMenuClick('adult-onset')}
-                  name="pharmacogenomics"
-                >
+                <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-14%202.svg?raw=true" />
                 </div>
                 <div className="navLabel">Pharmacogenomics</div>
