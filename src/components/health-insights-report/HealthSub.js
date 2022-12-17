@@ -7,21 +7,29 @@ export default function HealthSub() {
   const [isPanelOpen, setPanelOpen] = useState(false);
   function openPanel(event) {
     setPanelOpen(true);
+    console.log(isPanelOpen);
+    debugger;
   }
 
-  function onPanelClose(){
-
+  function onPanelClose() {
+    setPanelOpen(false);
   }
 
   return (
     <div className="d-flex flex-column mb-3 ">
-      <Sidepanel opne={isPanelOpen} />
-      <button className="btn btn-download align-self-end m-3"  onClick={openPanel()}>
+      {isPanelOpen && (
+        <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
+      )}
+      <button
+        className="btn btn-download align-self-end m-3"
+        onClick={openPanel}
+      >
         Download Report{' '}
         <img
           alt=""
           class="icon-download"
-          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"/>
+          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
+        />
       </button>
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered>
