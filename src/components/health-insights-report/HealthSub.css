@@ -45,7 +45,7 @@
   padding: 1rem 0.5rem;
 }
 
-.icon-question{
+.icon-question {
   cursor: pointer;
 }
 
@@ -55,4 +55,38 @@
 
 .no-text {
   color: #00b160;
+}
+
+.table-health-2 {
+  background-color: white;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+
+.table-health-2 table {
+  border-collapse: separate;
+}
+
+.table-health-2 table td {
+  border: 2px solid white;
+  width: 18%;
+}
+
+.table-health-2 table td:first-child {
+  color: #ffffff;
+  background-color: #06377b;
+}
+
+.table-health-2 table td:not(:first-child) {
+  color: #ffffff;
+  background-color: #c7c7c7;
+}
+.table-health-2 table tr:first-child td:not(:first-child),
+.table-health-2 table tr:last-child td:not(:first-child) {
+  color: #ffffff;
+  background-color: #078a6e;
 }

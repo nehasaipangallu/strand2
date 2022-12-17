@@ -3,7 +3,6 @@ import './side-panel.css';
 
 export default class Sidepanel extends React.Component {
   constructor(props) {
-    debugger;
     super(props);
     this.state = {
       isPanelOpen: props.open,
