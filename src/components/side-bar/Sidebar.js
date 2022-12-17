@@ -47,7 +47,7 @@ export default function Sidebar() {
                 <ul className="slideSubMenu" id="slideSubMenu">
                   <li>
                     <a
-                      onClick={() => onChildMenuClick('health-insight-cancer')}
+                      onClick={() => onChildMenuClick('cancer')}
                       className="nav-link"
                     >
                       <div className="navIcon">

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Health.css';
+import './cancer.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 
 import { Link } from 'react-router-dom';
 
-export default function Health() {
+export default function Cancer() {
   return (
     <div className="innerWrapper">
       <div class="d-flex p-2 img-box bdrRad1">

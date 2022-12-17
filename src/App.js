@@ -7,8 +7,8 @@ import Sidebar from './components/side-bar/Sidebar';
 import Home from './components/home/home';
 import Login from './components/login/Login';
 import User from './components/user/User';
-import Health from './components/health-insight/Health';
-import HealthSub from './components/health-insights-report/HealthSub';
+import Cancer from './components/cancer/cancer';
+import CancerReport from './components/cancer-report/cancer-report';
 import {
   Route,
   Routes,
@@ -48,15 +48,12 @@ export default function App() {
                 <Route exact path="/home" element={<Home />}></Route>
                 <Route exact path="/login" element={<Login />}></Route>
                 <Route exact path="/user" element={<User />}></Route>
+                <Route exact path="/cancer" element={<Cancer />}></Route>
+
                 <Route
                   exact
-                  path="/health-insight"
-                  element={<Health />}
-                ></Route>
-                <Route
-                  exact
-                  path="/health-insight-cancer"
-                  element={<HealthSub />}
+                  path="/cancer-report"
+                  element={<CancerReport />}
                 ></Route>
               </Routes>
             </div>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './HealthSub.css';
+import './cancer-report.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 
-export default function HealthSub() {
+export default function CancerReport() {
   const [isPanelOpen, setPanelOpen] = useState(false);
   function openPanel(event) {
     setPanelOpen(true);
