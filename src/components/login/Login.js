@@ -5,7 +5,7 @@ import { auth } from '../../firebase';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
 import { withRouter } from 'react-router';
-import { Navigate } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 
@@ -32,6 +32,7 @@ class Login extends React.Component {
       isValid: true,
       minutes: 1,
       seconds: 25,
+      onLogInCbk: props.onLogInCbk,
     };
   }
 
@@ -134,6 +135,7 @@ class Login extends React.Component {
         const user = result.user;
         console.log(JSON.stringify(user));
         window.localStorage.setItem('isLoggedin', 'true');
+        this.state.onLogInCbk();
         this.setState({
           isValidUser: true,
         });

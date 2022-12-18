@@ -27,7 +27,13 @@ import {
 export default function App() {
   const location = window.location.hash || '';
   const [path, setPath] = useState(location.replace('#/', ''));
-  const isLoggedin = localStorage.getItem('isLoggedin');
+  const [isLoggedin, setIsLoggedIn] = useState(
+    localStorage.getItem('isLoggedin')
+  );
+
+  function onLogIn() {
+    setIsLoggedIn('true');
+  }
 
   return (
     <div className="container-fluid p-0">
@@ -57,7 +63,11 @@ export default function App() {
               <Routes>
                 <Route exact path="/" element={<Home />}></Route>
                 <Route exact path="/home" element={<Home />}></Route>
-                <Route exact path="/login" element={<Login />}></Route>
+                <Route
+                  exact
+                  path="/login"
+                  element={<Login onLogInCbk={onLogIn} />}
+                ></Route>
                 <Route exact path="/user" element={<User />}></Route>
                 <Route
                   exact
