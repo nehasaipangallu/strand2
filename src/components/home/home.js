@@ -2,6 +2,15 @@ import React from 'react';
 import './home.css';
 
 export default function Home() {
+  function onViewInsightClick(e) {
+    e.preventDefault();
+    if (localStorage.getItem('isLoggedin') == 'true') {
+      window.location.href = '#/adult-onset';
+    } else {
+      window.location.href = '#/login';
+    }
+  }
+
   return (
     <div className="home-page d-flex justify-content-end align-items-center">
       <div className="home-page-container">
@@ -11,11 +20,10 @@ export default function Home() {
           sollicitudin consectetur. Suspendisse tempus at diam at volutpat.
           Donec sit amet dui malesuada, tincidunt sem sed, tincidunt justo.
         </p>
-        <button className="btn btn-view"
-         onClick={(e) => {
-          e.preventDefault();
-          window.location.href='#/login';
-          }}> View Insights</button>
+        <button className="btn btn-view" onClick={onViewInsightClick}>
+          {' '}
+          View Insights
+        </button>
       </div>
     </div>
   );

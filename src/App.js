@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import { browserHistory } from 'react-router';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import {
+  Route,
+  Routes,
+  BrowserRouter,
+  Switch,
+  HashRouter,
+  useLocation,
+} from 'react-router-dom';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+
 import Header from './components/header/header';
 import Sidebar from './components/side-bar/Sidebar';
-
 import Home from './components/home/home';
 import Login from './components/login/Login';
 import User from './components/user/User';
@@ -15,17 +27,8 @@ import Download from './components/download/download';
 import Articles from './components/articles/articles';
 import Faq from './components/faq/faq';
 
-import {
-  Route,
-  Routes,
-  BrowserRouter,
-  Switch,
-  HashRouter,
-  useLocation,
-} from 'react-router-dom';
-
 export default function App() {
-  const location = window.location.hash || '';
+  // const location = window.location.hash || '';
   const [path, setPath] = useState(location.replace('#/', ''));
   const [isLoggedin, setIsLoggedIn] = useState(
     localStorage.getItem('isLoggedin')
@@ -34,6 +37,10 @@ export default function App() {
   function onLogIn() {
     setIsLoggedIn('true');
   }
+
+  // this is a temporary dolution to hide the sidebar based on route.
+  //different solution must be found
+  function onStateChange() {}
 
   return (
     <div className="container-fluid p-0">
@@ -44,19 +51,22 @@ export default function App() {
             className="col-md-2 p-0"
             style={{
               display:
-                isLoggedin == 'true' ||
-                path != 'home' ||
-                path != 'login' ||
-                path != 'logout'
-                  ? 'block'
-                  : 'none',
+                location.hash.replace('#/', '') == 'home' ||
+                location.hash.replace('#/', '') == '' ||
+                location.hash.replace('#/', '') == 'login'
+                  ? 'none'
+                  : 'block',
             }}
           >
             {isLoggedin == 'true' && <Sidebar />}
           </div>
           <div
             className={`p-0 ${
-              isLoggedin == 'true' ? 'col-md-10' : 'col-md-12'
+              location.hash.replace('#/', '') == 'home' ||
+              location.hash.replace('#/', '') == '' ||
+              location.hash.replace('#/', '') == 'login'
+                ? 'col-md-12'
+                : 'col-md-10'
             }`}
           >
             <div className="pageWrapper">
