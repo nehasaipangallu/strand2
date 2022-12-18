@@ -1,4 +1,4 @@
-.faq-heading {
+.faq-containers .faq-heading {
   font-family: 'Open Sans';
   font-size: 32px;
   font-weight: 400;
@@ -6,4 +6,16 @@
   border-bottom: 1px solid rgba(210, 210, 210, 0.79);
   padding-bottom: 12px;
 }
+.faq-containers .faq-accordian {
+  width: 100%;
+}
 
+.faq-containers .faq-accordian .accordion-item {
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.faq-containers .faq-accordian .accordion-item .accordion-button {
+  font-family: 'Open Sans';
+  border-radius: 5px;
+}
