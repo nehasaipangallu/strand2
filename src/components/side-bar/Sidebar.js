@@ -78,7 +78,7 @@ export default function Sidebar() {
                     </a>
                   </li>
                   <li>
-                    <a onClick={() => setMenuOpen(true)} className="nav-link">
+                    <a onClick={() =>  onChildMenuClick('metabolism')} className="nav-link">
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism.svg?raw=true" />
                       </div>

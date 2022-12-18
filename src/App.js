@@ -15,6 +15,7 @@ import CancerReport from './components/cancer-report/cancer-report';
 import Download from './components/download/download';
 import Articles from './components/articles/articles';
 import Faq from './components/faq/faq';
+import Metabolism from './components/metabolism/Metabolism';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -89,6 +90,11 @@ export default function App() {
                 <Route
                   exact
                   path="/cardio"
+                  element={<Cardio onLoad={showSideBar} />}
+                ></Route>
+                 <Route
+                  exact
+                  path="/metabolism"
                   element={<Cardio onLoad={showSideBar} />}
                 ></Route>
 
