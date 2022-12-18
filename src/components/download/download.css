@@ -23,6 +23,16 @@
   padding: 15px 10px;
 }
 
-.download-container table tbody tr td:first-child {
+.download-container table tbody tr td:nth-child(odd) {
   background-color: rgba(217, 217, 217, 0.51);
+}
+
+.download-container .download-table .icon-report,
+.download-container .download-table .icon-download {
+  text-align: center;
+}
+
+.download-container .download-table .icon-report > img,
+.download-container .download-table .icon-download > img {
+  width: 18px;
 }
