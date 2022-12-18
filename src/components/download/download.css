@@ -1,0 +1,28 @@
+.download-container {
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+}
+
+.download-table {
+  height: 100%;
+}
+.download-table thead th {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 10px;
+}
+
+.download-table tbody tr:not(:last-child) {
+  height: 25px;
+}
+.download-table tbody td {
+  font-size: 14px;
+  font-weight: normal;
+  border: none;
+  padding: 15px 10px;
+}
+
+.download-container table tbody tr td:first-child {
+  background-color: rgba(217, 217, 217, 0.51);
+}
