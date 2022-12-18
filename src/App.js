@@ -9,6 +9,7 @@ import Login from './components/login/Login';
 import User from './components/user/User';
 import AdultOnset from './components/adult-onset/adult-onset';
 import Cancer from './components/cancer/cancer';
+import Cardio from './components/cardio/Cardio';
 import CancerReport from './components/cancer-report/cancer-report';
 import Download from './components/download/download';
 import Articles from './components/articles/articles';
@@ -64,6 +65,7 @@ export default function App() {
                   element={<AdultOnset />}
                 ></Route>
                 <Route exact path="/cancer" element={<Cancer />}></Route>
+                <Route exact path="/cardio" element={<Cardio />}></Route>
 
                 <Route
                   exact

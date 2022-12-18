@@ -65,7 +65,10 @@ export default function Sidebar() {
                     </a>
                   </li>
                   <li>
-                    <a onClick={() => setMenuOpen(true)} className="nav-link">
+                    <a
+                      onClick={() => onChildMenuClick('cardio')}
+                      className="nav-link"
+                    >
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/cardio.svg?raw=true" />
                       </div>
