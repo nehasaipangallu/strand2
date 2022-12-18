@@ -98,86 +98,85 @@ export default function Metabolism(props) {
         </div>
       </div>
       <div className="d-flex flex-row mb-3">
-      <div className="p-2">
-        <h2>Eg: Lysosomal Storage Disorders</h2>
-        <p>Lysosomal storage diseases or disorders (LSDs) are rare genetic conditions that cause a buildup of toxic materials in your body's cells. People with LSDs lack certain enzymes or a substance that helps the enzyme work.
-          <ul>
-            <li>Lysosomal storage diseases usually appear during pregnancy or soon after birth, More rarely, adults may develop LSDS.</li>
+        <div className="p-2">
+          <h2>Eg: Lysosomal Storage Disorders</h2>
+          <p>
+            Lysosomal storage diseases or disorders (LSDs) are rare genetic
+            conditions that cause a buildup of toxic materials in your body's
+            cells. People with LSDs lack certain enzymes or a substance that
+            helps the enzyme work.
+            <ul>
+              <li>
+                Lysosomal storage diseases usually appear during pregnancy or
+                soon after birth, More rarely, adults may develop LSDS.
+              </li>
 
-<li>People usually have more severe cases when an LSD starts early and more mild cases when an LSD starts later.</li>
+              <li>
+                People usually have more severe cases when an LSD starts early
+                and more mild cases when an LSD starts later.
+              </li>
 
-<li>Researchers have found more than 50 lysosomal storage diseases. And they continue to identify more.</li>
-          </ul>
-        </p>
-      </div>
-      <div className="p-2 img-box-meta">
-        <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/jj664gp3oqo08%201.svg?raw=true" />
-
-      </div>
+              <li>
+                Researchers have found more than 50 lysosomal storage diseases.
+                And they continue to identify more.
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div className="p-2 img-box-meta">
+          <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/jj664gp3oqo08%201.svg?raw=true" />
+        </div>
       </div>
 
       <div className="p-2">
         <Carousel>
           <Carousel.Item>
             <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
-             
               <div className="p-5 carousel-cap">
                 <h3>Lipidoses</h3>
                 <p>
-                This type occurs when your body lacks an enzyme to break down fats.
-
+                  This type occurs when your body lacks an enzyme to break down
+                  fats.
                 </p>
               </div>
               <div className="p-2 car-img-item">
-                <img
-                  src=""
-                  alt="First slide"
-                />
+                <img src="" alt="First slide" />
               </div>
             </div>
           </Carousel.Item>
 
           <Carousel.Item>
             <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
-             
               <div className="p-5 carousel-cap">
                 <h3>SphingolipidosesOncogenes</h3>
                 <p>
-                This type comes from not
-having enough of an enzyme to break down fatty substances (sphingolipids). They're responsible for specific jobs in your cells, including protecting the surface of your cells.
-
+                  This type comes from not having enough of an enzyme to break
+                  down fatty substances (sphingolipids). They're responsible for
+                  specific jobs in your cells, including protecting the surface
+                  of your cells.
                 </p>
               </div>
               <div className="p-2 car-img-item">
-                <img
-                  src=""
-                  alt="Second slide"
-                />
+                <img src="" alt="Second slide" />
               </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
-             
               <div className="p-5 carousel-cap">
                 <h3>Mucopolysaccharidoses</h3>
                 <p>
-                These happen when your body lacks an enzyme to break down complex sugar molecules (glycosaminoglycans).
-
+                  These happen when your body lacks an enzyme to break down
+                  complex sugar molecules (glycosaminoglycans).
                 </p>
               </div>
               <div className="p-2 car-img-item">
-                <img
-                  src=""
-                  alt="Third slide"
-                />
+                <img src="" alt="Third slide" />
               </div>
             </div>
           </Carousel.Item>
         </Carousel>
-        
       </div>
     </div>
-    
   );
 }
