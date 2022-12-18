@@ -19,3 +19,7 @@
   font-family: 'Open Sans';
   border-radius: 5px;
 }
+
+.faq-containers .faq-accordian .accordion-item .accordion-button::after {
+  background-image: url('https://github.com/nehasaipangallu/strand2/blob/main/public/plus.svg?raw=true');
+}
