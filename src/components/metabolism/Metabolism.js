@@ -178,5 +178,6 @@ having enough of an enzyme to break down fatty substances (sphingolipids). They'
         
       </div>
     </div>
+    
   );
 }
