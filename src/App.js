@@ -95,7 +95,7 @@ export default function App() {
                  <Route
                   exact
                   path="/metabolism"
-                  element={<Cardio onLoad={showSideBar} />}
+                  element={<Metabolism onLoad={showSideBar} />}
                 ></Route>
 
                 <Route
