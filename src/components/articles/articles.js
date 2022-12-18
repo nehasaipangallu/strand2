@@ -7,6 +7,6 @@ export class Articles extends React.Component {
     this.state = {};
   }
   render() {
-    return <div class="article-container">Welcomes</div>;
+    return <div class="articles-container">Welcomes</div>;
   }
 }

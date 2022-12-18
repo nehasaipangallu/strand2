@@ -69,7 +69,7 @@ export default function App() {
                   element={<CancerReport />}
                 ></Route>
                 <Route exact path="/download" element={<Download />}></Route>
-                <Route exact path="/article" element={<Articles />}></Route>
+                <Route exact path="/articles" element={<Articles />}></Route>
               </Routes>
             </div>
           </div>
