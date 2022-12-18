@@ -7,11 +7,22 @@ import { Link } from 'react-router-dom';
 
 export default function Cancer() {
   return (
-    <div className="innerWrapper">
-      <div class="d-flex p-2 img-box bdrRad1">
-        <div class="d-flex flex-row img-captions">
+    <div className="innerWrapper cancer-page">
+      <div class="d-flex p-2 img-box">
+        <div class="d-flex flex-row img-captions justify-content-evenly">
           <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/aza%203.svg?raw=true" />
-          <div class="p-2">Your Report Is Ready</div>
+          <p class="p-2 align-self-center">
+            Your Report Is Ready <br />
+            Please click on View Report
+          </p>
+          <div class=" d-flex flex-column report-dates">
+            <p>12/11/2022</p>
+            <p>02/08/2022</p>
+          </div>
+          <div class="d-flex flex-column report-buttons">
+            <button class="btn btn-report">View Report</button>
+            <button class="btn btn-report">View Report</button>
+          </div>
         </div>
       </div>
       <div className="d-flex flex-column body-para">
@@ -182,43 +193,48 @@ export default function Cancer() {
                     alt="First slide"
                   />
                 </div>
-                
-                  <div className="p-2 carousel-2-cap">
-                    <h3>Eg: Lynch syndrome</h3>
-                    <p>
-                      Lynch syndrome is a type of inherited cancer syndrome
-                      associated with a genetic predisposition to different
-                      cancer types. This means people with Lynch syndrome have a
-                      higher risk of certain types of cancer. Lynch Syndrome is
-                      also known as her non-polyposis colorectal cancer (HNPCC).
-                    </p>
-                  </div>
-                
+
+                <div className="p-2 carousel-2-cap">
+                  <h3>Eg: Lynch syndrome</h3>
+                  <p>
+                    Lynch syndrome is a type of inherited cancer syndrome
+                    associated with a genetic predisposition to different cancer
+                    types. This means people with Lynch syndrome have a higher
+                    risk of certain types of cancer. Lynch Syndrome is also
+                    known as her non-polyposis colorectal cancer (HNPCC).
+                  </p>
+                </div>
               </div>
             </Carousel.Item>
             <Carousel.Item>
-            <div className="d-flex flex-row mb-3 carousel-2">
+              <div className="d-flex flex-row mb-3 carousel-2">
                 <div className="p-2 carousel-2-flex">
-              <img
-                className="d-block w-100 carousel-3-img"
-                src="https://github.com/nehasaipangallu/strand2/blob/main/public/BRCA1_and_BRCA2_mutations_and_absolute_cancer_risk%201.svg?raw=true"
-                alt="Second slide"
-              />
-              </div>
+                  <img
+                    className="d-block w-100 carousel-3-img"
+                    src="https://github.com/nehasaipangallu/strand2/blob/main/public/BRCA1_and_BRCA2_mutations_and_absolute_cancer_risk%201.svg?raw=true"
+                    alt="Second slide"
+                  />
+                </div>
 
-<div className="p-2 carousel-3-cap">
-                <h3>Eg: Hereditary Breast and Ovarian Cancer syndrome (HBOC)</h3>
-                <p>Hereditary Breast and Ovarian Cancer syndrome (HBOC) is a genetic condition that makes it more likely that a person will get breast, ovarian, and other cancers. HBOC is hereditary, meaning that it is caused by a mutation (genetic change) that can be passed down in families.
-</p>
-             </div>
-             </div>
+                <div className="p-2 carousel-3-cap">
+                  <h3>
+                    Eg: Hereditary Breast and Ovarian Cancer syndrome (HBOC)
+                  </h3>
+                  <p>
+                    Hereditary Breast and Ovarian Cancer syndrome (HBOC) is a
+                    genetic condition that makes it more likely that a person
+                    will get breast, ovarian, and other cancers. HBOC is
+                    hereditary, meaning that it is caused by a mutation (genetic
+                    change) that can be passed down in families.
+                  </p>
+                </div>
+              </div>
             </Carousel.Item>
           </Carousel>
         </div>
       </div>
       {/*  */}
-      <Link to="/health-insights-sub">Click Here for More</Link>
-      </div>
-    
+      <Link to="/cancer-report">Click Here for More</Link>
+    </div>
   );
 }

@@ -1,4 +1,4 @@
-.health-main {
+/* .health-main {
   width: 100%;
   position: relative;
   z-index: 1;
@@ -25,16 +25,25 @@
   left: 0;
   background-size: cover;
   z-index: 0;
-}
+} */
 
 .img-box {
   display: flex;
   z-index: 1;
-  height: 100px;
+  height: 150px;
   width: 100%;
   background-color: #06377b;
   font-size: 10px;
   padding-top: 20px;
+  border-radius: 6px;
+}
+
+.img-captions {
+  width: 100%;
+}
+
+.img-captions p {
+  color: white;
 }
 
 .body-para {

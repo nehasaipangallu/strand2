@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-  debugger;
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(
     location.pathname.replace('/', '')
