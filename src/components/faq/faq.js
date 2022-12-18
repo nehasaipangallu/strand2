@@ -3,9 +3,10 @@ import './faq.css';
 import Accordion from 'react-bootstrap/Accordion';
 
 export default class Faq extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {};
+    props.onLoad(true);
   }
   render() {
     return (

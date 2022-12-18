@@ -40,7 +40,7 @@ export default function Sidebar() {
               onClick={() => onMenuClick('adult-onset')}
               name="adult-onset"
               style={{
-                'backgroundColor':
+                backgroundColor:
                   selectedMenu == 'adult-onset' ? '#F5F4F4' : '#FFFFFF',
               }}
             >

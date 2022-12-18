@@ -34,6 +34,7 @@ class Login extends React.Component {
       seconds: 25,
       onLogInCbk: props.onLogInCbk,
     };
+    props.onLoad(false);
   }
 
   handleChange = (e) => {

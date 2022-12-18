@@ -2,9 +2,10 @@ import React from 'react';
 import './adult-onset.css';
 
 export default class AdultOnset extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {};
+    props.onLoad(true);
   }
 
   render() {

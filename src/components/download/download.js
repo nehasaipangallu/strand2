@@ -2,9 +2,10 @@ import React from 'react';
 import './download.css';
 
 export default class Download extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {};
+    props.onLoad(true);
   }
 
   render() {
