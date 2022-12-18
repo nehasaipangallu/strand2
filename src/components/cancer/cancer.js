@@ -2,10 +2,14 @@ import React from 'react';
 import './cancer.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
-
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Cancer() {
+  const naviage = useNavigate();
+
+  function onVeiwReortClick() {
+    naviage('/cancer-report');
+  }
   return (
     <div className="innerWrapper cancer-page">
       <div class="d-flex p-2 img-box">
@@ -15,13 +19,17 @@ export default function Cancer() {
             Your Report Is Ready <br />
             Please click on View Report
           </p>
-          <div class=" d-flex flex-column report-dates">
-            <p>12/11/2022</p>
-            <p>02/08/2022</p>
+          <div class=" d-flex flex-column report-dates align-self-center">
+            <p class="m-2">12/11/2022</p>
+            <p class="m-2">02/08/2022</p>
           </div>
-          <div class="d-flex flex-column report-buttons">
-            <button class="btn btn-report">View Report</button>
-            <button class="btn btn-report">View Report</button>
+          <div class="d-flex flex-column report-buttons align-self-center">
+            <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
+              View Report
+            </button>
+            <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
+              View Report
+            </button>
           </div>
         </div>
       </div>
@@ -234,7 +242,6 @@ export default function Cancer() {
         </div>
       </div>
       {/*  */}
-      <Link to="/cancer-report">Click Here for More</Link>
     </div>
   );
 }
