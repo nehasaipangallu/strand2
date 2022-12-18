@@ -3,7 +3,7 @@ import './home.css';
 
 export default function Home(props) {
   props.onLoad(false);
-  
+
   function onViewInsightClick(e) {
     e.preventDefault();
     if (localStorage.getItem('isLoggedin') == 'true') {

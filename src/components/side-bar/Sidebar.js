@@ -10,7 +10,9 @@ export default function Sidebar() {
   const [selectedMenu, setSelectedMenu] = useState(
     location.pathname.replace('/', '')
   );
-
+if(selectedMenu == 'home'){
+  setSelectedMenu('adult-onset')
+}
   function onMenuClick(clickedMenuName) {
     setSelectedMenu(clickedMenuName);
   }
