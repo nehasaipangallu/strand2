@@ -98,13 +98,13 @@ export default function Sidebar() {
           <ul>
             <li
               name="carrier-risk"
-              onClick={() => onMenuClick('carrier-risk')}
+              onClick={() => onMenuClick('crrier-risk')}
               style={{
                 'background-color':
                   selectedMenu == 'carrier-risk' ? '#F5F4F4' : '#FFFFFF',
               }}
             >
-              <a href="#">
+              <a href="#/crrier-risk">
                 <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spreading%201.svg?raw=true" />
                 </div>
