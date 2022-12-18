@@ -36,3 +36,8 @@
 .download-container .download-table .icon-download > img {
   width: 18px;
 }
+
+.download-container .download-table .icon-report > img:hover,
+.download-container .download-table .icon-download > img:hover {
+  cursor: pointer;
+}

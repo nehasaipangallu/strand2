@@ -12,6 +12,8 @@ import Cancer from './components/cancer/cancer';
 import CancerReport from './components/cancer-report/cancer-report';
 import Download from './components/download/download';
 import Articles from './components/articles/articles';
+import Faq from './components/faq/faq';
+
 import {
   Route,
   Routes,
@@ -70,6 +72,7 @@ export default function App() {
                 ></Route>
                 <Route exact path="/download" element={<Download />}></Route>
                 <Route exact path="/articles" element={<Articles />}></Route>
+                <Route exact path="/faq" element={<Faq />}></Route>
               </Routes>
             </div>
           </div>

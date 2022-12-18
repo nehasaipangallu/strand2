@@ -1,0 +1,9 @@
+.faq-heading {
+  font-family: 'Open Sans';
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  border-bottom: 1px solid rgba(210, 210, 210, 0.79);
+  padding-bottom: 12px;
+}
+
