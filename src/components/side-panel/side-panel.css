@@ -38,7 +38,21 @@
   font-size: 13px;
 }
 
-.search-text {
+.side-panel .search-container {
+  position: relative;
+}
+.side-panel .search-container::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  background-image: url('https://github.com/nehasaipangallu/strand2/blob/main/public/search-gray.svg?raw=true');
+  width: 30px;
+  height: 30px;
+  right: 10px;
+
+  background-repeat: no-repeat;
+}
+.side-panel .search-container .search-text {
   height: 33px;
   width: 245px;
   border-radius: 2px;

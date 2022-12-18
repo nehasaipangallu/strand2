@@ -29,7 +29,9 @@ export default class Sidepanel extends React.Component {
           />
 
           <h3 class="side-panel-heading">Know your Report</h3>
-          <input type="text" class="search-text m-3" />
+          <div class="search-container  m-3">
+            <input type="text" class="search-text" />
+          </div>
           <h2 class="heading m-3">BRCA1</h2>
           <p class="m-3">
             Lorem Ipsum is simply dummy text of the printing and typesetting

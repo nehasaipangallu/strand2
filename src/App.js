@@ -81,13 +81,21 @@ export default function App() {
                   path="/adult-onset"
                   element={<AdultOnset onLoad={showSideBar} />}
                 ></Route>
-                <Route exact path="/cancer" element={<Cancer />}></Route>
-                <Route exact path="/cardio" element={<Cardio />}></Route>
+                <Route
+                  exact
+                  path="/cancer"
+                  element={<Cancer onLoad={showSideBar} />}
+                ></Route>
+                <Route
+                  exact
+                  path="/cardio"
+                  element={<Cardio onLoad={showSideBar} />}
+                ></Route>
 
                 <Route
                   exact
                   path="/cancer-report"
-                  element={<CancerReport />}
+                  element={<CancerReport onLoad={showSideBar} />}
                 ></Route>
                 <Route
                   exact

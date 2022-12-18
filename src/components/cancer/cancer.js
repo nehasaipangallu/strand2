@@ -4,7 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Cancer() {
+export default function Cancer(props) {
+  props.onLoad(true);
   const naviage = useNavigate();
 
   function onVeiwReortClick() {

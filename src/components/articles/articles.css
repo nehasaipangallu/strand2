@@ -8,7 +8,9 @@
   font-weight: 700;
   font-family: 'Open Sans';
 }
-
+.articles-container .search-container {
+  position: relative;
+}
 .articles-container .search-container input {
   width: 350px;
   height: 35px;
@@ -17,7 +19,18 @@
   border: 1px solid #a6a6a6;
   border-radius: 4px;
   font-size: 13px;
-  padding: 5;
+  padding: 8px;
+}
+
+.articles-container .search-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background-image: url('https://github.com/nehasaipangallu/strand2/blob/main/public/search.svg?raw=true');
+  background-repeat: no-repeat;
+  top: 22px;
+  right: 18px;
 }
 
 .articles-container .search-container ::-webkit-input-placeholder {

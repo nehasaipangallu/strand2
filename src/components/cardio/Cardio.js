@@ -2,7 +2,8 @@ import React from 'react';
 import './Cardio.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Cardio() {
+export default function Cardio(props) {
+  props.onLoad(true);
   const naviage = useNavigate();
 
   function onVeiwReortClick() {
