@@ -11,6 +11,7 @@ import AdultOnset from './components/adult-onset/adult-onset';
 import Cancer from './components/cancer/cancer';
 import CancerReport from './components/cancer-report/cancer-report';
 import Download from './components/download/download';
+import Articles from './components/articles/articles';
 import {
   Route,
   Routes,
@@ -68,6 +69,7 @@ export default function App() {
                   element={<CancerReport />}
                 ></Route>
                 <Route exact path="/download" element={<Download />}></Route>
+                <Route exact path="/article" element={<Articles />}></Route>
               </Routes>
             </div>
           </div>
