@@ -17,6 +17,9 @@
   );
   color: white;
 }
+.use-heading{
+  font-size: 30px;
+}
 
 .user-page * {
   z-index: 1;

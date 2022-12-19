@@ -112,6 +112,11 @@
 .heading-log {
   font-family: 'Baloo 2';
   font-weight: 400;
+  font-size: 28px;
+}
+.otp-heading{
+  font-family: 'Baloo 2';
+  font-weight: 400;
   font-size: 32px;
 }
 

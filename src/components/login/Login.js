@@ -205,7 +205,7 @@ class Login extends React.Component {
               }}
             >
               <h3 className="heading-log"> Continue with Phone Number</h3>
-              <h5 className="heading-log-2">Phone Number</h5>
+              {/* <h5 className="heading-log-2">Phone Number</h5> */}
               <div class="mobile-input-container  form-control">
                 <p class="country-code">+91</p>
                 <input
@@ -241,7 +241,7 @@ class Login extends React.Component {
                 display: this.state.isOtpSent ? 'flex' : 'none',
               }}
             >
-              <h4> Please enter the OTP sent to your mobile number</h4>
+              <h4 className= "otp-heading"> Please enter the OTP sent to your mobile number</h4>
               <form class="otp-box-container d-flex">
                 <input
                   type="text"

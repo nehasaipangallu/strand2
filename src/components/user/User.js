@@ -10,7 +10,7 @@ export default class User extends React.Component {
     return (
       <div class="user-page d-flex justify-content-center align-items-center">
         <div class="user-background  d-flex flex-column justify-content-center align-items-center">
-          <h3> Please Select User</h3>
+          <h3 className="use-heading"> Please Select User</h3>
           <button
             className="btn user-name-btn"
             onClick={(e) => {
