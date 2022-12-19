@@ -58,6 +58,10 @@ export default function Carrier(props) {
        <p>50% of which disorders have childhood onset</p>
         </div>
       </div>
+      <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/dna%20(1)%201.svg?raw=true" />
+      {/* <div className="p-2">
+      65% of which diseases associated with a reduced lifespan² and affect the quality of life significantly
+      </div> */}
     </div>
     </div>
   );
