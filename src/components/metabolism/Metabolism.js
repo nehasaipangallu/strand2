@@ -43,8 +43,8 @@ export default function Metabolism(props) {
         </div>
       </div>
       <div className="d-flex flex-column mb-3">
-        <h2>What are inherited cancers?</h2>
-        <p className="p-2">
+        <h2 className="meta-head">What are inherited cancers?</h2>
+        <p className="p-2 meta-para">
           Inborn errors of metabolism (IEM) are a heterogeneous group of 1,450
           disorders that are individually rare to ultra-rare, but relatively
           common as a group (estimated birth prevalence 1:2,000). Although
@@ -57,7 +57,7 @@ export default function Metabolism(props) {
         </p>
       </div>
       <div className="p-2">
-        <h2>Key Adult Onset Inborn Errors of Metabolism</h2>
+        <h2 className="meta-head">Key Adult Onset Inborn Errors of Metabolism</h2>
         <div className="d-flex flex-row mb-3 cardic-condition-box">
           <img
             class="m-2"
@@ -98,8 +98,8 @@ export default function Metabolism(props) {
         </div>
       </div>
       <div className="d-flex flex-row mb-3">
-        <div className="p-2">
-          <h2>Eg: Lysosomal Storage Disorders</h2>
+        <div className="p-2 exam-para">
+          <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
           <p>
             Lysosomal storage diseases or disorders (LSDs) are rare genetic
             conditions that cause a buildup of toxic materials in your body's
