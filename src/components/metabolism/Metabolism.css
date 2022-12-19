@@ -18,6 +18,10 @@
 .cardiac-condition{
   height: 400px;
   width: 400px;
+  border-top: 25px;
+}
+.meta-list{
+  border-top: 10px;
 }
 
 .exam-para{

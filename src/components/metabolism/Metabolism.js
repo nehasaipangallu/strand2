@@ -65,7 +65,7 @@ export default function Metabolism(props) {
             className="cardiac-condition"
           />
 
-          <div className="p-2">
+          <div className="p-2 meta-list">
             <h2>Tumor suppressor genes</h2>
 
             <ul>

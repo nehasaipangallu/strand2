@@ -13,8 +13,8 @@ export default function Cancer(props) {
   }
   return (
     <div className="innerWrapper cancer-page">
-      <div class="d-flex p-2 img-box">
-        <div class="d-flex flex-row img-captions justify-content-evenly">
+      <div className="d-flex p-2 img-box">
+        <div className="d-flex flex-row img-captions justify-content-evenly">
           <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/aza%203.svg?raw=true" />
           <p class="p-2 align-self-center">
             Your Report Is Ready <br />
