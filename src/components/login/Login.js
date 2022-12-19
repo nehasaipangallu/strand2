@@ -234,6 +234,7 @@ class Login extends React.Component {
                 Phone number is not Valid
               </Alert>
             </div>
+            
             {/* OTP */}
             <div
               class="otp-background flex-column justify-content-center"
