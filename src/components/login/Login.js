@@ -229,6 +229,7 @@ class Login extends React.Component {
                 key="danger"
                 variant="danger"
                 style={{ display: this.state.isValid ? 'none' : 'block' }}
+                className="alert-box"
               >
                 Phone number is not Valid
               </Alert>
