@@ -36,7 +36,7 @@ export default function Cancer(props) {
       </div>
       <div className="d-flex flex-column body-para">
         <div className="section1">
-          <h2 className="c1 pt-4">What are inherited cancers?</h2>
+          <h2 className="c1 pt-4 section-head">What are inherited cancers?</h2>
           <p className="c1 pb-4">
             Cancer caused by changes in the genetic material or L sperm or egg
             is called inherited cancer, R predisposes an individual to develop

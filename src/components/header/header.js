@@ -12,9 +12,10 @@ export default function Header() {
     window.location.replace('#/login');
     window.location.reload(false);
   }
+
   return (
-    <header className="header">
-      <Navbar bg="#0000" variant="light">
+    <header className="header topnav" id="myTopnav">
+      <Navbar collapseOnSelect fixed="top" expand="sm">
         <Container fluid>
           <Navbar.Brand href="#/home">
             <img
@@ -22,8 +23,9 @@ export default function Header() {
               className="logo"
             />
           </Navbar.Brand>
-          <Nav
-            className="me-auto nav-items"
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse
+            className="nav-items ml-auto"
             activeKey="/home"
             onSelect={(selectedKey, event) => console.log(`selected ${event}`)}
           >
@@ -39,7 +41,7 @@ export default function Header() {
             {localStorage.getItem('isLoggedin') === 'true' && (
               <Nav.Link onClick={() => logout()}>Logout</Nav.Link>
             )}
-          </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </header>

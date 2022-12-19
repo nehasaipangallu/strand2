@@ -193,167 +193,169 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div class="login-page d-flex justify-content-end align-items-center">
-        <div id="sign-in-button"></div>
-        <div class="login-page-container">
-          {/* Mobile number */}
-          <div
-            class="login-background flex-column justify-content-center"
-            style={{
-              display: !this.state.isOtpSent ? 'flex' : 'none',
-            }}
-          >
-            <h3 className="heading-log"> Continue with Phone Number</h3>
-            <h5 className="heading-log-2">Phone Number</h5>
-            <div class="mobile-input-container  form-control">
-              <p class="country-code">+91</p>
-              <input
-                type="text"
-                id="mobile"
-                class="mobile-input"
-                name="mobile"
-                required
-                onChange={this.onMobileInput}
-              />
-            </div>
-            <button
-              class="send-otp btn"
-              disabled={!this.state.isValidMobile}
-              onClick={this.sendOtp}
-            >
-              {/* <Spinner animation="border" size="sm" /> */}
-              Send OTP
-            </button>
-            <Alert
-              key="danger"
-              variant="danger"
-              style={{ display: this.state.isValid ? 'none' : 'block' }}
-            >
-              Phone number is not Valid
-            </Alert>
-          </div>
-          {/* OTP */}
-          <div
-            class="otp-background flex-column justify-content-center"
-            style={{
-              display: this.state.isOtpSent ? 'flex' : 'none',
-            }}
-          >
-            <h4> Please enter the OTP sent to your mobile number</h4>
-            <form class="otp-box-container d-flex">
-              <input
-                type="text"
-                id="0"
-                name="digit1"
-                class="otp-input form-control"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit1', e)}
-                tabIndex="1"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-              <input
-                type="text"
-                id="1"
-                name="digit2"
-                class=" otp-input form-control"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit2', e)}
-                tabIndex="2"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-              <input
-                type="text"
-                id="2"
-                name="digit3"
-                class=" otp-input form-control"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit3', e)}
-                tabIndex="3"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-              <input
-                type="text"
-                id="3"
-                class=" otp-input form-control"
-                name="digit4"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit4', e)}
-                tabIndex="4"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-              <input
-                type="text"
-                id="4"
-                name="digit5"
-                class=" otp-input form-control"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit5', e)}
-                tabIndex="5"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-              <input
-                type="text"
-                id="5"
-                name="digit6"
-                class=" otp-input form-control"
-                onChange={this.onOTPInput}
-                onKeyPress={this.keyPressed}
-                // onChange={(e) => this.handleChange('digit6', e)}
-                tabIndex="6"
-                maxLength="1"
-                onKeyUp={(e) => this.inputfocus(e)}
-              />
-            </form>
-
-            <button
-              class="verify-otp btn"
-              onClick={this.verifyOtp}
-              disabled={!this.state.isValidOtp}
-            >
-              Verify and Proceed
-            </button>
-            <div className="d-flex justify-content-between">
-              <button
-                class="resend-otp-btn"
-                onClick={this.resendOtp}
-                style={{
-                  visibility: this.state.isOtpTimerCompleted
-                    ? 'visible'
-                    : 'hidden',
-                }}
-              >
-                Resend OTP
-              </button>
-              <p class="countdown-text">
-                Time Remaining: {this.state.minutes}:{this.state.seconds}
-              </p>
-            </div>
-
-            <Alert
-              key="danger"
-              variant="danger"
-              className="otp-alert"
+      <div class="container-fluid p-0 py-0">
+        <div class="login-page d-flex justify-content-end align-items-center">
+          <div id="sign-in-button"></div>
+          <div class="login-page-container">
+            {/* Mobile number */}
+            <div
+              class="login-background flex-column justify-content-center"
               style={{
-                display:
-                  this.state.isValidUser && this.state.isOtpSent
-                    ? 'block'
-                    : 'none',
+                display: !this.state.isOtpSent ? 'flex' : 'none',
               }}
             >
-              {' '}
-              Otp is Not Valid{' '}
-            </Alert>
-            {this.state.isValidUser && <Navigate to="/user" replace={true} />}
+              <h3 className="heading-log"> Continue with Phone Number</h3>
+              <h5 className="heading-log-2">Phone Number</h5>
+              <div class="mobile-input-container  form-control">
+                <p class="country-code">+91</p>
+                <input
+                  type="text"
+                  id="mobile"
+                  class="mobile-input"
+                  name="mobile"
+                  required
+                  onChange={this.onMobileInput}
+                />
+              </div>
+              <button
+                class="send-otp btn"
+                disabled={!this.state.isValidMobile}
+                onClick={this.sendOtp}
+              >
+                {/* <Spinner animation="border" size="sm" /> */}
+                Send OTP
+              </button>
+              <Alert
+                key="danger"
+                variant="danger"
+                style={{ display: this.state.isValid ? 'none' : 'block' }}
+              >
+                Phone number is not Valid
+              </Alert>
+            </div>
+            {/* OTP */}
+            <div
+              class="otp-background flex-column justify-content-center"
+              style={{
+                display: this.state.isOtpSent ? 'flex' : 'none',
+              }}
+            >
+              <h4> Please enter the OTP sent to your mobile number</h4>
+              <form class="otp-box-container d-flex">
+                <input
+                  type="text"
+                  id="0"
+                  name="digit1"
+                  class="otp-input form-control"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit1', e)}
+                  tabIndex="1"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+                <input
+                  type="text"
+                  id="1"
+                  name="digit2"
+                  class=" otp-input form-control"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit2', e)}
+                  tabIndex="2"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+                <input
+                  type="text"
+                  id="2"
+                  name="digit3"
+                  class=" otp-input form-control"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit3', e)}
+                  tabIndex="3"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+                <input
+                  type="text"
+                  id="3"
+                  class=" otp-input form-control"
+                  name="digit4"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit4', e)}
+                  tabIndex="4"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+                <input
+                  type="text"
+                  id="4"
+                  name="digit5"
+                  class=" otp-input form-control"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit5', e)}
+                  tabIndex="5"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+                <input
+                  type="text"
+                  id="5"
+                  name="digit6"
+                  class=" otp-input form-control"
+                  onChange={this.onOTPInput}
+                  onKeyPress={this.keyPressed}
+                  // onChange={(e) => this.handleChange('digit6', e)}
+                  tabIndex="6"
+                  maxLength="1"
+                  onKeyUp={(e) => this.inputfocus(e)}
+                />
+              </form>
+
+              <button
+                class="verify-otp btn"
+                onClick={this.verifyOtp}
+                disabled={!this.state.isValidOtp}
+              >
+                Verify and Proceed
+              </button>
+              <div className="d-flex justify-content-between">
+                <button
+                  class="resend-otp-btn"
+                  onClick={this.resendOtp}
+                  style={{
+                    visibility: this.state.isOtpTimerCompleted
+                      ? 'visible'
+                      : 'hidden',
+                  }}
+                >
+                  Resend OTP
+                </button>
+                <p class="countdown-text">
+                  Time Remaining: {this.state.minutes}:{this.state.seconds}
+                </p>
+              </div>
+
+              <Alert
+                key="danger"
+                variant="danger"
+                className="otp-alert"
+                style={{
+                  display:
+                    this.state.isValidUser && this.state.isOtpSent
+                      ? 'block'
+                      : 'none',
+                }}
+              >
+                {' '}
+                Otp is Not Valid{' '}
+              </Alert>
+              {this.state.isValidUser && <Navigate to="/user" replace={true} />}
+            </div>
           </div>
         </div>
       </div>
