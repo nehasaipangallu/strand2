@@ -128,12 +128,13 @@ export default function Cancer(props) {
         </Carousel>
       </div>
       <div>
-        <h4>Susceptibility Genes in Hereditary Cancer</h4>
+        <h4 className="genes-head">Susceptibility Genes in Hereditary Cancer</h4>
         <div className="d-flex flex-row mb-3">
           <div className="p-2 bar-box">
             <img
               className="bar-img"
               src="https://github.com/nehasaipangallu/strand2/blob/main/public/image%2012.svg?raw=true"
+              
             />
           </div>
           <div className="p-2 bar-box-2">
@@ -173,19 +174,19 @@ export default function Cancer(props) {
       </div>
       <div className="d-flex flex-column mb-3">
         <div className="p-2">
-          <h2>Other Hereditary Mutations</h2>
-          <p>
+          <h2 className="other-head">Other Hereditary Mutations</h2>
+          <p className="other-para">
             In Case of familisal syndrome, the risk of developing cancer is even
             greater without timely intervention.
           </p>
           <div className="d-flex flex-row mb-3">
             <div className="p-2">
-              <ul>
+              <ul className="unsorted-list">
                 <li>Familial Adenomatous Polyposis-nearly 100%</li>
               </ul>
             </div>
             <div className="p-2">
-              <ul>
+              <ul className="unsorted-list">
                 <li>MUTYH- associated polyposis- 80-90% </li>
               </ul>
             </div>
@@ -194,7 +195,7 @@ export default function Cancer(props) {
         <div className="p-2">
           <Carousel>
             <Carousel.Item>
-              <div className="d-flex flex-row mb-3 carousel-2">
+              <div className="d-flex flex-row mb-3 carousel-2 justify-content-end align-items-center">
                 <div className="p-2 carousel-2-flex">
                   <img
                     className="d-block w-100 carousel-2-img"
@@ -216,7 +217,7 @@ export default function Cancer(props) {
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <div className="d-flex flex-row mb-3 carousel-2">
+              <div className="d-flex flex-row mb-3 carousel-2 justify-content-end align-items-center">
                 <div className="p-2 carousel-2-flex">
                   <img
                     className="d-block w-100 carousel-3-img"

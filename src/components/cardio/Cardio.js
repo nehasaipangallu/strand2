@@ -40,7 +40,7 @@ export default function Cardio(props) {
         </div>
       </div>
       <div className="p-2">
-        <h2>Inherited Cardiac Conditions (ICC)</h2>
+        <h2 className="cardio-class">Inherited Cardiac Conditions (ICC)</h2>
         <div className="d-flex flex-row mb-3 cardic-condition-box">
           <img
             class="m-2"
@@ -92,22 +92,15 @@ export default function Cardio(props) {
             <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
               <div className="p-2 car-img-item">
                 <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12495-300%202.svg?raw=true"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/cardiomypathies.svg?raw=true"
                   alt="First slide"
+                  className="tumor-img"
                 />
               </div>
               <div className="p-5 carousel-cap">
-                <h3>Tumor suppressor genes</h3>
+                <h3>Cardiomypathies</h3>
                 <p>
-                  These are protective genes under normal circumstances, and
-                  they limit cell growth. When a tumor suppressor gene mutates,
-                  control on cell growth is lost, resulting in the formation of
-                  a tumor. Examples of tumor suppres sor genes include BRCA1,
-                  BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2
-                  genes increase a wom ar's risk of developing hereditary breast
-                  or ovarian cancers and a man's risk of developing hereditary
-                  prostate or breast cancers. They also increase the risk of
-                  pancreatic cancer and melanoma in women and men.
+                Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is a disease of the heart muscle that makes it harder for the heart to pump blood to the rest of the body. Cardiomyopathy can lead to heart failure. The main types of cardiomyopathy include dilated, hypertrophic and restrictive cardiomyopathy.
                 </p>
               </div>
             </div>
@@ -117,15 +110,15 @@ export default function Cardio(props) {
             <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
               <div className="p-2 car-img-item">
                 <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12494-150%202.svg?raw=true"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/Group%2048095702.svg?raw=true"
                   alt="Second slide"
+                  className="arhy-img"
                 />
               </div>
               <div className="p-5 carousel-cap">
-                <h3>Oncogenes</h3>
+                <h3>Arrhythmias</h3>
                 <p>
-                  These genes actively turn a healthy cell into a cancerous cell
-                  Mutations in these genes are NOT known to be inherited.
+                A heart arrhythmia (uh-RITH-me-uh) is an irregular heartbeat. Heart rhythm problems (heart arrhythmias) occur when the electrical signals that coordinate the heart's beats don't work properly. The faulty signaling causes the heart to beat too fast (tachycardia), too slow (bradycardia) or irregularly.
                 </p>
               </div>
             </div>
@@ -133,48 +126,46 @@ export default function Cardio(props) {
           </Carousel>
           <div className="p-2">
           <Carousel>
-          <Carousel.Item>
-            <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
-              <div className="p-2 car-img-item">
-                <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12495-300%202.svg?raw=true"
-                  alt="First slide"
-                />
-              </div>
-              <div className="p-5 carousel-cap">
-                <h3>Tumor suppressor genes</h3>
-                <p>
-                  These are protective genes under normal circumstances, and
-                  they limit cell growth. When a tumor suppressor gene mutates,
-                  control on cell growth is lost, resulting in the formation of
-                  a tumor. Examples of tumor suppres sor genes include BRCA1,
-                  BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2
-                  genes increase a wom ar's risk of developing hereditary breast
-                  or ovarian cancers and a man's risk of developing hereditary
-                  prostate or breast cancers. They also increase the risk of
-                  pancreatic cancer and melanoma in women and men.
-                </p>
-              </div>
-            </div>
-          </Carousel.Item>
-
+          
           <Carousel.Item>
             <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
               <div className="p-2 car-img-item">
                 <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/nci-vol-12494-150%202.svg?raw=true"
-                  alt="Second slide"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/AFib%203.svg?raw=true"
+                  alt="First slide"
+                  className="heart-2"
                 />
               </div>
               <div className="p-5 carousel-cap">
-                <h3>Oncogenes</h3>
+                <h3>Eg: Familial Atrial Fibrillation</h3>
                 <p>
-                  These genes actively turn a healthy cell into a cancerous cell
-                  Mutations in these genes are NOT known to be inherited.
+                Genes Involved:
+BCC9, EMD, GJAS, KCNAS, KCNE2, KCNE3, KCNH2, KCNJ2, KCNJ5, KCNQ1, LMNA, NPPA, NUP155, SCN18, SCN2B, SCN3B, SCN5A.
                 </p>
+                <p>Familial atrial fibrillation is an inherited abnormality of the heart's normal rhythm. Atrial fibrillation is character- ized by episodes of uncoordinated electrical activity (fibrillation) in the heart's upper chambers (the atria), which cause a fast and irregular heartbeat.</p>
               </div>
             </div>
           </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
+              <div className="p-2 car-img-item">
+                <img
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/AFib%202.svg?raw=true"
+                  alt="Second slide"
+                  className="heart-img"
+                />
+              </div>
+              <div className="p-5 carousel-cap">
+                <h3>Eg: Hypertrophic cardiomyopathy </h3>
+                <p>
+                Genes Involved:
+ACE, ACTC1, ACTN2, AGT, ANKRD1, CASQ2, COX15, CSRP3, DES, FXN, GLA, LAMP2, MYBPC3, MYH6, MYH7, MYL2, MYL3, MYLK2, MY06, MYOM1, MYOZZ, NDUFAF1, NEXN, OBSCN, PDLIM3, PLN, PRKAG2, RAF1, SLC25A4, SRI, TCAP, TNNC1, TNNI3, TNNT2, TPM1, TTN, TTR.
+                </p>
+                <p>Condition: Hypertrophic cardiomyopathy (HCM) is a disease in which the heart muscle becomes thickened (hypertrophied). The thickened heart muscle can make it harder for the heart to pump blood. Hypertrophic cardiomyopathy often goes undiagnosed because many people with the disease have few, if any, symptoms. </p>
+              </div>
+            </div>
+          </Carousel.Item>
+
           </Carousel>
 
           </div>

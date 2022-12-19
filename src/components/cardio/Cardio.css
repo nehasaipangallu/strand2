@@ -10,15 +10,19 @@
   margin-top: 50px;
   color:#fff
 }
+.cardio-class{
+  color:#fff
+}
 
 .cardic-condition-box {
   display: flex;
   height:  537px;
-  width: 1195.94px;;
+  width: 1105.94px;;
   background-color: #fff;
   border-radius: 10px;
   font-size: 16px;
   font-family: "Open Sans";
+  align-content: space-between;
 }
 
 .cardio-img{
@@ -28,6 +32,24 @@
 }
 
 .cardiac-condition{
-  height: 176px;
-  width: 235px;
+  height: 500px;
+  width: 400px;
+}
+
+.tumor-img{
+  width: 500px;
+  height:500px;
+  left:0;
+}
+.arhy-img{
+  width: 400px;
+  height: 500px;
+}
+.heart-img{
+  width: 400px;
+  height: 500px;
+}
+.heart-2{
+  width: 400px;
+  height: 500px;
 }

@@ -137,3 +137,19 @@
 .body-para > .section1 > .section-head{
   color:#fff
 }
+
+.genes-head{
+  color:#fff;
+  font-family: "Baloo 2";
+}
+.other-head{
+  color: #fff;
+  justify-self: center;
+}
+.other-para{
+  color: #fff;
+}
+.unsorted-list{
+  color: #fff;
+  font-size: 14px;
+}
