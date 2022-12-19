@@ -148,7 +148,9 @@
   border: 1px solid #fb848e;
   background-color: #f8d7da;
   color: #842029;
-  font-size: 16px;
+  font-size: 12px;
+  width: 82%;
+  height: 50px;
 }
 
 /* responsive */
