@@ -2,6 +2,9 @@ import React from 'react';
 import './Metabolism.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function Metabolism(props) {
   props.onLoad(true);
@@ -11,38 +14,45 @@ export default function Metabolism(props) {
     naviage('/metabolism');
   }
   return (
-    <div className="d-flex flex-column mb-3">
-      <div className="p-2 cardio-rep-box">
-        <div className="d-flex flex-row mb-3">
-          <div className="p-2">
-            <img
-              src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism%202%20(1).svg?raw=true"
-              className="meta-img"
-            />
-          </div>
-          <p className="p-2">
+    <div className="d-flex flex-column mb-3 container p-o">
+      {/* this for report section */}
+
+      <Row className="report-container p-0">
+        <Col>
+          <img
+            src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism%202%20(1).svg?raw=true"
+            className="meta-img"
+          />
+        </Col>
+
+        <Col className="para-1">
+          <p className="pl-0 para-1">
             Your Report is Ready. Please click to View Report.
           </p>
-          <div className=" d-flex flex-column report-dates align-self-center">
-            <p className="m-2">12/11/2022</p>
-            <p className="m-2">02/08/2022</p>
-            <p className="m-2">20/08/2022</p>
-          </div>
+        </Col>
 
-          <div class="d-flex flex-column report-buttons align-self-center">
-            <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
-              View Report
-            </button>
-            <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
-              View Report
-            </button>
-            <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
-              View Report
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="d-flex flex-column mb-3">
+        <Col className="para-2">
+          <p className="m-2">12/11/2022</p>
+          <p className="m-2">02/08/2022</p>
+          <p className="m-2">20/08/2022</p>
+        </Col>
+
+        <Col>
+          <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
+            View Report
+          </button>
+          <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
+            View Report
+          </button>
+          <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
+            View Report
+          </button>
+        </Col>
+      </Row>
+
+      {/* end report section */}
+
+      <div className="d-flex flex-column mb-3 meata-sec-p">
         <h2 className="meta-head">What are inherited cancers?</h2>
         <p className="p-2 meta-para">
           Inborn errors of metabolism (IEM) are a heterogeneous group of 1,450
@@ -55,9 +65,13 @@ export default function Metabolism(props) {
           marathon, pregnancy) leading to metabolic decompensation (eg.
           hyperammonemia, rhabdomyolysis).
         </p>
+        <hr />
       </div>
+
       <div className="p-2">
-        <h2 className="meta-head">Key Adult Onset Inborn Errors of Metabolism</h2>
+        <h2 className="meta-head">
+          Key Adult Onset Inborn Errors of Metabolism
+        </h2>
         <div className="d-flex flex-row mb-3 cardic-condition-box">
           <img
             class="m-2"
@@ -97,7 +111,7 @@ export default function Metabolism(props) {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-row mb-3">
+      <div className="d-flex flex-row mb-3 meata-sec-p">
         <div className="p-2 exam-para">
           <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
           <p>
