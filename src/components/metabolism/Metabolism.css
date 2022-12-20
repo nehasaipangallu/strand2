@@ -10,13 +10,14 @@ img.meta-img {
   text-align: center !important;
   width: 236px !important;
   height: 124px;
+  margin-top: 48px
 }
 
 .meta-head {
-  color: #fff;
+  color:#000;
 }
 .meta-para {
-  color: #fff;
+  color: #333;
   font-family: 'Open Sans';
 }
 .cardiac-condition {
@@ -24,6 +25,7 @@ img.meta-img {
   width: 400px;
   border-top: 25px;
   padding: 40px;
+  
 }
 .meta-list {
   border-top: 10px;
@@ -37,41 +39,28 @@ img.meta-img {
   margin-top: 43px;
   margin-left: 100px;
 }
-ul li {
+/* ul li {
   list-style: none !important;
   font-size: 15px;
   font-weight: 500;
   line-height: 29px;
-}
-
-ul li::before {
-  content: '\2022';
-  color: #f99d1b;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  list-style: circle;
-}
+} */
 
 .meata-sec-p {
   padding: 50px !important;
 }
 
-p {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-}
-
 hr {
-  color: white;
+  color:#000;
   width: 100%;
 }
 
 .report-container {
-  background-color: #06377b;
+  background: linear-gradient(
+    rgb(82 131 199 / 80%) 4.2%, rgba(16, 107, 147, 0.8) 27.5%, rgba(7, 138, 110, 0.8) 69.73%, rgba(55, 190, 128, 0.8) 97.39%
+  );
   padding: 14px !important;
+  border-radius: 6px;
 }
 
 .report-container .para-1 {
@@ -104,4 +93,8 @@ hr {
 
 .btn-report:hover {
   color: white;
+}
+
+.cardic-condition-box{
+  box-shadow: 1px 2px 13px 1px #44444430;
 }
