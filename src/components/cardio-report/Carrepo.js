@@ -26,6 +26,7 @@ export default function CardioReport(props) {
          <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
          <button className="read-btn">
            Read More
+           
            </button>
          </div>
          <div className="p-2">
