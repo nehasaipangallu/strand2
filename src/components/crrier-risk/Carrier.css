@@ -18,15 +18,21 @@
 .carrier-rep-box{
   display: flex;
   z-index: 1;
-  height: 250px;
+  height: 226px;
   width: 100%;
-  background-color: #06377b;
+  background: linear-gradient(
+    110.27deg,
+    rgba(6, 55, 123, 0.8) 4.2%,
+    rgba(16, 107, 147, 0.8) 27.5%,
+    rgba(7, 138, 110, 0.8) 69.73%,
+    rgba(55, 190, 128, 0.8) 97.39%
+  );
   font-size: 10px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   border-radius: 6px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   color:#fff;
-  padding-right:10px;
+  /* padding-right:10px; */
 }
 
 .carrier-para{
@@ -48,6 +54,7 @@ color: #fff;
   border-radius: 6px;
   align-content: center;
   margin-left: 40px;
+  box-shadow: 1px 2px 13px 1px #44444430;
 }
 
 .ar-disorder > .ar-head{
@@ -62,6 +69,8 @@ color: #fff;
   border-radius: 6px;
   align-content: center;
  margin-left: 80px;
+ box-shadow: 1px 2px 13px 1px #44444430;
+
 }
 .table-risk{
   background-color: #078A6E;
@@ -85,4 +94,16 @@ color: #fff;
 .table-risk table tr:not(:first-child){
   color: #ffffff;
   background-color: #c7c7c7;
+}
+
+.para-car{
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.ar-head-2{
+  margin-left: 39px;
+}
+
+.ar-head{
+  margin-left: 72px;
 }
