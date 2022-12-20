@@ -31,7 +31,7 @@
 .img-box {
   display: flex;
   z-index: 1;
-  height: 150px;
+  height: 180px;
   width: 100%;
   background-color: #06377b;
   font-size: 10px;
@@ -103,10 +103,11 @@
   background-color: white;
   border-radius: 30px;
   align-items: center;
+  
 }
 
 .bar-img {
-  height: 250px;
+  height: 412px;
   width: 250px;
 }
 

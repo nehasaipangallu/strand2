@@ -15,3 +15,74 @@
 .cardio-rep-box{
   margin-top: 20px;
 }
+.carrier-rep-box{
+  display: flex;
+  z-index: 1;
+  height: 250px;
+  width: 100%;
+  background-color: #06377b;
+  font-size: 10px;
+  padding-top: 20px;
+  border-radius: 6px;
+  margin-top: 50px;
+  color:#fff;
+  padding-right:10px;
+}
+
+.carrier-para{
+  padding-left: 10px;
+}
+.type-head{
+  Font-family:"Baloo 2";
+font-weight:600;
+font-size:28px;
+line-height: 43.58px;
+color: #fff;
+
+}
+
+.ar-disorder{
+  height:200px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 6px;
+  align-content: center;
+  margin-left: 40px;
+}
+
+.ar-disorder > .ar-head{
+  font-family: "Open Sans";
+ 
+}
+
+.ar-disorder-2{
+  height:200px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 6px;
+  align-content: center;
+ margin-left: 80px;
+}
+.table-risk{
+  background-color: #078A6E;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+ 
+ 
+}
+
+.table-risk table tr:first-child{
+  color: #ffffff;
+  background-color: #06377b;
+  font-size: 10px;
+}
+.table-risk table {
+  border-collapse: separate;
+}
+
+.table-risk table tr:not(:first-child){
+  color: #ffffff;
+  background-color: #c7c7c7;
+}
