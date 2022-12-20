@@ -66,13 +66,16 @@ export default function CancerReport(props) {
                 PPM1D, PTEN, RAD51C, STK11, TP53{' '}
               </td>
               <td>
-                BRCA1{' '}
-                <img
+                {/* BRCA1{' '} */}
+                {/* <img
                   alt=""
                   class="icon-question"
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
-                  onClick={openPanel}
-                />
+                  onClick={openPanel} */}
+                {/* /> */}
+                <button className="brca-1">
+           BRCA1
+           </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
@@ -83,13 +86,17 @@ export default function CancerReport(props) {
                 PMS2, PPM1D, RAD51C,RAD51D, STK11, TP53
               </td>
               <td>
-                BRCA1{' '}
+                {/* BRCA1{' '}
                 <img
                   alt=""
                   class="icon-question"
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
-                />
+                /> */}
+                 <button className="brca-1">
+           BRCA1
+           </button>
+
               </td>
               <td className="yes-text">YES</td>
             </tr>
@@ -109,13 +116,16 @@ export default function CancerReport(props) {
               <td>Prostate Gland</td>
               <td>ATM, BRCA1, BRCA2, CHEK2, HOXB13, NBN, TP53</td>
               <td>
-                BRCA1{' '}
+                {/* BRCA1{' '}
                 <img
                   alt=""
                   class="icon-question"
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
-                />
+                /> */}
+                 <button className="brca-1">
+           BRCA1
+           </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
