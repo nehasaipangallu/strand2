@@ -17,6 +17,7 @@ import Articles from './components/articles/articles';
 import Faq from './components/faq/faq';
 import Metabolism from './components/metabolism/Metabolism';
 import Carrier from './components/crrier-risk/Carrier';
+import Pop from './components/pop-up/Pop'
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -123,6 +124,11 @@ export default function App() {
                   exact
                   path="/faq"
                   element={<Faq onLoad={showSideBar} />}
+                ></Route>
+                <Route
+                  exact
+                  path="/pop-up"
+                  element={<Pop onLoad={showSideBar} />}
                 ></Route>
               </Routes>
             </div>

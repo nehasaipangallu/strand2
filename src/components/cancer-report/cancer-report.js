@@ -3,6 +3,7 @@ import './cancer-report.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 
+
 export default function CancerReport(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
@@ -13,7 +14,7 @@ export default function CancerReport(props) {
   function onPanelClose() {
     setPanelOpen(false);
   }
-
+ 
   return (
     <div className="d-flex flex-column mb-3 container">
       {isPanelOpen && (
@@ -73,7 +74,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button className="brca-1">
+                <button className="brca-1" >
            BRCA1
            </button>
               </td>
@@ -93,7 +94,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                 <button className="brca-1">
+                 <button className="brca-1" >
            BRCA1
            </button>
 
