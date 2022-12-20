@@ -32,7 +32,7 @@ export default function Sidebar() {
   return (
     <div className="sideBar">
       <div className="sidebarInner">
-        <h2 className="sidebarHero">Health Insight</h2>
+        <h2 className="sidebarHero">Dashboard</h2>
 
         <nav className="sideBarNav">
           {/* One */}
@@ -78,7 +78,10 @@ export default function Sidebar() {
                     </a>
                   </li>
                   <li>
-                    <a onClick={() =>  onChildMenuClick('metabolism')} className="nav-link">
+                    <a
+                      onClick={() => onChildMenuClick('metabolism')}
+                      className="nav-link"
+                    >
                       <div className="navIcon">
                         <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism.svg?raw=true" />
                       </div>
