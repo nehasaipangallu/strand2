@@ -14,7 +14,7 @@ export default function Metabolism(props) {
     naviage('/metabolism');
   }
   return (
-    <div className="d-flex flex-column mb-3 container p-o">
+    <div className="d-flex flex-column mb-3 container pt-5">
       {/* this for report section */}
 
       <Row className="report-container p-0">
@@ -52,7 +52,7 @@ export default function Metabolism(props) {
 
       {/* end report section */}
 
-      <div className="d-flex flex-column mb-3 meata-sec-p">
+      <div className="d-flex flex-column mb-3 pt-3">
         <h2 className="meta-head">What are inherited cancers?</h2>
         <p className="p-2 meta-para">
           Inborn errors of metabolism (IEM) are a heterogeneous group of 1,450
@@ -73,13 +73,17 @@ export default function Metabolism(props) {
           Key Adult Onset Inborn Errors of Metabolism
         </h2>
         <div className="d-flex flex-row mb-3 cardic-condition-box">
+          <div>
           <img
             class="m-2"
             src="https://github.com/nehasaipangallu/strand2/blob/main/public/3-s2%201.svg?raw=true"
             className="cardiac-condition"
           />
+         </div>
+         
 
           <div className="p-2 meta-list">
+         
             <h2>Tumor suppressor genes</h2>
 
             <ul>
@@ -114,7 +118,7 @@ export default function Metabolism(props) {
       <div className="d-flex flex-row mb-3 meata-sec-p">
         <div className="p-2 exam-para">
           <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
-          <p>
+          <p className="c2">
             Lysosomal storage diseases or disorders (LSDs) are rare genetic
             conditions that cause a buildup of toxic materials in your body's
             cells. People with LSDs lack certain enzymes or a substance that
