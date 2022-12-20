@@ -12,7 +12,7 @@ export default function Carrier(props) {
     naviage('/crrier-risk');
   }
   return (
-    <div className="d-flex flex-column mb-3">
+    <div className="d-flex flex-column mb-3 container pt-5">
       <div className="p-2 carrier-rep-box">
         <div className="d-flex flex-row mb-3">
           <div className="p-2">
@@ -21,7 +21,7 @@ export default function Carrier(props) {
               className="carrier-img"
             />
           </div>
-          <p className="p-2 carrier-para">
+          <p className="p-2 carrier-para c1">
             Your Report is Ready. Please click to View Report.
           </p>
           <div className=" d-flex flex-column report-dates align-self-center">
@@ -43,13 +43,13 @@ export default function Carrier(props) {
         </div>
       </div>
       <div className="p-2 carrier-risk-rep">
-        <h2>What is Carrier Risk Screening?</h2>
-        <p>A test done on a person without signs or symptoms to find out whether he or she carries a gene for a genetic disorder. Genetic disorders can be caused by a mutation in one gene (monogenic), by mutations in multiple genes (multigenic), by a combination of gene mutations and environmental factors, or by damage to chromo- somes (Somatic).</p>
+        <h2 className="c2">What is Carrier Risk Screening?</h2>
+        <p className="c2">A test done on a person without signs or symptoms to find out whether he or she carries a gene for a genetic disorder. Genetic disorders can be caused by a mutation in one gene (monogenic), by mutations in multiple genes (multigenic), by a combination of gene mutations and environmental factors, or by damage to chromo- somes (Somatic).</p>
 
-<p>Those planning to get married or start a family, or have children in the same life stage, would benefit from knowing if they are carriers of a genetic disease</p>
+<p className="c2">Those planning to get married or start a family, or have children in the same life stage, would benefit from knowing if they are carriers of a genetic disease</p>
       </div>
       <div className="p-2 mono-disorders">
-      <h2>What are Single Gene Disorders (Monogenic Disorders)?</h2>
+      <h2 className="c2">What are Single Gene Disorders (Monogenic Disorders)?</h2>
       <div className="d-flex flex-row mb-3">
       {/* <div className="p-2"> */}
       <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/genetic%201.svg?raw=true" />
@@ -65,19 +65,19 @@ export default function Carrier(props) {
       </div> */}
     </div>
     <div className="p-2 type-carrier">
-      <h1 className ="type-head">
+      <h1 className ="type-head c2">
       Types of carrier risk disorder
       </h1>
       <div className="d-flex flex-row mb-3">
         <div className="ar-disorder">
-          <h4 className="ar-head">A R Disorders</h4>
-          <p className="ml-5">
+          <h4 className="ar-head p-6">A R Disorders</h4>
+          <p className="para-car">
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
         </div>
         <div className="ar-disorder-2">
-          <h4 className="ar-head">X-linked Disorders</h4>
-          <p>
+          <h4 className="ar-head-2">X-linked Disorders</h4>
+          <p className="para-car">
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
         </div>
@@ -139,25 +139,24 @@ export default function Carrier(props) {
           </Table>
       </div>
      </div>
-     <div className="p-2">
+     <div className="p-2 pt-5">
      <Carousel>
           <Carousel.Item>
             <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
               <div className="p-2 car-img-item">
                 <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/cardiomypathies.svg?raw=true"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/PX0001AS_PRESENTATION%201.svg?raw=true"
                   alt="First slide"
-                  className="tumor-img"
+                  className="blood-cell"
                 />
+                <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/1000_F_489389817_WrTqt6EAGUZ16MO6mrkSW6K2BzFb74Nl%201.svg?raw=true" 
+                classNmae ="blood-cell"/>
+          
               </div>
               <div className="p-5 carousel-cap">
-                <h3>Cardiomypathies</h3>
+                <h3>Sickle Cell Anemia</h3>
                 <p>
-                  Cardiomyopathy (kahr-dee-o-my-OP-uh-thee) is a disease of the
-                  heart muscle that makes it harder for the heart to pump blood
-                  to the rest of the body. Cardiomyopathy can lead to heart
-                  failure. The main types of cardiomyopathy include dilated,
-                  hypertrophic and restrictive cardiomyopathy.
+                Certain ethnic groups in India have high carrier frequency for AR Hemoglobinopathies such as Sickle cell anemia (upto 20%) and Thalassemias (upto 17%
                 </p>
               </div>
             </div>
@@ -167,19 +166,15 @@ export default function Carrier(props) {
             <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
               <div className="p-2 car-img-item">
                 <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/Group%2048095702.svg?raw=true"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/cq5dam.web.1280%201.svg?raw=true"
                   alt="Second slide"
                   className="arhy-img"
                 />
               </div>
               <div className="p-5 carousel-cap">
-                <h3>Arrhythmias</h3>
+                <h3>Spinal Muscular Atrophy (SMA)</h3>
                 <p>
-                  A heart arrhythmia (uh-RITH-me-uh) is an irregular heartbeat.
-                  Heart rhythm problems (heart arrhythmias) occur when the
-                  electrical signals that coordinate the heart's beats don't
-                  work properly. The faulty signaling causes the heart to beat
-                  too fast (tachycardia), too slow (bradycardia) or irregularly.
+                Spinal muscular atrophy (SMA) is an AR progressive, neuromuscular disorder with a carrier frequency of 1 in 38 in India
                 </p>
               </div>
             </div>
