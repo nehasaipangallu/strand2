@@ -4,6 +4,14 @@ import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 import { Link, useNavigate } from 'react-router-dom';
 
+const cancerdata = {
+  section1: {
+    title: 'What are inherited cancers?',
+    description:
+      'Cancer caused by changes in the genetic material or L sperm or egg is called inherited cancer, R predisposes an individual to develop cancers later in their life. This type of mutation accounts for about 5% to 20% of all cancers',
+  },
+};
+
 export default function Cancer(props) {
   props.onLoad(true);
   const naviage = useNavigate();
@@ -12,10 +20,12 @@ export default function Cancer(props) {
     naviage('/cancer-report');
   }
   return (
-    <div className="innerWrapper cancer-page">
+    <div className="innerWrapper cancer-page container pt-5">
       <div className="d-flex p-2 img-box">
         <div className="d-flex flex-row img-captions justify-content-evenly">
+          <div claasName="p-2">
           <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/aza%203.svg?raw=true" />
+          </div>
           <p class="p-2 align-self-center">
             Your Report Is Ready <br />
             Please click on View Report
@@ -31,13 +41,16 @@ export default function Cancer(props) {
             <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
               View Report
             </button>
+            <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
+              View Report
+            </button>
           </div>
         </div>
       </div>
       <div className="d-flex flex-column body-para">
         <div className="section1">
-          <h2 className="c1 pt-4 section-head">What are inherited cancers?</h2>
-          <p className="c1 pb-4">
+          <h2 className="c2 pt-4 section-head">{cancerdata.section1.title}</h2>
+          <p className="c2 pb-4">
             Cancer caused by changes in the genetic material or L sperm or egg
             is called inherited cancer, R predisposes an individual to develop
             cancers later in their life. This type of mutation accounts for
@@ -46,8 +59,8 @@ export default function Cancer(props) {
         </div>
 
         <div className="section1">
-          <h2 className="c1">Types of genes linked to cancer</h2>
-          <p className="c1 pb-4">
+          <h2 className="c2">Types of genes linked to cancer</h2>
+          <p className="c2 pb-4">
             Many of the genes that contribute to cancer development fall into
             broad categories :
           </p>
@@ -128,13 +141,14 @@ export default function Cancer(props) {
         </Carousel>
       </div>
       <div>
-        <h4 className="genes-head">Susceptibility Genes in Hereditary Cancer</h4>
+        <h4 className="genes-head c2">
+          Susceptibility Genes in Hereditary Cancer
+        </h4>
         <div className="d-flex flex-row mb-3">
           <div className="p-2 bar-box">
             <img
               className="bar-img"
               src="https://github.com/nehasaipangallu/strand2/blob/main/public/image%2012.svg?raw=true"
-              
             />
           </div>
           <div className="p-2 bar-box-2">
@@ -174,19 +188,19 @@ export default function Cancer(props) {
       </div>
       <div className="d-flex flex-column mb-3">
         <div className="p-2">
-          <h2 className="other-head">Other Hereditary Mutations</h2>
-          <p className="other-para">
+          <h2 className="other-head c2">Other Hereditary Mutations</h2>
+          <p className="other-para c2">
             In Case of familisal syndrome, the risk of developing cancer is even
             greater without timely intervention.
           </p>
           <div className="d-flex flex-row mb-3">
             <div className="p-2">
-              <ul className="unsorted-list">
+              <ul className="unsorted-list c2">
                 <li>Familial Adenomatous Polyposis-nearly 100%</li>
               </ul>
             </div>
             <div className="p-2">
-              <ul className="unsorted-list">
+              <ul className="unsorted-list c2">
                 <li>MUTYH- associated polyposis- 80-90% </li>
               </ul>
             </div>
