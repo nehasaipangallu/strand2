@@ -15,10 +15,19 @@ export default function CancerReport(props) {
   }
 
   return (
-    <div className="d-flex flex-column mb-3 ">
+    <div className="d-flex flex-column mb-3 container">
       {isPanelOpen && (
         <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
       )}
+       <div className="d-flex flex-row mb-3">
+         <div className="d-flex flex-column mb-3">
+         <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
+         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
+         <button className="read-btn">
+           Read More
+           </button>
+         </div>
+         <div className="p-2">
       <button class="btn btn-download align-self-end m-3">
         Download Report{' '}
         <img
@@ -27,13 +36,25 @@ export default function CancerReport(props) {
           src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
         />
       </button>
+      </div>
+      </div>
+      <div className="res-box p-0 m-0">
+        <h2 className="c2">Result</h2>
+        </div>
+        <p className="c2">
+        Your report describes X no. of observations of significance.
+        </p>
+
+        <div className="res-box p-0 m-0">
+        <h2 className="c2">Detailed Findings</h2>
+        </div>
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered>
           <thead>
             <tr>
-              <td style={{ width: 'auto' }}>Cancer/Tumor</td>
+              <td style={{ width: 'auto' }}>Organ/Tissue</td>
               <td style={{ width: '40%' }}>Associated Gene(s)</td>
-              <td style={{ width: '15%' }}></td>
+              <td style={{ width: '15%' }}> Gene(s) with Variants</td>
               <td>Reportable Mutation Detected</td>
             </tr>
           </thead>
