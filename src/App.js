@@ -18,6 +18,7 @@ import Faq from './components/faq/faq';
 import Metabolism from './components/metabolism/Metabolism';
 import Carrier from './components/crrier-risk/Carrier';
 import Pop from './components/pop-up/Pop'
+import Carrepo from './components/cardio-report/Carrepo';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -109,6 +110,11 @@ export default function App() {
                   exact
                   path="/cancer-report"
                   element={<CancerReport onLoad={showSideBar} />}
+                ></Route>
+                  <Route
+                  exact
+                  path="/cardio-report"
+                  element={<Carrepo onLoad={showSideBar} />}
                 ></Route>
                 <Route
                   exact
