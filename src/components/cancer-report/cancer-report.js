@@ -149,8 +149,9 @@ export default function CancerReport(props) {
             </tr>
           </tbody>
         </Table>
+        <div className="exp-box">Schedule appointment with Genetic Counsellor for detailed explanation</div>
       </div>
-      <div className="m-3 table-health-2">
+      {/* <div className="m-3 table-health-2">
         <div className="m-4">
           <Table responsive="sm">
             <tbody>
@@ -208,9 +209,13 @@ export default function CancerReport(props) {
             it may be evaluated vis-à-vis an individuals health.
           </p>
         </div>
-      </div>
+      </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
+      <div className="rec-class">
+        <h2 className="c2 rec-head" >Recommendations</h2>
+        <p className="rec-para">Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.</p>
+      </div>
     </div>
   );
 }
