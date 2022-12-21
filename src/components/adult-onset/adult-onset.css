@@ -9,6 +9,11 @@
   background-size: cover;
 }
 
+.adult-route-container .route-row-1,
+.adult-route-container .route-row-2 {
+  width: 60%;
+  margin: 0;
+}
 .adult-route-container .route-row-1 .row-1-heading {
   width: 75%;
   margin: 0;
@@ -45,4 +50,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.adult-route-container .route-row-2 .row-2-heading {
+  margin: 0;
 }
