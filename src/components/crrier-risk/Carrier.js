@@ -192,6 +192,7 @@ export default function Carrier(props) {
       </div>
      </div>
 
+
      <div className="p-2">
        <h2>Why Should One Get Tested For Carrier Status For Genetic Disorders?</h2>
        <p>Genetic disorders are given low priority in India, however they are a major public health burden, a cause of suffering for families and a source of significant expenditure for parents in India. Those planning to get married or start a family would benefit from knowing if they are carriers of a genetic disease.</p>
