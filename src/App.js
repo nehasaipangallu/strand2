@@ -17,7 +17,7 @@ import Articles from './components/articles/articles';
 import Faq from './components/faq/faq';
 import Metabolism from './components/metabolism/Metabolism';
 import Carrier from './components/crrier-risk/Carrier';
-import Pop from './components/pop-up/Pop'
+import Pop from './components/pop-up/Pop';
 import Carrepo from './components/cardio-report/Carrepo';
 
 export default function App() {
@@ -43,7 +43,7 @@ export default function App() {
         <HashRouter>
           <Header />
           <div
-            className="col-md-2 p-0"
+            className="col-md-1 p-0"
             style={{
               display:
                 sidebarVisibility && isLoggedin == 'true' ? 'block' : 'none',
@@ -54,7 +54,7 @@ export default function App() {
           <div
             className={`p-0 ${
               sidebarVisibility && isLoggedin == 'true'
-                ? 'col-md-10'
+                ? 'col-md-11'
                 : 'col-md-12'
             }`}
           >
@@ -95,7 +95,7 @@ export default function App() {
                   path="/cardio"
                   element={<Cardio onLoad={showSideBar} />}
                 ></Route>
-                 <Route
+                <Route
                   exact
                   path="/metabolism"
                   element={<Metabolism onLoad={showSideBar} />}
@@ -111,7 +111,7 @@ export default function App() {
                   path="/cancer-report"
                   element={<CancerReport onLoad={showSideBar} />}
                 ></Route>
-                  <Route
+                <Route
                   exact
                   path="/cardio-report"
                   element={<Carrepo onLoad={showSideBar} />}

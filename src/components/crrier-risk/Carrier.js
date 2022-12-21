@@ -52,14 +52,14 @@ export default function Carrier(props) {
       <h2 className="c2">What are Single Gene Disorders (Monogenic Disorders)?</h2>
       <div className="d-flex flex-row mb-3">
       {/* <div className="p-2"> */}
-      <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/genetic%201.svg?raw=true" />
+      {/* <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/genetic%201.svg?raw=true" /> */}
         <p>They are caused by defects in a single gene</p>
         {/* </div> */}
         <div className="p-2">
        <p>50% of which disorders have childhood onset</p>
         </div>
       </div>
-      <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/dna%20(1)%201.svg?raw=true" />
+      {/* <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/dna%20(1)%201.svg?raw=true" /> */}
       {/* <div className="p-2">
       65% of which diseases associated with a reduced lifespan² and affect the quality of life significantly
       </div> */}

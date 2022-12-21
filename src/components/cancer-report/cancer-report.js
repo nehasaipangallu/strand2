@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './cancer-report.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
 export default function CancerReport(props) {

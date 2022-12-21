@@ -14,6 +14,19 @@ export default function CardioReport(props) {
     setPanelOpen(false);
   }
 
+  function popup(mylink, popup)
+{
+  if (! window.focus)
+    return true;
+  var href;
+  if (typeof(mylink) == 'string')
+    href=mylink;
+  else 
+    href=mylink.href;
+  window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+  return false;
+}
+
   return (
     <div className="d-flex flex-column mb-3 container">
       {isPanelOpen && (

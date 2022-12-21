@@ -2,22 +2,34 @@ import React ,{ useState }from 'react';
 import './Pop.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 export default function Pop(props){
-  const [isPanelOpen, setPanelOpen] = useState(false);
-  props.onLoad(true);
-  function openPanel(event) {
-    setPanelOpen(true);
-  }
+  // const [isPanelOpen, setPanelOpen] = useState(false);
+  // props.onLoad(true);
+  // function openPanel(event) {
+  //   setPanelOpen(true);
+  // }
 
-  function onPanelClose() {
-    setPanelOpen(false);
-  }
+  // function onPanelClose() {
+  //   setPanelOpen(false);
+  // }
 return(
 
  <div className="m-3 table-health-2">
  <div className="m-4">
-   <Table responsive="sm">
+ <div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Cancer-report</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p><Table responsive="sm">
      <tbody>
        <tr>
          <td>Gene</td>
@@ -67,8 +79,19 @@ return(
      consequence of a change in DNA to the function of the gene and how
      it may be evaluated vis-à-vis an individuals health.
    </p>
- </div>
-</div>
+ </p>
 
+
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
+    </div>
+    </div>
+   
 );
 }
