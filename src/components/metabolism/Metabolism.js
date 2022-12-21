@@ -115,8 +115,11 @@ export default function Metabolism(props) {
           </div>
         </div>
       </div>
+      <h2 className="">Featured Inherited IEM Disorders</h2>
       <div className="d-flex flex-row  align-items-center justify-content-evenly w-100 mt-3 meata-sec-p">
+      
         <div className="m-4 exam-para">
+          
           <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
           <p className="c2 meta-list">
             Lysosomal storage diseases or disorders (LSDs) are rare genetic
