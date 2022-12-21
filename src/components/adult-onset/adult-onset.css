@@ -9,6 +9,11 @@
   background-size: cover;
 }
 
+.adult-route-container .route-row-1 .row-1-heading {
+  width: 75%;
+  margin: 0;
+}
+
 .adult-route-container .route-row-1 .row-1-card {
   width: 150px;
   height: 215px;
@@ -30,4 +35,14 @@
   font-size: 14px;
   font-weight: 400;
   font-family: 'Open sans';
+}
+
+.adult-route-container .route-row-2 .row-2-card {
+  width: 225px;
+  height: 210px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
