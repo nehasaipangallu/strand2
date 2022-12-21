@@ -42,12 +42,12 @@ export default function Header() {
               Articles
             </Nav.Link>
             {localStorage.getItem('isLoggedin') === null && (
-              <Nav.Link href="#/login" className="m-2">
+              <Nav.Link href="#/login" className="m-3">
                 Login
               </Nav.Link>
             )}
             {localStorage.getItem('isLoggedin') === 'true' && (
-              <Nav.Link onClick={() => logout()} className="m-2">
+              <Nav.Link onClick={() => logout()} className="m-3">
                 Logout
               </Nav.Link>
             )}
