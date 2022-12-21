@@ -1,8 +1,10 @@
 .adult-onset {
 }
 
-.adult-onset .container-1 {
-  background: white;
+.adult-onset .adult-img-container {
+  background-image: url('https://github.com/nehasaipangallu/strand2/blob/main/public/Rectangle%205200.svg?raw=true');
+  background-repeat: no-repeat;
+  width: 100%;
   height: 500px;
-  border-radius: 5px;
+  background-size: cover;
 }

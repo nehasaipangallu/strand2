@@ -14,7 +14,7 @@ h1{
   font-family: 'Baloo 2', cursive!important;
 } */
 .header {
-  width: 100%!important;
+  width: 100% !important;
   height: 90px;
   color: rgb(12, 12, 12);
   background-color: white !important;
@@ -31,11 +31,13 @@ h1{
   text-align: center;
   padding: 14px 16px;
 }
-.nav-items{
-  margin-left: auto!important;
-  float: left;
-}
 
+.nav-brand-img {
+  margin-left: 2rem;
+}
+.nav-items {
+  justify-content: flex-end;
+}
 
 .logo {
   height: 60px;
@@ -49,14 +51,13 @@ h1{
 
 /* responsive */
 @media screen and (max-width: 480px) {
- 
   .header {
-    width: 100%!important;
+    width: 100% !important;
     height: 90px;
     color: rgb(12, 12, 12);
     background-color: white !important;
   }
-  
+
   .nav-items a {
     justify-content: space-evenly;
     display: block !important;
@@ -67,7 +68,7 @@ h1{
     float: right !important;
     text-align: center;
     padding: 11px 10px;
-}
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -80,8 +81,8 @@ h1{
     font-weight: 600;
     float: right !important;
     text-align: center;
-    padding: 11px 10px!important;
-}
+    padding: 11px 10px !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -94,24 +95,24 @@ h1{
     font-weight: 600;
     float: right !important;
     text-align: center;
-    padding: 11px 10px!important;
-}
+    padding: 11px 10px !important;
+  }
 }
 @media screen and (max-width: 600px) {
-.nav-items a {
-  justify-content: space-evenly;
-  display: block !important;
-  margin: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  float: right !important;
-  text-align: center;
-  padding: 11px 10px!important;
-}
+  .nav-items a {
+    justify-content: space-evenly;
+    display: block !important;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    float: right !important;
+    text-align: center;
+    padding: 11px 10px !important;
+  }
 }
 
-@media screen and (min-device-width: 575px) and (max-device-width: 992px) { 
+@media screen and (min-device-width: 575px) and (max-device-width: 992px) {
   .nav-items a {
     justify-content: space-evenly;
     display: block !important;
@@ -121,12 +122,11 @@ h1{
     font-weight: 600;
     float: right !important;
     text-align: center;
-    padding: 8px 9px!important;
-  
-} 
+    padding: 8px 9px !important;
+  }
 }
 
-@media screen and (min-device-width: 574px) and (max-device-width: 584px) { 
+@media screen and (min-device-width: 574px) and (max-device-width: 584px) {
   .nav-items a {
     justify-content: space-evenly;
     display: block !important;
@@ -136,9 +136,6 @@ h1{
     font-weight: 600;
     float: right !important;
     text-align: center;
-    padding: 6px 6px!important;
-   
+    padding: 6px 6px !important;
   }
-} 
-  
-  
+}

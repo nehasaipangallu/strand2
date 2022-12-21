@@ -11,8 +11,11 @@ export default class AdultOnset extends React.Component {
   render() {
     return (
       <div class="adult-onset">
-        <div class="d-flex m-4 container-1"></div>
-        <div class="d-flex m-4 container-1"></div>
+        <div class="d-flex justify-content-center align-items-center adult-img-container">
+          <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/Group%2048095784.svg?raw=true"
+          className="flow-img" />
+        </div>
+       
       </div>
     );
   }

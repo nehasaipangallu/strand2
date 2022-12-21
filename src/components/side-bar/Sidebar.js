@@ -46,14 +46,14 @@ export default function Sidebar() {
                   selectedMenu == 'adult-onset' ? '#F5F4F4' : '#FFFFFF',
               }}
             >
-              <a onClick={() => setMenuOpen(true)} className="nav-link">
+              <a href="#/adult-onset" className="nav-link">
                 <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
                 </div>
                 <div className="navLabel">Adult Onset</div>
               </a>
 
-              {menuOpen && (
+              {/* {menuOpen && (
                 <ul className="slideSubMenu" id="slideSubMenu">
                   <li>
                     <a
@@ -94,7 +94,7 @@ export default function Sidebar() {
                     </a>
                   </li>
                 </ul>
-              )}
+              )}*/}
             </li>
           </ul>
 
