@@ -24,7 +24,8 @@ export default function CancerReport(props) {
          <div className="d-flex flex-column mb-3">
          <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
          <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
-         <button className="read-btn">
+         <button className="read-btn"
+         >
            Read More
            </button>
          </div>
@@ -74,7 +75,11 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button className="brca-1" >
+                <button className="brca-1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '#/pop-up';
+                }} >
            BRCA1
            </button>
               </td>
@@ -94,7 +99,11 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                 <button className="brca-1" >
+                 <button className="brca-1"
+                 onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '#/pop-up';
+                }} >
            BRCA1
            </button>
 
@@ -124,7 +133,11 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                 <button className="brca-1">
+                 <button className="brca-1"
+                 onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '#/pop-up';
+                }}>
            BRCA1
            </button>
               </td>
