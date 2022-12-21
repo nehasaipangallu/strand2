@@ -53,7 +53,9 @@ export default function Metabolism(props) {
       {/* end report section */}
 
       <div className="d-flex flex-column mb-3 pt-3">
-        <h2 className="meta-head">What are inherited cancers?</h2>
+        <h2 className="meta-head">
+          What is Adult Onset In-born Errors of Metabolism (IEM)?
+        </h2>
         <p className="p-2 meta-para">
           Inborn errors of metabolism (IEM) are a heterogeneous group of 1,450
           disorders that are individually rare to ultra-rare, but relatively
@@ -72,18 +74,16 @@ export default function Metabolism(props) {
         <h2 className="meta-head">
           Key Adult Onset Inborn Errors of Metabolism
         </h2>
-        <div className="d-flex flex-row mb-3 cardic-condition-box">
+        <div className="d-flex flex-row mb-3 align-items-center justify-content-evenly w-100 cardic-condition-box">
           <div>
-          <img
-            class="m-2"
-            src="https://github.com/nehasaipangallu/strand2/blob/main/public/3-s2%201.svg?raw=true"
-            className="cardiac-condition"
-          />
-         </div>
-         
+            <img
+              class="m-2"
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/3-s2%201.svg?raw=true"
+              className="cardiac-condition"
+            />
+          </div>
 
-          <div className="p-2 meta-list">
-         
+          <div className="meta-list">
             <h2>Tumor suppressor genes</h2>
 
             <ul>
