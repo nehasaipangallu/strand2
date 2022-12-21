@@ -84,7 +84,7 @@ export default function Metabolism(props) {
           </div>
 
           <div className="meta-list">
-            <h2>Tumor suppressor genes</h2>
+          
 
             <ul>
               <li>Disorders of Amino Acid and Peptide Metabolism.</li>
