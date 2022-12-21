@@ -16,6 +16,35 @@
 .cardio-class{
   color:#fff
 }
+.cardio-class-head{
+  font-family: "Baloo 2";
+   
+    margin-top: 72px;
+    margin-bottom: 38px;
+    font-weight: 600;
+    font-size: 30px;
+   
+}
+.cardio-bg{
+  box-shadow: 1px 2px 13px 1px #44444430;
+  border-radius: 50px;
+  background-color: white!important;
+  padding: 24px;
+}
+.tumor{
+  color: #06377B;
+  align-content: center;
+  padding-left: 110px;
+}
+.unsorted-cardio{
+  line-height: 30px;
+  margin-top: 3px;
+}
+.cardio-box{
+  width:100%;
+  height: 600px;
+  background-color: #fff;
+}
 
 .cardic-condition-box {
   display: flex;

@@ -40,6 +40,7 @@ export default function Cancer(props) {
           <div class=" d-flex flex-column report-dates align-self-center">
             <p class="m-2">12/11/2022</p>
             <p class="m-2">02/08/2022</p>
+            <p class="m-2">07/12/2022</p>
           </div>
           <div class="d-flex flex-column report-buttons align-self-center">
             <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
