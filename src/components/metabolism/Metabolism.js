@@ -115,10 +115,10 @@ export default function Metabolism(props) {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-row mb-3 meata-sec-p">
-        <div className="p-2 exam-para">
+      <div className="d-flex flex-row  align-items-center justify-content-evenly w-100 mt-3 meata-sec-p">
+        <div className="m-4 exam-para">
           <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
-          <p className="c2">
+          <p className="c2 meta-list">
             Lysosomal storage diseases or disorders (LSDs) are rare genetic
             conditions that cause a buildup of toxic materials in your body's
             cells. People with LSDs lack certain enzymes or a substance that
@@ -141,7 +141,7 @@ export default function Metabolism(props) {
             </ul>
           </p>
         </div>
-        <div className="p-2 img-box-meta">
+        <div className="m-4 img-box-meta">
           <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/jj664gp3oqo08%201.svg?raw=true" />
         </div>
       </div>
