@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carpo.css';
+import './Carrepo.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 

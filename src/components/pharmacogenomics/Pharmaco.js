@@ -109,5 +109,5 @@ export default function pharmaco(props){
       </div>
     </div>
     
-  )
+  );
 }
