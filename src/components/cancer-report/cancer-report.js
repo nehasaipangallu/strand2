@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Container from 'react-bootstrap/Container';
 
 export default function CancerReport(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
@@ -18,42 +18,55 @@ export default function CancerReport(props) {
   function onPanelClose() {
     setPanelOpen(false);
   }
- 
+
   return (
     <div className="d-flex flex-column mb-3 container">
       {isPanelOpen && (
         <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
       )}
-       <div className="d-flex flex-row mb-3">
-       <div className="d-flex flex-column mb-3">
-         <div className="p-2">
-           {/* <Row>
-             <Col>
-             </Col>
-             <Col> */}
-      <button class="btn btn-download align-self-end m-3">
-        Download Report{' '}
-        <img
-          alt=""
-          class="icon-download"
-          src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
-        />
-      </button>
-      </div>
-      {/* </Col>
-      </Row> */}
-      </div>
-      </div>
-      <div className="res-box p-0 m-0">
-        <h2 className="c2">Result</h2>
-        </div>
-        <p className="c2">
-        Your report describes X no. of observations of significance.
-        </p>
 
-        <div className="res-box p-0 m-0">
-        <h2 className="c2">Detailed Findings</h2>
-        </div>
+      <Container fluid className="p-c">
+        <Row>
+          <Col>
+            <h1>Hereditary Cancer Risk Report</h1>
+          </Col>
+          <Col>
+            <button className="btn btn-download  align-self-end m-3 float-right btn-lg">
+              Download Report{' '}
+              <img
+                alt=""
+                className="icon-download"
+                src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
+              />
+            </button>
+          </Col>
+        </Row>
+      </Container>
+
+      <Row className="bor-class">
+        <Col lg={12} md={6} xs={12}>
+          <h2 className="c2">Result</h2>
+        </Col>
+      </Row>
+
+      <Container fluid>
+        <Row>
+          <Col className="p-c2">
+            <p className="c2">
+              Your report describes X no. of observations of significance.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container fluid>
+        <Row className="bor-class">
+          <Col lg={12} md={6} xs={12} >
+              <h2 className="c2">Detailed Findings</h2>
+          </Col>
+        </Row>
+      </Container>
+
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered className="table-border">
           <thead>
@@ -79,13 +92,15 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button className="brca-1"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = '#/pop-up';
-                }} >
-           BRCA1
-           </button>
+                <button
+                  className="brca-1"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '#/pop-up';
+                  }}
+                >
+                  BRCA1
+                </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
@@ -103,14 +118,15 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                 <button className="brca-1"
-                 onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = '#/pop-up';
-                }} >
-           BRCA1
-           </button>
-
+                <button
+                  className="brca-1"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '#/pop-up';
+                  }}
+                >
+                  BRCA1
+                </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
@@ -137,13 +153,15 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                 <button className="brca-1"
-                 onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = '#/pop-up';
-                }}>
-           BRCA1
-           </button>
+                <button
+                  className="brca-1"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '#/pop-up';
+                  }}
+                >
+                  BRCA1
+                </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
@@ -168,7 +186,9 @@ export default function CancerReport(props) {
           </tbody>
         </Table>
 
-        <div className="exp-box">Schedule appointment with Genetic Counsellor for detailed explanation</div>
+        <div className="exp-box">
+          Schedule appointment with Genetic Counsellor for detailed explanation
+        </div>
       </div>
       {/* <div className="m-3 table-health-2">
         <div className="m-4">
@@ -231,17 +251,23 @@ export default function CancerReport(props) {
       </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
-               <div className="d-flex flex-column mb-3">
-         <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
-         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
-         <button className="read-btn"
-         >
-           Read More
-           </button>
-         </div>
+      <div className="d-flex flex-column mb-3">
+        <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
+        <p className=" c2">
+          A thorough Analysis of 500 genes across 20 hereditary cancer types was
+          conducted. Your report indicates “X” Variants of Concern.
+        </p>
+        <button className="read-btn">Read More</button>
+      </div>
       <div className="rec-class">
-        <h2 className="c2 rec-head" >Recommendations</h2>
-        <p className="rec-para">Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.</p>
+        <h2 className="c2 rec-head">Recommendations</h2>
+        <p className="rec-para">
+          Genetic counseling is recommended to discuss the implications of this
+          test result. Schedule genetic counselor appointment at
+          xxx@strandls.com. Test results should be interpreted in the context of
+          this individual's personal and family history of cancer. Kindly
+          consult with a physician before taking any interventional steps.
+        </p>
       </div>
     </div>
   );
