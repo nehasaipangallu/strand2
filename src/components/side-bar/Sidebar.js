@@ -128,7 +128,7 @@ export default function Sidebar() {
                   selectedMenu == 'pharmacogenomics' ? '#F5F4F4' : '#FFFFFF',
               }}
             >
-              <a href="#">
+              <a href="#/pharmacogenomics">
                 <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/StrandBrandGuide-14%202.svg?raw=true" />
                 </div>
