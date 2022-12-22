@@ -109,47 +109,57 @@ export default function Carrier(props) {
         <div className="d-flex flex-row mb-3">
           {/* <div className="p-2"> */}
           {/* <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/genetic%201.svg?raw=true" /> */}
-          <Col>
+          
           <Row>
-             
+             <Col>
            <p className="c2">They are caused by defects in a single gene</p> 
+           </Col>
           {/* </Row>  */}
           {/* </div> */}
           {/* <Row> */}
           {/* <div className="p-2"> */}
+          <Col>
             <p className="c2">50% of which disorders have childhood onset</p>
-            </Row>
             </Col>
+            </Row>
             
-            <Col>
+            
+            
               <Row>
+              <Col>
             <p className="c2">
               400 million people are affected by 6000 single gene disorders
               globally
             </p>
-            </Row>
-            <Row>
+            </Col>
+            
+            
+            <Col>
             <p className="c2">
               65% of which diseases associated with a reduced lifespan and
               affect the quality of life significantly
             </p>
-            </Row>
+           
             </Col>
+            </Row>
 
-            <Col>
+            
               <Row>
+              <Col>
             <p className="c2">
               28% of neonatal intensive care deaths are caused by genetic
               diseases
             </p>
-            </Row>
-            <Row>
+            
+            </Col>
+            <Col>
             <p className="c2">
               {' '}
               95% of these diseases do not have a single FDA approved treatment
             </p>
-            </Row>
             </Col>
+            </Row>
+            
            
           
         </div>
@@ -320,17 +330,9 @@ export default function Carrier(props) {
                       />
                     </div>
                     <div className="p-5 carousel-cap">
-                      <h3>Tumor suppressor genes</h3>
+                      <h3>Prevalence of Sickle Cell Anemia</h3>
                       <p>
-                        These are protective genes under normal circumstances, and
-                        they limit cell growth. When a tumor suppressor gene mutates,
-                        control on cell growth is lost, resulting in the formation of
-                        a tumor. Examples of tumor suppres sor genes include BRCA1,
-                        BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2
-                        genes increase a wom ar's risk of developing hereditary breast
-                        or ovarian cancers and a man's risk of developing hereditary
-                        prostate or breast cancers. They also increase the risk of
-                        pancreatic cancer and melanoma in women and men.
+                      Certain ethnic groups in India have high carrier frequency for AR Hemoglobinopathies such as Sickle cell anemia (upto 20%)6 and Thalassemias (upto 17%
                       </p>
                     </div>
                   </div>
@@ -348,10 +350,9 @@ export default function Carrier(props) {
                   />
                 </div>
                 <div className="p-5 carousel-cap">
-                  <h3>Oncogenes</h3>
+                  <h3>Prevalence of Inborn Errors of Metabolism</h3>
                   <p>
-                    These genes actively turn a healthy cell into a cancerous cell
-                    Mutations in these genes are NOT known to be inherited.
+                  5-15% of children born India annually are diagnosed with Inborn Errors of Metabolism. These biochemical disorders are AR and lead to physical and intellectual disabilities, and even death.
                   </p>
                 </div>
               </div>
@@ -367,24 +368,48 @@ export default function Carrier(props) {
                 </div>
 
                 <div className="p-5 carousel-cap">
-                  <h3>DNA Repair Genes</h3>
+                  <h3>Prevalence of Bleeding and Clotting Disorders</h3>
                   <p>
-                    These genes fix mistakes made when DNA is copied. Many of them
-                    also function as tumor suppressor genes. Eg BRCA1, BRCAZ and
-                    p53 are all DNA repair genes. It is normal that DNA is copied
-                    every time a cell divides. However, If a person has an error
-                    in a DNA repair gene, mistakes made during DNA copying remain
-                    uncorrected. Then, the mistakes become mutations. These
-                    mutations may eventually lead to cancer, particu larly
-                    mutations in tumor suppressor genes or oncogenes. Mutations in
-                    DNA repair genes may be inherited or acquired Lynch syndrome
-                    is an example of the inherited kind. BRCAT, BRCA2, and p53
-                    mutations
+                  1 in 1000 people globally are affected with bleeding and clotting disorders such as Hemophilias A & B (XR). India harbors 5% of all patients suffering from these disorders. An example of such disorders being Hemophilias A & B (XR)
                   </p>
                 </div>
               </div>
             </Carousel.Item>
             {/* end itsem-3 */}
+
+            <Carousel.Item>
+              <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
+                <div className="p-2">
+                  <img className="img-1"
+                    src="/1.png"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="p-5 carousel-cap">
+                  <h3>Prevalence of Spinal Muscular Atrophy (SMA)</h3>
+                  <p>
+                  Spinal muscular atrophy (SMA) is an AR, progressive, neuromuscular disorder with a carrier frequency of 1 in 38 in India
+                  </p>
+                </div>
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
+                <div className="p-2">
+                  <img className="img-1"
+                    src="/1.png"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="p-5 carousel-cap">
+                  <h3>Prevalence of Spinal Muscular Atrophy (SMA)</h3>
+                  <p>
+                  Spinal muscular atrophy (SMA) is an AR, progressive, neuromuscular disorder with a carrier frequency of 1 in 38 in India
+                  </p>
+                </div>
+              </div>
+            </Carousel.Item>
           </Carousel>
         </Row>
       </Container>

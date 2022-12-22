@@ -95,18 +95,100 @@ export default function pharmaco(props){
       </div>
       <div className="">
         <h2>Key terms in the results</h2>
-        <p>Ultra-Rapid Metabolizer: Increased enzyme activity compared to rapid metabolizers.</p>
+        <ul className="unsorted-pharam">
+        <li>Ultra-Rapid Metabolizer: Increased enzyme activity compared to rapid metabolizers.</li>
 
-<p>Rapid Metabolizer: Increased enzyme activity compared to normal metabolizers but less than ultrarapid metabolizers </p>
+<li>Rapid Metabolizer: Increased enzyme activity compared to normal metabolizers but less than ultrarapid metabolizers </li>
 
-<p>Normal Metabolizer: Fully functional enzyme activity.</p>
+<li>Normal Metabolizer: Fully functional enzyme activity.</li>
 
-<p>Intermediate Metabolizer: Decreased enzyme activity (activity between normal and poor me-tabolizer)</p>
+<li>Intermediate Metabolizer: Decreased enzyme activity (activity between normal and poor me-tabolizer)</li>
 
-<p>Poor Metabolizer: Little to no enzyme activity </p>
+<li>Poor Metabolizer: Little to no enzyme activity </li>
 
-<p>Indeterminate: Allele contains a variant that has not yet been characterized</p>
+<li>Indeterminate: Allele contains a variant that has not yet been characterized</li>
+</ul>
       </div>
+
+      <div className="gene-table">
+        <h2>
+        Genes tested and variants reported
+        </h2>
+        <Table className="genes">
+        <tbody>
+        <tr>
+          <td>CYP2D6</td>
+          <td>*1, *2, *3, *4, *5, *6, *7, *8, *9, *10, *11, *12, *14A, *14B, *15, *17, *19, *29, *35, *41, *xN</td>
+          
+        </tr>
+        <tr>
+          <td>CYP2C19</td>
+          <td>*1, *2, *3, *4A, *4B, *10, *17</td>
+         
+        </tr>
+        <tr>
+          <td>CYP3A4</td>
+          <td>*1, *1B, *22</td>
+         
+        </tr>
+        <tr>
+          <td>CYP1A2</td>
+          <td>*1, *1F, *1J, *1K</td>
+         
+        </tr>
+        <tr>
+          <td>CYP2C9</td>
+          <td>*1, *2, *3, *4, *5, *6, *8, *11</td>
+         
+        </tr>
+        <tr>
+          <td>CYP3A5</td>
+          <td>*1, *3, *6, *7</td>
+         
+        </tr>
+        <tr>
+          <td>CYP4F2</td>
+          <td>*1, *3</td>
+         
+        </tr>
+        <tr>
+          <td>DPYD</td>
+          <td>*1, *2A, *13</td>
+         
+        </tr>
+        <tr>
+          <td>F5</td>
+          <td>rs6025 (Leiden)</td>
+         
+        </tr>
+        <tr>
+          <td>IFNL3</td>
+          <td>rs12979860</td>
+         
+        </tr>
+        <tr>
+          <td>NUDT15</td>
+          <td>rs116855232</td>
+         
+        </tr>
+        <tr>
+          <td>SLCO1B1</td>
+          <td>rs4149056</td>
+         
+        </tr>
+        <tr>
+          <td>TPMT</td>
+          <td>*1, *2, *3A, *3C, *4</td>
+         
+        </tr>
+        <tr>
+          <td>VKORC1</td>
+          <td>rs9923231</td>
+         
+        </tr>
+        </tbody>
+          </Table>
+        </div>
     </div>
     
   );
