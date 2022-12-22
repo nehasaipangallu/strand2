@@ -15,16 +15,16 @@ export default function Metabolism(props) {
   }
   return (
     <div className="innerWrapper cancer-page container pt-5">
-    <div className="d-flex p-2 img-box">
-      <div className="d-flex flex-row img-captions justify-content-evenly">
-        <div claasName="p-2">
-          <img
-            src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism%202%20(1).svg?raw=true"
-            className="meta-img"
-          />
-      </div>
+      <div className="d-flex p-2 img-box">
+        <div className="d-flex flex-row img-captions justify-content-evenly">
+          <div claasName="p-2">
+            <img
+              src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism%202%20(1).svg?raw=true"
+              className="meta-img"
+            />
+          </div>
 
-      <p className="p-2 align-self-center">
+          <p className="p-2 align-self-center">
             Your Report is Ready.
             <br />
             Please click to View Report.
@@ -84,8 +84,6 @@ export default function Metabolism(props) {
           </div>
 
           <div className="meta-list">
-          
-
             <ul>
               <li>Disorders of Amino Acid and Peptide Metabolism.</li>
 
@@ -116,11 +114,66 @@ export default function Metabolism(props) {
         </div>
       </div>
       <h2 className="">Featured Inherited IEM Disorders</h2>
+      <Row>
+        <Col>
+          <p>
+            <strong>Disorders of amino acid and peptide metabolism</strong>
+          </p>
+          <p>
+            This is a group of diseases where the genes involved in the
+            absorption, transport and breakdown of amino acids have
+            altered/impacted function. These problems cause a buildup of harmful
+            substances in your body that can lead to serious, sometimes
+            life-threatening, health problems.
+          </p>
+
+          <p>
+            <strong>Ex: Phenylketonuria (PKU)</strong>
+          </p>
+          <p>
+            lthough it is principally a childhood disorder, in rare cases, the
+            first signs of PKU may develop in late adulthood resembling common
+            neurological diseases.
+          </p>
+        </Col>
+        <Col>
+          <table class="table iem-disorder-table">
+            <thead>
+              <tr>
+                <th>Symptoms of Phenylketonuria (PKU)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Learning disabilities</td>
+              </tr>
+              <tr>
+                <td>Mental retardation</td>
+              </tr>
+              <tr>
+                <td>Tremors or jerky movemnets of limbs</td>
+              </tr>
+              <tr>
+                <td>Skin rash or eczema</td>
+              </tr>
+              <tr>
+                <td>Epilepsy</td>
+              </tr>
+              <tr>
+                <td>Hyperactivity</td>
+              </tr>
+              <tr>
+                <td>Behavioral issues</td>
+              </tr>
+            </tbody>
+          </table>
+        </Col>
+      </Row>
       <div className="d-flex flex-row  align-items-center justify-content-evenly w-100 mt-3 meata-sec-p">
-      
         <div className="m-4 exam-para">
-          
-          <h2 className="meta-head">Eg: Lysosomal Storage Disorders</h2>
+          <p className="meta-head">
+            <strong>Eg: Lysosomal Storage Disorders</strong>
+          </p>
           <p className="c2 meta-list">
             Lysosomal storage diseases or disorders (LSDs) are rare genetic
             conditions that cause a buildup of toxic materials in your body's

@@ -103,3 +103,22 @@ hr {
 .cardic-condition-box {
   box-shadow: 1px 2px 13px 1px #44444430;
 }
+
+.iem-disorder-table {
+  border-collapse: separate;
+  font-size: 14px;
+  border-spacing: 0 5px;
+}
+
+.iem-disorder-table thead tr th {
+  background-color: #078a6e;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+.iem-disorder-table tbody tr td {
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+}

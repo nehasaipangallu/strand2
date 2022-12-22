@@ -65,19 +65,22 @@ p {
 
 /* HEADERS */
 h3 {
-  font-family: 'Baloo 2';
+  font-family: 'Open Sans';
   font-size: 20px;
   font-weight: 600;
+  color: #06377B !important;
 }
 h2 {
-  font-family: 'Baloo 2';
+  font-family: 'Open Sans';
   font-size: 24px;
   font-weight: 600;
+  color: #06377B !important;
 }
 h1 {
-  font-family: 'Baloo 2';
+  font-family: 'Open Sans';
   font-size: 26px;
   font-weight: 600;
+  color: #06377B !important;
 }
 
 .pageWrapper {
