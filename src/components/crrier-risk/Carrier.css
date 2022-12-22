@@ -125,3 +125,18 @@ color: #fff;
 .ar-head{
   margin-left: 72px;
 }
+
+.table-carrier{
+  font-size: 16px;
+  border-spacing:4px ;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.table-carrier tbody tr:first-child{
+  background-color: #fff;
+}
+
+.table-carrier tbody tr:not(:first-child){
+  background-color:#D9D9D9 ;
+}

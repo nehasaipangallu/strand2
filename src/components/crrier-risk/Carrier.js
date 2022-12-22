@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Table from 'react-bootstrap/Table';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 export default function Carrier(props) {
   props.onLoad(true);
@@ -44,7 +45,7 @@ export default function Carrier(props) {
           </button>
         </div>
       </div> */}
-      <div className="carrier-report">
+      <div className="carrier-report ">
         <Row>
           <Col>
             <h2>My Carrier Risk Screening Report</h2>
@@ -104,30 +105,53 @@ export default function Carrier(props) {
         <h2 className="c2">
           What are Single Gene Disorders (Monogenic Disorders)?
         </h2>
+
         <div className="d-flex flex-row mb-3">
           {/* <div className="p-2"> */}
           {/* <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/genetic%201.svg?raw=true" /> */}
-          <p className="c2">They are caused by defects in a single gene</p>
+          <Col>
+          <Row>
+             
+           <p className="c2">They are caused by defects in a single gene</p> 
+          {/* </Row>  */}
           {/* </div> */}
-          <div className="p-2">
+          {/* <Row> */}
+          {/* <div className="p-2"> */}
             <p className="c2">50% of which disorders have childhood onset</p>
+            </Row>
+            </Col>
+            
+            <Col>
+              <Row>
             <p className="c2">
               400 million people are affected by 6000 single gene disorders
               globally
             </p>
+            </Row>
+            <Row>
             <p className="c2">
               65% of which diseases associated with a reduced lifespan and
               affect the quality of life significantly
             </p>
+            </Row>
+            </Col>
+
+            <Col>
+              <Row>
             <p className="c2">
               28% of neonatal intensive care deaths are caused by genetic
               diseases
             </p>
+            </Row>
+            <Row>
             <p className="c2">
               {' '}
               95% of these diseases do not have a single FDA approved treatment
             </p>
-          </div>
+            </Row>
+            </Col>
+           
+          
         </div>
         {/* <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/dna%20(1)%201.svg?raw=true" /> */}
         {/* <div className="p-2">
@@ -185,7 +209,7 @@ export default function Carrier(props) {
       </div>
 
       <h2>Frequency of the Most Prevalent AR/XR Disorders in India</h2>
-      <div className="p-2 table-risk">
+      <div className="p-2 table-carrier">
         <div className="m-4">
           <Table responsive="sm">
             <tbody>
@@ -196,44 +220,44 @@ export default function Carrier(props) {
                 <td>Inheritance</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Hemophilia</td>
+                <td>8</td>
+                <td>9600</td>
+                <td>XR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Muscular Dystrophy</td>
+                <td>29</td>
+                <td>348000</td>
+                <td>Most common in DMD which is XR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Fragile X syndrome</td>
+                <td>15</td>
+                <td>180000</td>
+                <td>XR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Cystinuria</td>
+                <td>14</td>
+                <td>168000</td>
+                <td>AR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Cystic fibrosis</td>
+                <td>12</td>
+                <td>144000</td>
+                <td>AR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Sickle Cell Anemia</td>
+                <td>11</td>
+                <td>132000</td>
+                <td>AR</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>TOTAL</td>
+                <td>90</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -262,52 +286,109 @@ export default function Carrier(props) {
           knowing this prepares parents to plan their families.
         </p>
       </div>
-      <div className="p-2 pt-5">
-        <Carousel>
-          <Carousel.Item>
-            <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
-              <div className="p-2 car-img-item">
-                <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/PX0001AS_PRESENTATION%201.svg?raw=true"
-                  alt="First slide"
-                  className="blood-cell"
-                />
-                <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/1000_F_489389817_WrTqt6EAGUZ16MO6mrkSW6K2BzFb74Nl%201.svg?raw=true"
-                  classNmae="blood-cell"
-                />
-              </div>
-              <div className="p-5 carousel-cap">
-                <h3>Sickle Cell Anemia</h3>
-                <p>
-                  Certain ethnic groups in India have high carrier frequency for
-                  AR Hemoglobinopathies such as Sickle cell anemia (upto 20%)
-                  and Thalassemias (upto 17%
-                </p>
-              </div>
-            </div>
-          </Carousel.Item>
 
-          <Carousel.Item>
-            <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
-              <div className="p-2 car-img-item">
-                <img
-                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/cq5dam.web.1280%201.svg?raw=true"
-                  alt="Second slide"
-                  className="arhy-img"
-                />
+      <div className="cvarrier-status d-flex flex-row mb-3">
+       <div className="pl-5">
+          <img src="" />
+       <p> Family history of a genetic disorder.</p>
+        </div>
+
+        <div  className="pl-5">
+          <img src="" />
+        <p>Family history of a genetic disorder.</p>
+       </div>
+
+        <div  className="pl-5">
+          <img src="" />
+       <p> Family history of a genetic disorder.</p>
+      </div>
+
+      </div>
+
+
+      <div className="p-2 pt-5">
+         <Container>
+        <Row>
+          <Carousel className='car-bg'>
+            <Carousel.Item>
+              <Row>
+                <Col>
+                  <div className="d-flex flex-row mb-3 flex-car justify-content-between align-items-center">
+                    <div className="p-2">
+                      <img className='img-1'
+                        src="/3.png"
+                      />
+                    </div>
+                    <div className="p-5 carousel-cap">
+                      <h3>Tumor suppressor genes</h3>
+                      <p>
+                        These are protective genes under normal circumstances, and
+                        they limit cell growth. When a tumor suppressor gene mutates,
+                        control on cell growth is lost, resulting in the formation of
+                        a tumor. Examples of tumor suppres sor genes include BRCA1,
+                        BRCA2, and p53 or 7P53. Germline mutations in BRCA or BRCA2
+                        genes increase a wom ar's risk of developing hereditary breast
+                        or ovarian cancers and a man's risk of developing hereditary
+                        prostate or breast cancers. They also increase the risk of
+                        pancreatic cancer and melanoma in women and men.
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Carousel.Item>
+            {/* end item-1 */}
+
+            <Carousel.Item>
+              <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center">
+                <div className="p-2">
+                  <img className="img-1"
+                    src="/1.png"
+                    alt="Second slide"
+                  />
+                </div>
+                <div className="p-5 carousel-cap">
+                  <h3>Oncogenes</h3>
+                  <p>
+                    These genes actively turn a healthy cell into a cancerous cell
+                    Mutations in these genes are NOT known to be inherited.
+                  </p>
+                </div>
               </div>
-              <div className="p-5 carousel-cap">
-                <h3>Spinal Muscular Atrophy (SMA)</h3>
-                <p>
-                  Spinal muscular atrophy (SMA) is an AR progressive,
-                  neuromuscular disorder with a carrier frequency of 1 in 38 in
-                  India
-                </p>
+            </Carousel.Item>
+            {/* end item-2 */}
+
+            <Carousel.Item>
+              <div className="d-flex flex-row mb-3 flex-car justify-content-end align-items-center ">
+                <div className="p-2">
+                  <img className="img-1"
+                    src="/2.png"
+                  />
+                </div>
+
+                <div className="p-5 carousel-cap">
+                  <h3>DNA Repair Genes</h3>
+                  <p>
+                    These genes fix mistakes made when DNA is copied. Many of them
+                    also function as tumor suppressor genes. Eg BRCA1, BRCAZ and
+                    p53 are all DNA repair genes. It is normal that DNA is copied
+                    every time a cell divides. However, If a person has an error
+                    in a DNA repair gene, mistakes made during DNA copying remain
+                    uncorrected. Then, the mistakes become mutations. These
+                    mutations may eventually lead to cancer, particu larly
+                    mutations in tumor suppressor genes or oncogenes. Mutations in
+                    DNA repair genes may be inherited or acquired Lynch syndrome
+                    is an example of the inherited kind. BRCAT, BRCA2, and p53
+                    mutations
+                  </p>
+                </div>
               </div>
-            </div>
-          </Carousel.Item>
-        </Carousel>
+            </Carousel.Item>
+            {/* end itsem-3 */}
+          </Carousel>
+        </Row>
+      </Container>
+      {/* end car sec */}
       </div>
     </div>
   );

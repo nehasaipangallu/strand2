@@ -96,15 +96,16 @@ export default function CarrierReport(props) {
           <thead>
             <tr>
               <td>Disorder Type</td>
-              <td>Associated Gene(s)</td>
+              
               <td> Inheritence (AR/XR)</td>
+              <td>Associated Gene(s)</td>
               <td>Variant Detected</td>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Surfactant metabolism dysfunction, pulmonary 3</td>
-              <td>ABCA3 </td>
+             
               <td>
                 {/* BRCA1{' '} */}
                 {/* <img
@@ -123,11 +124,13 @@ export default function CarrierReport(props) {
                   AR
                 </button>
               </td>
+              <td>ABCA3 </td>
               <td className="yes-text">YES</td>
             </tr>
+
             <tr>
               <td>Diabetes mellitus, permanent neonatal 3</td>
-              <td>ABCC8</td>
+              
               <td>
                 -
                 {/* BRCA1{' '}
@@ -145,26 +148,29 @@ export default function CarrierReport(props) {
            BRCA1
            </button> */}
               </td>
+              <td>ABCC8</td>
               <td className="yes-text">No</td>
             </tr>
 
             <tr>
               <td>Adrenoleukodystrophy (ALD)</td>
-              <td>ABCD1</td>
+             
               <td>-</td>
+              <td>ABCD1</td>
               <td className="no-text">NO</td>
             </tr>
 
             <tr>
               <td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
-              <td>ACADM</td>
               <td>-</td>
+              <td>ACADM</td>
+              
               <td className="no-text">No</td>
             </tr>
 
             <tr>
               <td>Very long chain acyl-CoA dehydrogenase deficiency</td>
-              <td>ACADVL</td>
+              
               <td>
                 -
                 {/* BRCA1{' '}
@@ -175,40 +181,45 @@ export default function CarrierReport(props) {
                   onClick={openPanel}
                 /> */}
               </td>
+              <td>ACADVL</td>
               <td className="no-text">No</td>
             </tr>
 
             <tr>
               <td>α-Methylacetoacetic aciduria</td>
-              <td>ACAT1</td>
               <td>-</td>
+              <td>ACAT1</td>
+            
               <td className="no-text">NO</td>
             </tr>
 
             <tr>
               <td>Aspartylglucosaminuria</td>
-              <td>AGA</td>
               <td>-</td>
+              <td>AGA</td>
+             
               <td className="no-text">NO</td>
             </tr>
 
             <tr>
               <td>Hyperoxaluria, primary type I</td>
-              <td>AGXT</td>
               <td>-</td>
+              <td>AGXT</td>
+             
               <td className="no-text">NO</td>
             </tr>
 
             <tr>
               <td>Joubert syndrome 3</td>
-              <td>AHI1</td>
               <td>-</td>
+              <td>AHI1</td>
+              
               <td className="no-text">NO</td>
             </tr>
 
             <tr>
               <td>Autoimmune polyendocrinopathy syndrome type I</td>
-              <td>AIRE</td>
+              
               <td>
                 {' '}
                 <button
@@ -222,13 +233,15 @@ export default function CarrierReport(props) {
                   XR{' '}
                 </button>
               </td>
+              <td>AIRE</td>
               <td className="yes-text">YES</td>
             </tr>
 
             <tr>
               <td>Hereditary fructosuria</td>
+              
+              <td>-</td>
               <td>ALDOB</td>
-              <td></td>
               <td className="no-text">NO</td>
             </tr>
           </tbody>
