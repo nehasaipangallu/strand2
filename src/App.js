@@ -21,6 +21,7 @@ import Pop from './components/pop-up/Pop';
 import Carrepo from './components/cardio-report/Carrepo';
 import Pharmaco from './components/pharmacogenomics/Pharmaco';
 import Metarepo from'./components/metabolic-report/Metarepo';
+import Carrepo from './components/carrier-risk-repo/Carrepo';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -106,6 +107,12 @@ export default function App() {
                   exact
                   path="/crrier-risk"
                   element={<Carrier onLoad={showSideBar} />}
+                ></Route>
+
+                 <Route
+                  exact
+                  path="/carrier-risk-repo"
+                  element={<Carrepo onLoad={showSideBar} />}
                 ></Route>
                 
                  <Route

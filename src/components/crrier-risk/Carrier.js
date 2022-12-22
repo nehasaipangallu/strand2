@@ -11,7 +11,7 @@ export default function Carrier(props) {
   const naviage = useNavigate();
 
   function onVeiwReortClick() {
-    naviage('/crrier-risk');
+    naviage('/carrier-risk-repo');
   }
   return (
     <div className="d-flex flex-column mb-3 container pt-5">
@@ -53,7 +53,7 @@ export default function Carrier(props) {
         <p><strong>A thorough Analysis of 154 genes across 194 disorders associated with Autosomal and X-linked recessive disorders was conducted. Your report indicates “X” Variants of Concern.</strong></p>
         </Col>
         <Col>
-        <button class="btn btn-click align-self-end m-3">
+        <button class="btn btn-click align-self-end m-3"  onCLick={onVeiwReortClick}>
         Click Here For Your Report{' '}
         {/* <img
           alt=""

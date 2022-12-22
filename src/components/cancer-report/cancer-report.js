@@ -4,6 +4,8 @@ import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export default function CancerReport(props) {
@@ -23,15 +25,12 @@ export default function CancerReport(props) {
         <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
       )}
        <div className="d-flex flex-row mb-3">
-         <div className="d-flex flex-column mb-3">
-         <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
-         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
-         <button className="read-btn"
-         >
-           Read More
-           </button>
-         </div>
+       <div className="d-flex flex-column mb-3">
          <div className="p-2">
+           {/* <Row>
+             <Col>
+             </Col>
+             <Col> */}
       <button class="btn btn-download align-self-end m-3">
         Download Report{' '}
         <img
@@ -40,6 +39,9 @@ export default function CancerReport(props) {
           src="https://github.com/nehasaipangallu/strand2/blob/main/public/download.svg?raw=true"
         />
       </button>
+      </div>
+      {/* </Col>
+      </Row> */}
       </div>
       </div>
       <div className="res-box p-0 m-0">
@@ -53,7 +55,7 @@ export default function CancerReport(props) {
         <h2 className="c2">Detailed Findings</h2>
         </div>
       <div className="m-3 table-health-1">
-        <Table responsive="lg" bordered>
+        <Table responsive="lg" bordered className="table-border">
           <thead>
             <tr>
               <td style={{ width: 'auto' }}>Organ/Tissue</td>
@@ -165,6 +167,7 @@ export default function CancerReport(props) {
             </tr>
           </tbody>
         </Table>
+
         <div className="exp-box">Schedule appointment with Genetic Counsellor for detailed explanation</div>
       </div>
       {/* <div className="m-3 table-health-2">
@@ -228,6 +231,14 @@ export default function CancerReport(props) {
       </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
+               <div className="d-flex flex-column mb-3">
+         <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
+         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
+         <button className="read-btn"
+         >
+           Read More
+           </button>
+         </div>
       <div className="rec-class">
         <h2 className="c2 rec-head" >Recommendations</h2>
         <p className="rec-para">Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.</p>

@@ -1,12 +1,12 @@
 import React from 'react';
-
+import './Carrepo.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
-export default function CancerReport(props) {
+export default function CarrierReport(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
   function openPanel(event) {
