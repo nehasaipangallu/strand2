@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './Metarepo.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
 
 
-export default function CancerReport(props) {
+export default function Metarepo(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
   function openPanel(event) {
@@ -77,7 +77,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button className="ARG1"
+                <button className="arg1"
                 onClick={(e) => {
                   e.preventDefault();
                   window.location.href = '/pop-meta';

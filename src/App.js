@@ -126,7 +126,7 @@ export default function App() {
                 ></Route>
                  <Route
                   exact
-                  path="/meta-repo"
+                  path="/metabolic-report"
                   element={<Metarepo onLoad={showSideBar} />}
                 ></Route>
                 <Route
