@@ -59,13 +59,11 @@ export default function CancerReport(props) {
         </Row>
       </Container>
 
-      <Container fluid>
-        <Row className="bor-class">
-          <Col lg={12} md={6} xs={12} >
-              <h2 className="c2">Detailed Findings</h2>
-          </Col>
-        </Row>
-      </Container>
+      <Row className="bor-class">
+        <Col lg={12} md={6} xs={12}>
+          <h2 className="c2">Detailed Findings</h2>
+        </Col>
+      </Row>
 
       <div className="m-3 table-health-1">
         <Table responsive="lg" bordered className="table-border">
@@ -251,24 +249,36 @@ export default function CancerReport(props) {
       </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
-      <div className="d-flex flex-column mb-3">
-        <h2 className="c2 pt-3 ml-3">Hereditary Cancer Risk Report</h2>
-        <p className=" c2">
-          A thorough Analysis of 500 genes across 20 hereditary cancer types was
-          conducted. Your report indicates “X” Variants of Concern.
-        </p>
-        <button className="read-btn">Read More</button>
-      </div>
-      <div className="rec-class">
-        <h2 className="c2 rec-head">Recommendations</h2>
-        <p className="rec-para">
-          Genetic counseling is recommended to discuss the implications of this
-          test result. Schedule genetic counselor appointment at
-          xxx@strandls.com. Test results should be interpreted in the context of
-          this individual's personal and family history of cancer. Kindly
-          consult with a physician before taking any interventional steps.
-        </p>
-      </div>
+
+      <Container fluid>
+        <Row>
+          <Col className="p-c2">
+            <div className="d-flex flex-column mb-3">
+              <p className="c2">
+                A thorough Analysis of 500 genes across 20 hereditary cancer
+                types was conducted. Your report indicates “X” Variants of
+                Concern.
+              </p>
+              <button className="read-btn">Read More</button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      <Row className="bor-class">
+        <Col lg={12} md={6} xs={12}>
+          <h2 className="c2 rec-head">Recommendations</h2>
+          <p className="rec-para">
+            Genetic counseling is recommended to discuss the implications of
+            this test result. Schedule genetic counselor appointment at{' '}
+            <span>xxx@strandls.com.</span> Test results should be interpreted in
+            the context of this individual's personal and family history of
+            cancer. Kindly consult with a physician before taking any
+            interventional steps.
+          </p>
+        </Col>
+      </Row>
     </div>
   );
 }
+
