@@ -32,11 +32,7 @@ export default function CarrierRisk(props) {
       <div className="d-flex flex-row mb-3">
         <div className="d-flex flex-column mb-3">
           <h2 className="c2 pt-3 ml-3">Hereditary Cardio Report</h2>
-          <p className=" c2">
-            A thorough Analysis of 500 genes across 20 hereditary cancer types
-            was conducted. Your report indicates “X” Variants of Concern.
-          </p>
-          <button className="read-btn">Read More</button>
+         
         </div>
         <div className="p-2">
           <button class="btn btn-download align-self-end m-3">
@@ -218,6 +214,14 @@ export default function CarrierRisk(props) {
           Schedule appointment with Genetic Counsellor for detailed explanation
         </div>
       </div>
+     <div className="read-class">
+      <p className=" c2">
+            A thorough Analysis of 500 genes across 20 hereditary cancer types
+            was conducted. Your report indicates “X” Variants of Concern.
+          </p>
+          <button className="read-btn">Read More</button>
+          </div>
+          
       <div className="rec-class">
         <h2 className="c2 rec-head">Recommendations</h2>
         <p className="rec-para">

@@ -25,11 +25,7 @@ export default function Metarepo(props) {
        <div className="d-flex flex-row mb-3">
          <div className="d-flex flex-column mb-3">
          <h2 className="c2 pt-3 ml-3">In-born Errors of Metabolism Report</h2>
-         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
-         <button className="read-btn"
-         >
-           Read More
-           </button>
+        
          </div>
          <div className="p-2">
       <button class="btn btn-download align-self-end m-3">
@@ -187,6 +183,13 @@ export default function Metarepo(props) {
       </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
+      <div>
+       <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
+         <button className="read-btn"
+         >
+           Read More
+           </button>
+           </div>
       <div className="rec-class">
         <h2 className="c2 rec-head" >Recommendations</h2>
         <p className="rec-para">Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.</p>
