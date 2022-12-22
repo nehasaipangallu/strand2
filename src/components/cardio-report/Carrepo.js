@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Carrepo.css';
+import './Carpo.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 
-export default function CardioReport(props) {
+export default function CarrierRisk(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
   function openPanel(event) {

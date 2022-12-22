@@ -14,7 +14,7 @@ export default function Carrier(props) {
     naviage('/carrier-risk-repo');
   }
   return (
-    <div className="d-flex flex-column mb-3 container pt-5">
+    <div className="d-flex flex-column mb-3 ml-10 container pt-5 ps-5">
       {/* <div className="p-2 carrier-rep-box">
         <div className="d-flex flex-row mb-3">
           <div className="p-2">
