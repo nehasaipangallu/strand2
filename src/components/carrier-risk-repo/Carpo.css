@@ -9,7 +9,7 @@
   font-size: 14px;
   font-weight: 400;
   font-family: 'Open sans';
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 
 .carrier-risk-report-container .cr-report-heading {
