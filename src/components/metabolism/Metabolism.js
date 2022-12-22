@@ -14,41 +14,41 @@ export default function Metabolism(props) {
     naviage('/metabolism');
   }
   return (
-    <div className="d-flex flex-column mb-3 container pt-5">
-      {/* this for report section */}
-
-      <Row className="report-container p-0">
-        <Col>
+    <div className="innerWrapper cancer-page container pt-5">
+    <div className="d-flex p-2 img-box">
+      <div className="d-flex flex-row img-captions justify-content-evenly">
+        <div claasName="p-2">
           <img
             src="https://github.com/nehasaipangallu/strand2/blob/main/public/metabolism%202%20(1).svg?raw=true"
             className="meta-img"
           />
-        </Col>
+      </div>
 
-        <Col className="para-1">
-          <p className="pl-0 para-1">
-            Your Report is Ready. Please click to View Report.
+      <p className="p-2 align-self-center">
+            Your Report is Ready.
+            <br />
+            Please click to View Report.
           </p>
-        </Col>
 
-        <Col className="para-2">
-          <p className="m-2">12/11/2022</p>
-          <p className="m-2">02/08/2022</p>
-          <p className="m-2">20/08/2022</p>
-        </Col>
+          <div class=" d-flex flex-column report-dates align-self-center">
+            <p class="m-2">12/11/2022</p>
+            <p class="m-2">02/08/2022</p>
+            <p class="m-2">07/12/2022</p>
+          </div>
 
-        <Col>
-          <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
-            View Report
-          </button>
-          <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
-            View Report
-          </button>
-          <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
-            View Report
-          </button>
-        </Col>
-      </Row>
+          <div class="d-flex flex-column report-buttons align-self-center">
+            <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
+              View Report
+            </button>
+            <button class="btn btn-report m-2" onCLick={onVeiwReortClick}>
+              View Report
+            </button>
+            <button class="btn btn-report m-2" onClick={onVeiwReortClick}>
+              View Report
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* end report section */}
 
