@@ -1,0 +1,122 @@
+.carrier-risk-report-container .btn-download {
+  background: #f99d1b;
+  box-shadow: 0px 6.5625px 13.125px rgba(0, 0, 0, 0.33);
+  border: 1px solid #d45e1b;
+  border-radius: 4px;
+  /* width: 225px;
+  height: 35px; */
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open sans';
+  margin-right: 1rem;
+}
+
+.carrier-risk-report-container .cr-report-heading {
+  background: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cr-report-desc > p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cr-report-summary-table {
+  border-collapse: separate;
+  font-size: 16px;
+  border-spacing: 0;
+}
+.cr-report-summary-table thead tr td {
+  background-color: #000d55;
+  color: white;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.cr-report-summary-table tbody tr td {
+  height: 135px;
+  border: none;
+  vertical-align: middle;
+}
+.cr-report-summary-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.cr-report-summary-table tbody tr:nth-child(even) {
+  background: #e6e6e6;
+}
+
+.cr-report-recommendation-text {
+  font-size: 16px;
+  list-style: none;
+}
+
+.cr-report-recommendation-text li::before {
+  content: '\2022';
+  color: #f99d1b;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.cr-report-findings-table-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.cr-report-findings-table {
+  border-collapse: separate;
+  font-size: 16px;
+  border-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cr-report-findings-table thead tr {
+  font-weight: 700;
+  font-size: 20px;
+  height: 80px;
+  vertical-align: middle;
+  border: none;
+  background-color: #ffffff;
+}
+
+.cr-report-findings-table tbody tr td {
+  height: 85px;
+  border-top: none;
+  background-color: #ffffff;
+}
+.cr-report-findings-table thead tr td:not(:first-child),
+.cr-report-findings-table tbody tr td:not(:first-child) {
+  border-left: none;
+}
+.cr-report-findings-table thead tr td:not(:last-child),
+.cr-report-findings-table tbody tr td:not(:last-child) {
+  border-right: none;
+}
+
+.cr-report-findings-table tbody tr td:last-child {
+  font-weight: 700;
+}
+
+.cr-report-finding-ar_xr {
+  background: #f99d1b;
+  box-shadow: 0px 6.5625px 13.125px rgb(0 0 0 / 33%);
+  border: 0px solid #d45e1b;
+  border-radius: 4px;
+  color: white;
+  width: 50px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cr-report-findings-table-footer {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  height: 60px;
+  border-radius: 8px;
+  background: #d9d9d9;
+}
