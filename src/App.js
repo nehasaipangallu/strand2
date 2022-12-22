@@ -20,6 +20,7 @@ import Carrier from './components/crrier-risk/Carrier';
 import Pop from './components/pop-up/Pop';
 import Carrepo from './components/cardio-report/Carrepo';
 import Pharmaco from './components/pharmacogenomics/Pharmaco';
+import Metarepo from'./components/metabolic-report/Metarepo';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -122,6 +123,11 @@ export default function App() {
                   exact
                   path="/cardio-report"
                   element={<Carrepo onLoad={showSideBar} />}
+                ></Route>
+                 <Route
+                  exact
+                  path="/meta-repo"
+                  element={<Metarepo onLoad={showSideBar} />}
                 ></Route>
                 <Route
                   exact

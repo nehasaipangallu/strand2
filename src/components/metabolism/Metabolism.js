@@ -11,7 +11,7 @@ export default function Metabolism(props) {
   const naviage = useNavigate();
 
   function onVeiwReortClick() {
-    naviage('/metabolism');
+    naviage('/metabolic-report');
   }
   return (
     <div className="innerWrapper cancer-page container pt-5">
