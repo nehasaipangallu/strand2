@@ -6,6 +6,7 @@ import Sidepanel from '../../components/side-panel/side-panel';
 export default function CarrierRisk(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
+  
   function openPanel(event) {
     setPanelOpen(true);
   }
@@ -14,18 +15,14 @@ export default function CarrierRisk(props) {
     setPanelOpen(false);
   }
 
-  function popup(mylink, popup)
-{
-  if (! window.focus)
-    return true;
-  var href;
-  if (typeof(mylink) == 'string')
-    href=mylink;
-  else 
-    href=mylink.href;
-  window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
-  return false;
-}
+  function popup(mylink, popup) {
+    if (!window.focus) return true;
+    var href;
+    if (typeof mylink == 'string') href = mylink;
+    else href = mylink.href;
+    window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+    return false;
+  }
 
   return (
     <div className="d-flex flex-column mb-3 container">

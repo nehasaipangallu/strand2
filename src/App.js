@@ -52,7 +52,7 @@ export default function App() {
                 sidebarVisibility && isLoggedin == 'true' ? 'block' : 'none',
             }}
           >
-             <Sidebar /> 
+            <Sidebar />
           </div>
           <div
             className={`p-0 ${
