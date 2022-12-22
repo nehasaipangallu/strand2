@@ -20,8 +20,8 @@ import Carrier from './components/crrier-risk/Carrier';
 import Pop from './components/pop-up/Pop';
 import Carrepo from './components/cardio-report/Carrepo';
 import Pharmaco from './components/pharmacogenomics/Pharmaco';
-import Metarepo from'./components/metabolic-report/Metarepo';
-import Carrepo from './components/carrier-risk-repo/Carrepo';
+import Metarepo from './components/metabolic-report/Metarepo';
+import Carpo from './components/carrier-risk-repo/Carpo';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -52,7 +52,7 @@ export default function App() {
                 sidebarVisibility && isLoggedin == 'true' ? 'block' : 'none',
             }}
           >
-            <Sidebar />
+             <Sidebar /> 
           </div>
           <div
             className={`p-0 ${
@@ -109,13 +109,13 @@ export default function App() {
                   element={<Carrier onLoad={showSideBar} />}
                 ></Route>
 
-                 <Route
+                <Route
                   exact
                   path="/carrier-risk-repo"
-                  element={<Carrepo onLoad={showSideBar} />}
+                  element={<Carpo onLoad={showSideBar} />}
                 ></Route>
-                
-                 <Route
+
+                <Route
                   exact
                   path="/pharmacogenomics"
                   element={<Pharmaco onLoad={showSideBar} />}
@@ -131,7 +131,7 @@ export default function App() {
                   path="/cardio-report"
                   element={<Carrepo onLoad={showSideBar} />}
                 ></Route>
-                 <Route
+                <Route
                   exact
                   path="/metabolic-report"
                   element={<Metarepo onLoad={showSideBar} />}

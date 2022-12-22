@@ -9,7 +9,7 @@ p{
   background-repeat: no-repeat;
   background: linear-gradient(
     110.27deg,
-    rgba(6, 55, 123, 0.8) 4.2%,
+    rgba(6, 55, 123, 0.8) 4.2%,a
     rgba(16, 107, 147, 0.8) 27.5%,
     rgba(7, 138, 110, 0.8) 69.73%,
     rgba(55, 190, 128, 0.8) 97.39%
@@ -231,7 +231,7 @@ text-align: center;
     border: 0;
     opacity: .5;
     transition: opacity .15s ease;
-    margin-right: -50px!important;
+    /* margin-right: -24px!important; */
   
    
     font-size: 55px!important;
@@ -256,7 +256,7 @@ text-align: center;
   border: 0;
   opacity: .5;
   transition: opacity .15s ease;
-  margin-left: -32px !important;
+  /* margin-left: -24px !important; */
  
  
   

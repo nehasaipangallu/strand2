@@ -227,20 +227,6 @@ export default function Cancer(props) {
       <div className="p-2">
         <Row>
         <h2 className="genes-head c2"> Other Hereditary Mutations</h2>
-        <p className="other-paragraph">In Case of familisal syndrome, the risk of developing cancer is even greater without timely intervention.</p>
-        <Col>
-      
-        <ul className="other-mut">
-          <li>Familial Adenomatous Polyposis-nearly 100%
-          </li>
-          </ul>
-          </Col>
-
-          <Col>
-          <ul className="other-mut-2">
-          <li>MUTYH- associated polyposis- 80-90% </li>
-          </ul>
-        </Col>
        
         </Row>
       </div>

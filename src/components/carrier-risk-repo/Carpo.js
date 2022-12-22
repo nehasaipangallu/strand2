@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carrepo.css';
+import './Carpo.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
 import Button from 'react-bootstrap/Button';

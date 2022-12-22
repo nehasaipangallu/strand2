@@ -47,9 +47,10 @@ export default function Sidebar() {
               }}
             >
               <a
-              onClick={() => setMenuOpen(true)}
-              //  href="#/adult-onset" 
-              className="nav-link">
+                onClick={() => setMenuOpen(true)}
+                //  href="#/adult-onset"
+                className="nav-link"
+              >
                 <div className="navIcon">
                   <img src="https://github.com/nehasaipangallu/strand2/blob/main/public/spread%20(1)%201.svg?raw=true" />
                 </div>
