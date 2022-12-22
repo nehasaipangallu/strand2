@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import './Metarepo.css';
+import React from 'react';
+
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
-// import Button from 'react-bootstrap/Button';
-// import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
-export default function Metarepo(props) {
+export default function CancerReport(props) {
   const [isPanelOpen, setPanelOpen] = useState(false);
   props.onLoad(true);
   function openPanel(event) {
@@ -23,15 +23,8 @@ export default function Metarepo(props) {
         <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
       )}
        <div className="d-flex flex-row mb-3">
-         <div className="d-flex flex-column mb-3">
-         <h2 className="c2 pt-3 ml-3">In-born Errors of Metabolism Report</h2>
-         <p className=" c2">A thorough Analysis of 500 genes across 20 hereditary cancer types was conducted. Your report indicates “X” Variants of Concern.</p>
-         <button className="read-btn"
-         >
-           Read More
-           </button>
-         </div>
-         <div className="p-2">
+         
+        
       <button class="btn btn-download align-self-end m-3">
         Download Report{' '}
         <img
@@ -41,7 +34,58 @@ export default function Metarepo(props) {
         />
       </button>
       </div>
+      <div>
+        Results
+     
       </div>
+
+      <div>
+        <p>Your report describes X no. of observations of significance.</p>
+      </div>
+      <div>
+      Summary of Observations of Significance
+      </div>
+      <Table className="">
+      <thead>
+        <tr>
+          
+          <td>Disorder Type</td>
+          <td>Associated Gene(s)</td>
+          <td>Variant Detected</td>
+          <td>Inhheritence (AR/XR)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Surfactant metabolism dysfunction, pulmonary </td>
+          <td>ABCA3</td>
+          <td>Yes</td>
+          <td>AR</td>
+        </tr>
+        <tr>
+          <td>Autoimmune polyendocrinopathy syndrome type </td>
+          <td>AIRE</td>
+          <td>Yes</td>
+          <td>XR</td>
+        </tr>
+        
+      </tbody>
+    </Table>
+    <div>
+      <h2>
+      Recommendations
+      </h2>
+      <ul>
+        <li>
+        Based on the variations seen in your test it is imperative to ascertain the variation status of your partner in order to rule out a similar test result when planning to have children. </li>
+
+<li>Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. </li>
+
+<li>Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.
+        </li>
+        </ul>
+    </div>
+      
       <div className="res-box p-0 m-0">
         <h2 className="c2">Result</h2>
         </div>
@@ -58,16 +102,15 @@ export default function Metarepo(props) {
             <tr>
               <td style={{ width: 'auto' }}>Disorder Type</td>
               <td style={{ width: '40%' }}>Associated Gene(s)</td>
-              <td style={{ width: '15%' }}> Gene(s) with Variants</td>
+              <td style={{ width: '15%' }}> Inheritence (AR/XR)</td>
               <td>Variant Detected</td>
             </tr>
           </thead>
-          <div></div>
           <tbody>
             <tr>
-              <td>Urea cycle disorders and inherited hyperammonaemias</td>
+              <td>Surfactant metabolism dysfunction, pulmonary 3</td>
               <td>
-              ARG1, ASL, ASS 1, CPS1, GLUD 1, NAGS*, OTC, SLC25A 13, SLC25A 15{' '}
+              ABCA3{' '}
               </td>
               <td>
                 {/* BRCA1{' '} */}
@@ -77,23 +120,22 @@ export default function Metarepo(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button className="arg1"
+                <button className="ar"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href = '/pop-meta';
+                  window.location.href = '#/pop-up';
                 }} >
-           ARG1
+           AR
            </button>
               </td>
               <td className="yes-text">YES</td>
             </tr>
             <tr>
-              <td>Methylmalonic aciduria and homocystinuria</td>
+              <td>Diabetes mellitus, permanent neonatal 3</td>
               <td>
-              ABCD4, ACSF3, CD320, LMBRD1, MAT1A*, MCEE, MMAA, MMAB, MMACHC*, MMADHC, MTHFR, MTR, MTRR, MUT, SUCLA2, SUCLG 1, TCN2
+              ABCC8
               </td>
-              <td></td>
-              <td className="no-text">
+              <td>
                 {/* BRCA1{' '}
                 <img
                   alt=""
@@ -101,27 +143,108 @@ export default function Metarepo(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                  
-            No
-          
+                 {/* <button className="brca-1"
+                 onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '#/pop-up';
+                }} >
+           BRCA1
+           </button> */}
 
               </td>
-              {/* <td className="yes-text">YES</td> */}
+              <td className="yes-text">No</td>
             </tr>
+
             <tr>
-              <td>Glycogen Storage Disorder</td>
-              <td>AGL, ALDOA, ENO3, G6PC, GAA, GBE1, GYG1, GYS1, No GYS2, LAMP2, LDHA, PFKM, PGAM2, PGK1, PGM 1, PHKA 1, PHKA2, PHKB, PHKG2, PRKAG2,* PYGL, PYGM, SLC2A2, SLC37A4</td>
+              <td>Adrenoleukodystrophy (ALD)</td>
+              <td>ABCD1</td>
               <td></td>
               <td className="no-text">NO</td>
             </tr>
+            
             <tr>
-              <td>Disorders of sterol biosynthesis</td>
-              <td>DHCR24, DHCR7, EBP, FGFR2*, LBR, MSM01, MVK, No NSDHL, POR, SC5D</td>
+              <td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+              <td>ACADM</td>
               <td></td>
               <td className="no-text">No</td>
             </tr>
-           
-              
+
+            <tr>
+              <td>Very long chain acyl-CoA dehydrogenase deficiency</td>
+              <td>ACADVL</td>
+              <td>
+                {/* BRCA1{' '}
+                <img
+                  alt=""
+                  class="icon-question"
+                  src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
+                  onClick={openPanel}
+                /> */}
+                
+              </td>
+              <td className="no-text">No</td>
+            </tr>
+
+            <tr>
+              <td>α-Methylacetoacetic aciduria</td>
+              <td>
+              ACAT1
+              </td>
+              <td></td>
+              <td className="no-text">NO</td>
+            </tr>
+
+            <tr>
+              <td>Aspartylglucosaminuria</td>
+              <td>
+              AGA
+              </td>
+              <td></td>
+              <td className="no-text">NO</td>
+            </tr>
+
+            <tr>
+              <td>Hyperoxaluria, primary type I</td>
+              <td>
+              AGXT
+              </td>
+              <td></td>
+              <td className="no-text">NO</td>
+            </tr>
+
+            <tr>
+              <td>Joubert syndrome 3</td>
+              <td>
+              AHI1
+              </td>
+              <td></td>
+              <td className="no-text">NO</td>
+            </tr>
+
+            <tr>
+              <td>Autoimmune polyendocrinopathy syndrome type I</td>
+              <td>
+              AIRE
+              </td>
+              <td> <button className="ar"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '#/pop-up';
+                }} > XR </button>
+
+                </td>
+              <td className="yes-text">YES</td>
+            </tr>
+
+            <tr>
+              <td>Hereditary fructosuria</td>
+              <td>
+              ALDOB
+              </td>
+              <td></td>
+              <td className="no-text">NO</td>
+            </tr>
+
           </tbody>
         </Table>
         <div className="exp-box">Schedule appointment with Genetic Counsellor for detailed explanation</div>
@@ -187,10 +310,7 @@ export default function Metarepo(props) {
       </div> */}
       {/* <div className="m-3">Flex item 3</div>
       <div className="m-3">Flex item 3</div> */}
-      <div className="rec-class">
-        <h2 className="c2 rec-head" >Recommendations</h2>
-        <p className="rec-para">Genetic counseling is recommended to discuss the implications of this test result. Schedule genetic counselor appointment at xxx@strandls.com. Test results should be interpreted in the context of this individual's personal and family history of cancer. Kindly consult with a physician before taking any interventional steps.</p>
-      </div>
+      
     </div>
   );
 }
