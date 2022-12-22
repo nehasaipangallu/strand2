@@ -22,6 +22,7 @@ import Carrepo from './components/cardio-report/Carrepo';
 import Pharmaco from './components/pharmacogenomics/Pharmaco';
 import Metarepo from './components/metabolic-report/Metarepo';
 import Carpo from './components/carrier-risk-repo/Carpo';
+import Pharmarepo from './components/pharma-repo/Pharmarepo';
 
 export default function App() {
   // const location = window.location.hash || '';
@@ -119,6 +120,12 @@ export default function App() {
                   exact
                   path="/pharmacogenomics"
                   element={<Pharmaco onLoad={showSideBar} />}
+                ></Route>
+
+                 <Route
+                  exact
+                  path="/pharma-repo"
+                  element={<Pharmarepo onLoad={showSideBar} />}
                 ></Route>
 
                 <Route

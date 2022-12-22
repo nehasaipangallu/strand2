@@ -12,7 +12,7 @@ export default function pharmaco(props){
   const naviage = useNavigate();
 
   function onVeiwReortClick() {
-    naviage('/pharmacogenomis');
+    naviage('/pharma-repo');
   }
   return(
     <div className="d-flex flex-column mb-3 container pt-5">
@@ -25,7 +25,8 @@ export default function pharmaco(props){
         <p><strong>A thorough Analysis of 14 genes and 190 drugs was conducted. Your detailed report is provided.</strong></p>
         </Col>
         <Col>
-        <button class="btn btn-click align-self-end m-3">
+        <button class="btn btn-click align-self-end m-3"
+        onClick={onVeiwReortClick}>
         Click Here For Your Report{' '}
         {/* <img
           alt=""
