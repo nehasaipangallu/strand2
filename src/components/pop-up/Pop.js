@@ -32,8 +32,8 @@ export default function Pop(props) {
     <Modal
       show={show}
       onHide={hidePopup}
-      backdrop="static"
-      keyboard={false}
+      backdrop="true"
+      keyboard={true}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -95,9 +95,9 @@ export default function Pop(props) {
         <Button variant="secondary" onClick={hidePopup}>
           Close
         </Button>
-        <Button variant="primary" onClick={hidePopup}>
+        {/* <Button variant="primary" onClick={hidePopup}>
           Save changes
-        </Button>
+        </Button> */}
       </Modal.Footer>
     </Modal>
   );
