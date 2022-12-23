@@ -2,28 +2,29 @@ import React, { useState } from 'react';
 import './cancer-report.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import PopService from '../../services/PopService';
 
 export default function CancerReport(props) {
-  const [isPanelOpen, setPanelOpen] = useState(false);
+  //const [isPanelOpen, setPanelOpen] = useState(false);
+  // function onPanelOpen() {
+  //   setPanelOpen(true);
+  // }
+  // function onPanelClose() {
+  //   setPanelOpen(false);
+  // }
   props.onLoad(true);
-  function openPanel(event) {
-    setPanelOpen(true);
-  }
-
-  function onPanelClose() {
-    setPanelOpen(false);
+  function openPopup(event) {
+    PopService.open();
   }
 
   return (
     <div className="d-flex flex-column mb-3 container">
-      {isPanelOpen && (
+      {/* {isPanelOpen && (
         <Sidepanel open={isPanelOpen} onCloseCallback={onPanelClose} />
-      )}
+      )} */}
 
       <Container fluid className="p-c">
         <Row>
@@ -90,13 +91,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel} */}
                 {/* /> */}
-                <button
-                  className="brca-1"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '#/pop-up';
-                  }}
-                >
+                <button className="brca-1" onClick={openPopup}>
                   BRCA1
                 </button>
               </td>
@@ -116,13 +111,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                <button
-                  className="brca-1"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '#/pop-up';
-                  }}
-                >
+                <button className="brca-1" onClick={openPopup}>
                   BRCA1
                 </button>
               </td>
@@ -151,13 +140,7 @@ export default function CancerReport(props) {
                   src="https://github.com/nehasaipangallu/strand2/blob/main/public/question.svg?raw=true"
                   onClick={openPanel}
                 /> */}
-                <button
-                  className="brca-1"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '#/pop-up';
-                  }}
-                >
+                <button className="brca-1" onClick={openPopup}>
                   BRCA1
                 </button>
               </td>
@@ -281,4 +264,3 @@ export default function CancerReport(props) {
     </div>
   );
 }
-

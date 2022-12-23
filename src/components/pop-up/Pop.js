@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Pop.css';
 import Table from 'react-bootstrap/Table';
 import Sidepanel from '../../components/side-panel/side-panel';
@@ -7,7 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import PopService from '../../services/PopService';
 
 export default function Pop(props) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [modal, setModal] = useState({});
   // function openPanel(event) {
   //   setPanelOpen(true);
@@ -29,12 +29,6 @@ export default function Pop(props) {
     setShow(false);
   }
   return (
-    // <div className="m-3 table-health-2">
-    //   <div className="m-4">
-    // <div
-    //   className="modal show"
-    //   style={{ display: 'block', position: 'initial' }}
-    // >
     <Modal
       show={show}
       onHide={hidePopup}
@@ -101,11 +95,10 @@ export default function Pop(props) {
         <Button variant="secondary" onClick={hidePopup}>
           Close
         </Button>
-        <Button variant="primary">Save changes</Button>
+        <Button variant="primary" onClick={hidePopup}>
+          Save changes
+        </Button>
       </Modal.Footer>
     </Modal>
-    // </div>
-    //   </div>
-    // </div>
   );
 }
