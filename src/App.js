@@ -122,7 +122,7 @@ export default function App() {
                   element={<Pharmaco onLoad={showSideBar} />}
                 ></Route>
 
-                 <Route
+                <Route
                   exact
                   path="/pharma-repo"
                   element={<Pharmarepo onLoad={showSideBar} />}
@@ -158,14 +158,15 @@ export default function App() {
                   path="/faq"
                   element={<Faq onLoad={showSideBar} />}
                 ></Route>
-                <Route
+                {/* <Route
                   exact
                   path="/pop-up"
                   element={<Pop onLoad={showSideBar} />}
-                ></Route>
+                ></Route> */}
               </Routes>
             </div>
           </div>
+          <Pop />
         </HashRouter>
       </div>
     </div>
