@@ -36,6 +36,7 @@ export default function Pop(props) {
       keyboard={true}
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      scrollable
     >
       <Modal.Header closeButton onClick={() => setShow(false)}>
         <Modal.Title>Cancer-report</Modal.Title>
