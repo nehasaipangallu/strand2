@@ -43,7 +43,7 @@ export default function Pop(props) {
 
       <Modal.Body>
         <p>
-          <Table responsive="sm">
+          <Table responsive="sm" className="report-pop-up-table">
             <tbody>
               <tr>
                 <td>Gene</td>

@@ -1,0 +1,16 @@
+.report-pop-up-table {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+.report-pop-up-table tbody tr td:first-child {
+  width: 35%;
+  background-color: #c7c7c7;
+  border: none;
+  font-size: 14px;
+}
+
+.report-pop-up-table tbody tr td:last-child {
+  background-color: #e6e6e6;
+  border: none;
+  font-size: 14px;
+}
